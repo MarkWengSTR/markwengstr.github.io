@@ -7,15 +7,15 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Series on MarkWeng</title>
-    <link>https://markwengstr.github.io/zh/series/</link>
+    <link>https://mark-weng.com/zh/series/</link>
     <description>Recent content in Series on MarkWeng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
-    <copyright>© Copyright {year} MarkWengSTR ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
     
-        <atom:link href="https://markwengstr.github.io/zh/series/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mark-weng.com/zh/series/index.xml" rel="self" type="application/rss+xml" />
     
     
     

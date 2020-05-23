@@ -3,91 +3,91 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://markwengstr.github.io/posts/</loc>
+    <loc>https://mark-weng.com/posts/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/tags/blog/</loc>
+    <loc>https://mark-weng.com/tags/blog/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/tags/hugo/</loc>
+    <loc>https://mark-weng.com/tags/hugo/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/tags/</loc>
+    <loc>https://mark-weng.com/tags/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://markwengstr.github.io/zh/tags/"
+                href="https://mark-weng.com/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://markwengstr.github.io/tags/"
+                href="https://mark-weng.com/tags/"
                 />
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/posts/hugo-setup/</loc>
+    <loc>https://mark-weng.com/posts/hugo-setup/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/</loc>
+    <loc>https://mark-weng.com/</loc>
     <lastmod>2020-05-16T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://markwengstr.github.io/zh/"
+                href="https://mark-weng.com/zh/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://markwengstr.github.io/"
+                href="https://mark-weng.com/"
                 />
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/about/</loc>
+    <loc>https://mark-weng.com/about/</loc>
     <lastmod>2020-05-16T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/archive/</loc>
+    <loc>https://mark-weng.com/archive/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/categories/</loc>
+    <loc>https://mark-weng.com/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://markwengstr.github.io/zh/categories/"
+                href="https://mark-weng.com/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://markwengstr.github.io/categories/"
+                href="https://mark-weng.com/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/series/</loc>
+    <loc>https://mark-weng.com/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://markwengstr.github.io/zh/series/"
+                href="https://mark-weng.com/zh/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://markwengstr.github.io/series/"
+                href="https://mark-weng.com/series/"
                 />
   </url>
   

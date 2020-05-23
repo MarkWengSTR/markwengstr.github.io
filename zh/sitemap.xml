@@ -3,58 +3,58 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://markwengstr.github.io/zh/</loc>
+    <loc>https://mark-weng.com/zh/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://markwengstr.github.io/"
+                href="https://mark-weng.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://markwengstr.github.io/zh/"
+                href="https://mark-weng.com/zh/"
                 />
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/zh/categories/</loc>
+    <loc>https://mark-weng.com/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://markwengstr.github.io/categories/"
+                href="https://mark-weng.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://markwengstr.github.io/zh/categories/"
+                href="https://mark-weng.com/zh/categories/"
                 />
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/zh/series/</loc>
+    <loc>https://mark-weng.com/zh/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://markwengstr.github.io/series/"
+                href="https://mark-weng.com/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://markwengstr.github.io/zh/series/"
+                href="https://mark-weng.com/zh/series/"
                 />
   </url>
   
   <url>
-    <loc>https://markwengstr.github.io/zh/tags/</loc>
+    <loc>https://mark-weng.com/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://markwengstr.github.io/tags/"
+                href="https://mark-weng.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://markwengstr.github.io/zh/tags/"
+                href="https://mark-weng.com/zh/tags/"
                 />
   </url>
   

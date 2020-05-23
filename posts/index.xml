@@ -7,16 +7,16 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>MarkWeng</title>
-    <link>https://markwengstr.github.io/posts/</link>
+    <link>https://mark-weng.com/posts/</link>
     <description>Recent content on MarkWeng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
-    <copyright>© Copyright {year} MarkWengSTR ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
     <lastBuildDate>Thu, 21 May 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://markwengstr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mark-weng.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -24,11 +24,11 @@
       
       <item>
         <title>用Hugo建立blog</title>
-        <link>https://markwengstr.github.io/posts/hugo-setup/</link>
+        <link>https://mark-weng.com/posts/hugo-setup/</link>
         <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Thu, 21 May 2020 00:00:00 +0000</atom:modified>
-        <guid>https://markwengstr.github.io/posts/hugo-setup/</guid>
+        <guid>https://mark-weng.com/posts/hugo-setup/</guid>
         <description></description>
         
         <dc:creator>Mark</dc:creator>
