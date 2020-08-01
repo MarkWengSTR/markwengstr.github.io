@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>MarkWeng</title>
-    <link>https://mark-weng.com/posts/</link>
-    <description>Recent content on MarkWeng</description>
+    <title>ansys_auto_analysis on MarkWeng</title>
+    <link>https://mark-weng.com/tags/ansys_auto_analysis/</link>
+    <description>Recent content in ansys_auto_analysis on MarkWeng</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
@@ -16,7 +16,7 @@
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
     <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
-        <atom:link href="https://mark-weng.com/posts/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://mark-weng.com/tags/ansys_auto_analysis/index.xml" rel="self" type="application/rss+xml" />
     
     
     
@@ -45,34 +45,6 @@ client.Dispatch 開啟軟體 使用以下的方式就可以直接開啟 ansys �
           
             
               <category>ansys_auto_analysis</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>用Hugo建立blog</title>
-        <link>https://mark-weng.com/posts/hugo-setup/</link>
-        <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Thu, 21 May 2020 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/hugo-setup/</guid>
-        <description></description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>hugo</category>
-            
-          
-            
-              <category>blog</category>
             
           
         
