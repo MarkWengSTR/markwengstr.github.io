@@ -14,13 +14,49 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>clojure</title>
+        <link>https://mark-weng.com/tags/clojure/</link>
+        <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        
+        <guid>https://mark-weng.com/tags/clojure/</guid>
+        <description></description>
+        
+        <dc:creator>Mark Weng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>sicp</title>
+        <link>https://mark-weng.com/tags/sicp/</link>
+        <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        
+        <guid>https://mark-weng.com/tags/sicp/</guid>
+        <description></description>
+        
+        <dc:creator>Mark Weng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
       
       <item>
         <title>ansys_auto_analysis</title>
