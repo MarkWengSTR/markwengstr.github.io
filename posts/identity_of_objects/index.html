@@ -1466,7 +1466,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Aug 2, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1498,17 +1498,15 @@ if (!doNotTrack) {
   <div class="expand__content expand__content--toc">
     <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#本文介紹">本文介紹</a></li>
+    <li><a href="#定義最簡單的資料結構">定義最簡單的資料結構</a></li>
+    <li><a href="#未引入賦值">未引入賦值</a></li>
+    <li><a href="#引入賦值後">引入賦值後</a></li>
+    <li><a href="#何謂身份">何謂身份</a></li>
+    <li><a href="#賦值的危險">賦值的危險</a></li>
+    <li><a href="#data-structure-is-just-a-function">Data Structure is Just a function</a>
       <ul>
-        <li><a href="#未引入賦值">未引入賦值</a></li>
-        <li><a href="#引入賦值後">引入賦值後</a></li>
-        <li><a href="#何謂身份">何謂身份</a></li>
-        <li><a href="#cons--car-by-lambda">cons &amp; car by lambda</a>
-          <ul>
-            <li><a href="#演示一下用lambda憑空製造一個-cons--by-alonzo-church">演示一下用lambda憑空製造一個 cons ! by Alonzo Church</a></li>
-            <li><a href="#賦值的set-設計">賦值的set 設計</a></li>
-          </ul>
-        </li>
+        <li><a href="#演示一下用lambda憑空製造一個-cons----by-alonzo-church">演示一下用lambda憑空製造一個 cons ! - by Alonzo Church</a></li>
       </ul>
     </li>
   </ul>
@@ -1516,8 +1514,12 @@ if (!doNotTrack) {
   </div>
 </div>
 
-      <p><a href="https://www.youtube.com/watch?v=2Iz7agtk614&amp;t=302s">计算机程序的构造和解释（Lec5b：计算对象)</a> ，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的，後面參雜了一點 lec6a 。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。</p>
-<p>首先討論一個最簡單的資料結構(data structure)，任何的一個 object 的最小單位就是一個pair，而如何組成pair這個data structure呢，就是利用 cons ， <code>(cons x y)</code> 就是一個pair。</p>
+      <h2 id="本文介紹">本文介紹</h2>
+<p>為<a href="https://www.youtube.com/watch?v=2Iz7agtk614&amp;t=302s">计算机程序的构造和解释（Lec5b：计算对象)</a> 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。</p>
+<h2 id="定義最簡單的資料結構">定義最簡單的資料結構</h2>
+<p>首先討論，什麼是 <strong>最簡單的資料結構(data structure)</strong>，任何 object 的最小單位就是一個pair， 而如何組成pair呢。</p>
+<p>就要談到組成pair的方法，叫做  <strong>cons</strong>  。</p>
+<p>以下是 cons 的定義</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1525,19 +1527,20 @@ if (!doNotTrack) {
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="nv">對於任何的</span> <span class="nv">x</span>, <span class="nv">y</span>
+<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="c1">;;對於任何的 x, y</span>
 <span class="p">(</span><span class="nf">car</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">x</span>
 <span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">y</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>但其實上述定義並沒有闡述，到底cons是否有像人一樣的身份(identity)？</p>
-<h3 id="未引入賦值">未引入賦值</h3>
+</div><p>簡單來說 <code>(cons x y)</code> 就是一個pair，也是最基本的資料結構。</p>
+<p>但其實上述定義並沒有闡述，到底cons是否有像人一樣的身份(identity)？</p>
+<h2 id="未引入賦值">未引入賦值</h2>
 <p>就上述的定義來說，其實是一種抽象，cons包含兩個參數，如果兩個cons包含的參數是一樣的，那這兩個cons就是一樣的。</p>
-<h3 id="引入賦值後">引入賦值後</h3>
+<h2 id="引入賦值後">引入賦值後</h2>
 <p>上述定義就不完整了，因為如果我想修改兩個包含一樣參數cons的car，那兩個cons都同時會被我修改嗎？</p>
 <p>如果兩個cons代表的是數學，那其實沒差，就算是兩個一樣的 3/4，就還是3/4，變成同把兩個3/4變成1/4，反正就是1/4，並沒有所謂 <strong>身份</strong> 的區別，</p>
 <p>但物件導向的世界中，我們描述的是真實的世界，是有 <strong>身份</strong> 的，改變car可能就像是做變性手術一樣的。</p>
-<h3 id="何謂身份">何謂身份</h3>
+<h2 id="何謂身份">何謂身份</h2>
 <p>如何解釋以下這段code ?</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1548,10 +1551,19 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div><p>指的是在一個環境裡面，創造了一個名為 a 的 pair，這個pair裡面包含兩個指針一個指向1，一個指向2。</p>
-<p>那如果接下來，我又定義了一個 b <code>(def b (cons a a))</code></p>
-<p>那 b 這個pair指向的兩個a，是同一個a嗎？ 且現在呼叫 a 的方式有三種 a, (car b), (cdr b) ，哪個才是真正的呢？</p>
-<p>而現在我用了 賦值去改 <code>car b (set-car! (car b) 3)</code> ，原本存在 a 的 1被改成3了。</p>
-<p>現在如果再呼叫 (car a) 回傳的會是 3，儘管一開始我們定義的 (car a) 是1。</p>
+<p>接下來來探討幾個哲學的問題</p>
+<ul>
+<li>
+<p>假設又定義了一個 b <code>(def b (cons a a))</code>，那 b 這個pair指向的兩個a，是同一個a嗎？</p>
+</li>
+<li>
+<p>呈上，且現在呼叫 a 的方式有三種 <code>a</code>, <code>(car b)</code>, <code>(cdr b)</code> ，哪個才是真正的呢？</p>
+</li>
+<li>
+<p>假設又用了賦值去改 <code>car b (set-car! (car b) 3)</code> ，原本存在 a 的 1被改成3了，現在如果再呼叫 (car a) 回傳的會是 3，儘管一開始我們定義的 (car a) 是1。</p>
+</li>
+</ul>
+<h2 id="賦值的危險">賦值的危險</h2>
 <p><strong>非預期的共享</strong>，是大型系統的bug來源，透過給object一個身份 ，給它一個別名互相共享，是有蠻多方便，但也相對付出了代價。</p>
 <p>當開始任意使用賦值，以下問題便開始產生</p>
 <ul>
@@ -1560,9 +1572,9 @@ if (!doNotTrack) {
 <li>Identity: pair不再只是用car cdr去呼叫，它可以有別稱</li>
 <li>Share: 兩個別稱之間有可能會共享同一個pair</li>
 </ul>
+<h2 id="data-structure-is-just-a-function">Data Structure is Just a function</h2>
 <p>為了盡量避免object的問題，能不能就把它當成數學的函式，而不要認為它是有身分的object呢 ?</p>
-<h3 id="cons--car-by-lambda">cons &amp; car by lambda</h3>
-<h4 id="演示一下用lambda憑空製造一個-cons--by-alonzo-church">演示一下用lambda憑空製造一個 cons ! by Alonzo Church</h4>
+<h3 id="演示一下用lambda憑空製造一個-cons----by-alonzo-church">演示一下用lambda憑空製造一個 cons ! - by Alonzo Church</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1581,37 +1593,6 @@ if (!doNotTrack) {
 <li>傳入 cus-car之後代換掉 fc2 : <code>((fn [fc] fc 1 2) (fn [a d] a))</code> ， <code>(fn [a d] a)</code> 被當成參數代換掉 fc</li>
 <li>最後變成 <code>((fn [a b] a) 1 2)</code> ，回傳值就是1了，超級神奇吧！</li>
 </ul>
-<h4 id="賦值的set-設計">賦值的set 設計</h4>
-<p>稍微修改一下 church的算式</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="kd">defn </span><span class="nv">cus-cons</span>
-  <span class="p">[</span><span class="nv">x</span> <span class="nv">y</span><span class="p">]</span>
-  <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">fc</span><span class="p">]</span>
-    <span class="p">(</span><span class="nf">fc</span> <span class="nv">x</span>
-        <span class="nv">y</span>
-        <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">n</span><span class="p">]</span> <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">x</span> <span class="nv">n</span><span class="p">]))</span>
-        <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">n</span><span class="p">]</span> <span class="p">(</span><span class="k">let </span><span class="p">[</span><span class="nv">y</span> <span class="nv">n</span><span class="p">])))))</span>
-<span class="p">(</span><span class="kd">defn </span><span class="nv">cus-car</span> <span class="p">[</span><span class="nv">fc2</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc2</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">a</span> <span class="nv">d</span> <span class="nv">sa</span> <span class="nv">sd</span><span class="p">]</span> <span class="nv">a</span><span class="p">)))</span>
-<span class="p">(</span><span class="kd">defn </span><span class="nv">cus-cbr</span> <span class="p">[</span><span class="nv">fc2</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc2</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">a</span> <span class="nv">d</span> <span class="nv">sa</span> <span class="nv">sd</span><span class="p">]</span> <span class="nv">d</span><span class="p">)))</span>
-<span class="p">(</span><span class="kd">defn </span><span class="nv">cus-set-car!</span> <span class="p">[</span><span class="nv">fc2</span> <span class="nv">x2</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc2</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">a</span> <span class="nv">d</span> <span class="nv">sa</span> <span class="nv">sd</span><span class="p">]</span> <span class="p">(</span><span class="nf">sa</span> <span class="nv">x2</span><span class="p">))))</span>
-<span class="p">(</span><span class="kd">defn </span><span class="nv">cus-set-cdr!</span> <span class="p">[</span><span class="nv">fc2</span> <span class="nv">y2</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc2</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">a</span> <span class="nv">d</span> <span class="nv">sa</span> <span class="nv">sd</span><span class="p">]</span> <span class="p">(</span><span class="nf">sd</span> <span class="nv">y2</span><span class="p">))))</span>
-</code></pre></td></tr></table>
-</div>
-</div><p>在cons的地方，新增兩個lambda參數作為修改的認證用，這個set理論上是可行的，而有了一個set，就可以做千千萬萬個set了</p>
 <p>Lambda這個方式，完全是用function來完成 cons car cdr，並沒有存在任何一的地方，真的很有趣啊，之後一定要來看一下 這個傳說中的 <a href="https://zh.wikipedia.org/wiki/%CE%9B%E6%BC%94%E7%AE%97">Alonzo church lambda calculus</a>！！！</p>
 
     </article>
@@ -2868,17 +2849,15 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#本文介紹">本文介紹</a></li>
+    <li><a href="#定義最簡單的資料結構">定義最簡單的資料結構</a></li>
+    <li><a href="#未引入賦值">未引入賦值</a></li>
+    <li><a href="#引入賦值後">引入賦值後</a></li>
+    <li><a href="#何謂身份">何謂身份</a></li>
+    <li><a href="#賦值的危險">賦值的危險</a></li>
+    <li><a href="#data-structure-is-just-a-function">Data Structure is Just a function</a>
       <ul>
-        <li><a href="#未引入賦值">未引入賦值</a></li>
-        <li><a href="#引入賦值後">引入賦值後</a></li>
-        <li><a href="#何謂身份">何謂身份</a></li>
-        <li><a href="#cons--car-by-lambda">cons &amp; car by lambda</a>
-          <ul>
-            <li><a href="#演示一下用lambda憑空製造一個-cons--by-alonzo-church">演示一下用lambda憑空製造一個 cons ! by Alonzo Church</a></li>
-            <li><a href="#賦值的set-設計">賦值的set 設計</a></li>
-          </ul>
-        </li>
+        <li><a href="#演示一下用lambda憑空製造一個-cons----by-alonzo-church">演示一下用lambda憑空製造一個 cons ! - by Alonzo Church</a></li>
       </ul>
     </li>
   </ul>

@@ -50,16 +50,18 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Sun, 02 Aug 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/identity_of_objects/</guid>
-        <description>计算机程序的构造和解释（Lec5b：计算对象) ，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的，後面參雜了一點 lec6a 。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。
-首先討論一個最簡單的資料結構(data structure)，任何的一個 object 的最小單位就是一個pair，而如何組成pair這個data structure呢，就是利用 cons ， (cons x y) 就是一個pair。
-1 2 3  對於任何的 x, y (car (cons x y)) = x (cdr (cons x y)) = y   但其實上述定義並沒有闡述，到底cons是否有像人一樣的身份(identity)？
+        <description>本文介紹 為计算机程序的构造和解释（Lec5b：计算对象) 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。
+定義最簡單的資料結構 首先討論，什麼是 最簡單的資料結構(data structure)，任何 object 的最小單位就是一個pair， 而如何組成pair呢。
+就要談到組成pair的方法，叫做 cons 。
+以下是 cons 的定義
+1 2 3  ;;對於任何的 x, y (car (cons x y)) = x (cdr (cons x y)) = y   簡單來說 (cons x y) 就是一個pair，也是最基本的資料結構。
+但其實上述定義並沒有闡述，到底cons是否有像人一樣的身份(identity)？
 未引入賦值 就上述的定義來說，其實是一種抽象，cons包含兩個參數，如果兩個cons包含的參數是一樣的，那這兩個cons就是一樣的。
 引入賦值後 上述定義就不完整了，因為如果我想修改兩個包含一樣參數cons的car，那兩個cons都同時會被我修改嗎？
 如果兩個cons代表的是數學，那其實沒差，就算是兩個一樣的 3/4，就還是3/4，變成同把兩個3/4變成1/4，反正就是1/4，並沒有所謂 身份 的區別，
 但物件導向的世界中，我們描述的是真實的世界，是有 身份 的，改變car可能就像是做變性手術一樣的。
 何謂身份 如何解釋以下這段code ?
-1  (def a (cons 1 2))   指的是在一個環境裡面，創造了一個名為 a 的 pair，這個pair裡面包含兩個指針一個指向1，一個指向2。
-那如果接下來，我又定義了一個 b (def b (cons a a))</description>
+1  (def a (cons 1 2))   指的是在一個環境裡面，創造了一個名為 a 的 pair，這個pair裡面包含兩個指針一個指向1，一個指向2。</description>
         
         <dc:creator>Mark</dc:creator>
         
