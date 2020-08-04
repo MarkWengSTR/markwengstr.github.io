@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sun, 02 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,9 +23,63 @@
 
       
       <item>
+        <title>auto_EM_analysis</title>
+        <link>https://mark-weng.com/tags/auto_em_analysis/</link>
+        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        
+        <guid>https://mark-weng.com/tags/auto_em_analysis/</guid>
+        <description></description>
+        
+        <dc:creator>Mark Weng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>auto_motor_design</title>
+        <link>https://mark-weng.com/tags/auto_motor_design/</link>
+        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        
+        <guid>https://mark-weng.com/tags/auto_motor_design/</guid>
+        <description></description>
+        
+        <dc:creator>Mark Weng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>python_ansys_script</title>
+        <link>https://mark-weng.com/tags/python_ansys_script/</link>
+        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        
+        <guid>https://mark-weng.com/tags/python_ansys_script/</guid>
+        <description></description>
+        
+        <dc:creator>Mark Weng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>clojure</title>
         <link>https://mark-weng.com/tags/clojure/</link>
-        <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         
         <guid>https://mark-weng.com/tags/clojure/</guid>
@@ -43,28 +97,10 @@
       <item>
         <title>sicp</title>
         <link>https://mark-weng.com/tags/sicp/</link>
-        <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         
         <guid>https://mark-weng.com/tags/sicp/</guid>
-        <description></description>
-        
-        <dc:creator>Mark Weng</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>ansys_auto_analysis</title>
-        <link>https://mark-weng.com/tags/ansys_auto_analysis/</link>
-        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        
-        <guid>https://mark-weng.com/tags/ansys_auto_analysis/</guid>
         <description></description>
         
         <dc:creator>Mark Weng</dc:creator>

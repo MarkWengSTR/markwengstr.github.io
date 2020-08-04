@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sun, 02 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,11 +23,77 @@
 
       
       <item>
+        <title>permanent-magnet synchronous motor 設計 &amp; 分析自動化 (透過 ansys maxwell) - 淺談永磁馬達設計原理</title>
+        <link>https://mark-weng.com/posts/motor_principle/</link>
+        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 01 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/motor_principle/</guid>
+        <description>馬達 (電動機) 是什麼? 最近可以看到電動車在路上到處跑了，雖然目前還算是有錢人的玩具，但未來普及應是不在話下，而電動車的動力來源，就是 馬達 。 當然不只電動車用到馬達，其實日常生活中到處都是馬達，筆電風扇、洗衣機、機器手臂&amp;hellip;等，任何要讓機械動起來的源頭都是馬達。
+而馬達是什麼? 維基百科 裡面提到，最重要的原理就是 電能 -&amp;gt; 機械能 ，描述的更準確一點，其實是 電能 -&amp;gt; 磁能 -&amp;gt; 機械能 。
+馬達設計 是什麼? 馬達設計，就是設計 電能 -&amp;gt; 磁能 -&amp;gt; 機械能 中間的 磁能， 讓電能 有效率 的轉換為機械能。
+勞倫茲力 (Lorentz force) 勞倫茲力 (Lorentz force) : F (force density) = $\sigma$( charge density) E (electric field)+ J (current density) x B (magnetic density)
+先來談談電磁力的源頭 - 勞倫茲力 ，為了讓大家不要看到這邊就關掉，不考慮第一項電場力，我們可以回想一下高中一個很簡單的公式，長直導體電流在磁場裡的作用力 - f (電磁作用力) = i (電流) * l (磁場中的導線長度) * B (磁通密度) * sin (垂直分量) ，其實就是勞倫茲力計算得到的。</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>auto_motor_design</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>PM motor 設計 &amp; 分析自動化 (透過 ansys maxwell) - 開啟ansys軟體、新增project</title>
+        <link>https://mark-weng.com/posts/ansys_init/</link>
+        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 01 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/ansys_init/</guid>
+        <description>環境  windows10 正版Ansys (我的是教學版) python 3  目標 使用python script，執行後自動開啟maxwell、新增project
+win32com 首先要完成的是讓python開啟maxwell，參考了網路上的一些資訊，使用win32com這個module是最方便的，因此先跑pip install pywin32裝好module。
+client.Dispatch 開啟軟體 使用以下的方式就可以直接開啟 ansys 的電磁分析軟體。
+1 2 3  from win32com import client oAnsoftApp = client.Dispatch(&amp;#34;Ansoft.ElectronicDesktop&amp;#34;)   看到上面的code，可能會有幾個問題
+  client.Dispatch做了什麼事?
+ win32com.client.Dispatch()是利用 微軟 提供的一個 IDispatch 的自動化介面，接收軟體的 ProgID為參數，來操作windows軟體 (來源、詳細資料)    怎麼知道，我的系統有沒有 &amp;ldquo;Ansoft.ElectronicDesktop&amp;rdquo; 這個 ProgID呢 ?
+ 可以在powershell打上 Get-ChildItem HKLM:\Software\Classes -ErrorAction SilentlyContinue | Where-Object {$_.PSChildName -match &#39;^\w+\.\w+$&#39; -and (Test-Path -Path &amp;quot;$($_.PSPath)\CLSID&amp;quot;)} | Select-Object -ExpandProperty PSChildName 找看看有沒有，如果太多的話可以在最後面加上 | grep An 來縮減結果。    為什麼使用 oAnsoftApp 這個Object name?</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>auto_motor_design</category>
+            
+          
+            
+              <category>auto_EM_analysis</category>
+            
+          
+            
+              <category>python_ansys_script</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>SICP - Identity? of objects (by clojure)</title>
         <link>https://mark-weng.com/posts/identity_of_objects/</link>
-        <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sun, 02 Aug 2020 00:00:00 +0000</atom:modified>
+        <atom:modified>Wed, 01 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/identity_of_objects/</guid>
         <description>本文介紹 為计算机程序的构造和解释（Lec5b：计算对象) 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。
 定義最簡單的資料結構 首先討論，什麼是 最簡單的資料結構(data structure)，任何 object 的最小單位就是一個pair， 而如何組成pair呢。
@@ -54,36 +120,6 @@
           
             
               <category>clojure</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>馬達、電機 電磁分析自動化 (ansoft maxwell) - (1) 開啟ansys軟體、新增project</title>
-        <link>https://mark-weng.com/posts/ansys_init/</link>
-        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sat, 01 Aug 2020 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/ansys_init/</guid>
-        <description>環境  windows10 正版Ansys (我的是教學版) python 3  目標 使用python script，執行後自動開啟maxwell、新增project
-win32com 首先要完成的是讓python開啟maxwell，參考了網路上的一些資訊，使用win32com這個module是最方便的，因此先跑pip install pywin32裝好module。
-client.Dispatch 開啟軟體 使用以下的方式就可以直接開啟 ansys 的電磁分析軟體。
-1 2 3  from win32com import client oAnsoftApp = client.Dispatch(&amp;#34;Ansoft.ElectronicDesktop&amp;#34;)   看到上面的code，可能會有幾個問題
-  client.Dispatch做了什麼事?
- win32com.client.Dispatch()是利用 微軟 提供的一個 IDispatch 的自動化介面，接收軟體的 ProgID為參數，來操作windows軟體 (來源、詳細資料)    怎麼知道，我的系統有沒有 &amp;ldquo;Ansoft.ElectronicDesktop&amp;rdquo; 這個 ProgID呢 ?
- 可以在powershell打上 Get-ChildItem HKLM:\Software\Classes -ErrorAction SilentlyContinue | Where-Object {$_.PSChildName -match &#39;^\w+\.\w+$&#39; -and (Test-Path -Path &amp;quot;$($_.PSPath)\CLSID&amp;quot;)} | Select-Object -ExpandProperty PSChildName 找看看有沒有，如果太多的話可以在最後面加上 | grep An 來縮減結果。    為什麼使用 oAnsoftApp 這個Object name?</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>ansys_auto_analysis</category>
             
           
         

@@ -1293,6 +1293,43 @@ if (!doNotTrack) {
 
 
 
+<script type="text/javascript"
+        async
+        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[\[','\]\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+
+MathJax.Hub.Queue(function() {
+    
+    
+    
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i = 0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>
+
+
     
 </head>
 
@@ -1570,12 +1607,25 @@ if (!doNotTrack) {
         
         
             <span class="tag">
-                <a href="/tags/ansys_auto_analysis/" class="is-tags taxo__link" data-dir="ltr">
+                <a href="/tags/auto_em_analysis/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
-                        ansys_auto_analysis
+                        auto_EM_analysis
                     </span>
                     <span class="taxo__num" dir="auto">
                         1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/auto_motor_design/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        auto_motor_design
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        2
                     </span>
                 </a>
             </span>
@@ -1612,6 +1662,19 @@ if (!doNotTrack) {
                 <a href="/tags/hugo/" class="is-tags taxo__link" data-dir="ltr">
                     <span class="taxo__text">
                         hugo
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/python_ansys_script/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        python_ansys_script
                     </span>
                     <span class="taxo__num" dir="auto">
                         1

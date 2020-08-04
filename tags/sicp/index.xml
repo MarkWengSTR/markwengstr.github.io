@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sun, 02 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
     
@@ -25,9 +25,9 @@
       <item>
         <title>SICP - Identity? of objects (by clojure)</title>
         <link>https://mark-weng.com/posts/identity_of_objects/</link>
-        <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sun, 02 Aug 2020 00:00:00 +0000</atom:modified>
+        <atom:modified>Wed, 01 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/identity_of_objects/</guid>
         <description>本文介紹 為计算机程序的构造和解释（Lec5b：计算对象) 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。
 定義最簡單的資料結構 首先討論，什麼是 最簡單的資料結構(data structure)，任何 object 的最小單位就是一個pair， 而如何組成pair呢。

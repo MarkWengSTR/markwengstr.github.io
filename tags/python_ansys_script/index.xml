@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>python_ansys_script on MarkWeng</title>
+    <link>https://mark-weng.com/tags/python_ansys_script/</link>
+    <description>Recent content in python_ansys_script on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://mark-weng.com/tags/python_ansys_script/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>PM motor 設計 &amp; 分析自動化 (透過 ansys maxwell) - 開啟ansys軟體、新增project</title>
+        <link>https://mark-weng.com/posts/ansys_init/</link>
+        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 01 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/ansys_init/</guid>
+        <description>環境  windows10 正版Ansys (我的是教學版) python 3  目標 使用python script，執行後自動開啟maxwell、新增project
+win32com 首先要完成的是讓python開啟maxwell，參考了網路上的一些資訊，使用win32com這個module是最方便的，因此先跑pip install pywin32裝好module。
+client.Dispatch 開啟軟體 使用以下的方式就可以直接開啟 ansys 的電磁分析軟體。
+1 2 3  from win32com import client oAnsoftApp = client.Dispatch(&amp;#34;Ansoft.ElectronicDesktop&amp;#34;)   看到上面的code，可能會有幾個問題
+  client.Dispatch做了什麼事?
+ win32com.client.Dispatch()是利用 微軟 提供的一個 IDispatch 的自動化介面，接收軟體的 ProgID為參數，來操作windows軟體 (來源、詳細資料)    怎麼知道，我的系統有沒有 &amp;ldquo;Ansoft.ElectronicDesktop&amp;rdquo; 這個 ProgID呢 ?
+ 可以在powershell打上 Get-ChildItem HKLM:\Software\Classes -ErrorAction SilentlyContinue | Where-Object {$_.PSChildName -match &#39;^\w+\.\w+$&#39; -and (Test-Path -Path &amp;quot;$($_.PSPath)\CLSID&amp;quot;)} | Select-Object -ExpandProperty PSChildName 找看看有沒有，如果太多的話可以在最後面加上 | grep An 來縮減結果。    為什麼使用 oAnsoftApp 這個Object name?</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>auto_motor_design</category>
+            
+          
+            
+              <category>auto_EM_analysis</category>
+            
+          
+            
+              <category>python_ansys_script</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
