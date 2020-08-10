@@ -14,13 +14,37 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>SICP - The Elements of Programming</title>
+        <link>https://mark-weng.com/posts/sicp_lec1a/</link>
+        <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 10 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/sicp_lec1a/</guid>
+        <description>SICP 1a - The Elements of Programming What is computer science  Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo; Method: 組成process的元素，而method的名稱應該要陳述出裡面的知識  Computer science 的特性  處理&amp;rdquo; 理想化的元件&amp;rdquo;: 因為我們對所有要組合在一起的 data 與 function都能完全的掌控， 因此在理想與現實之間是差不多的 (如果是電子或機械工程師 那可能會需要考慮很多真實世界的限制)。 一個工程中的 &amp;ldquo;抽象形式&amp;rdquo;: 因為不需考慮現實的限制  Computer science 的技術 - 控制複雜度  black-box abstraction: 將功能封裝起來，使用的人不需要知道裡面的技術，只要呼叫它，丟入值就會輸出結果，而使用者又可以拿這個功能再去組合成更多功能。  將細節隱藏 (用以構建更大型的盒子) 具有通用性 (generality)   Conventional interface: 如果系統裡的數據有許多不一樣的類型，計算的時候總不能混雜在一起，那怎麼辦呢?  Generic operations large-scale structure and modularity object-oriented programming operations on aggregate (流)   Metalinguistic Abstraction: 定義一個新語言 (用lisp做一個解析器來解析lisp)  black-box abstraction Example: Square root algorithm process of algorithm (find an approximation to x^0.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>sicp</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>SICP - Identity? of objects (by clojure)</title>
