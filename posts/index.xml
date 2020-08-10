@@ -23,6 +23,33 @@
 
       
       <item>
+        <title>permanent-magnet synchronous motor 設計 &amp; 分析自動化 (透過 ansys maxwell) - python script 自動化設計 demo</title>
+        <link>https://mark-weng.com/posts/auto_design_intro/</link>
+        <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 10 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/auto_design_intro/</guid>
+        <description>影片介紹 目前的成果，拍成影片上傳到youtube上
+  輸入所需的參數 spec_params
+1 2 3 4 5 6 7 8 9 10 11  spec_params = { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, &amp;#34;export_path&amp;#34;: None, &amp;#34;pj_key&amp;#34;: str(int(time.mktime(datetime.datetime.now().timetuple()))), &amp;#34;res_url&amp;#34;: None, }   稍微解釋一下參數
+ stator_OD_limit: 定子外徑限制 max_power: 最大功率 voltage_dc: DC bus 電壓 max_torque_nm: 最大轉矩 max_speed_rpm: 最高轉速 export_path: 輸出參數 (這是之後串接要用的可以不用管) pj_key: project的名稱(使用不重複的時間戳，以便同時多個模擬一起執行) res_url: 打response回去的url (這是之後串接要用的可以不用管)  輸入以上參數後，執行 python run.py 就會開始 執行設計 -&amp;gt; 跑模擬 -&amp;gt; 數據計算後處理。</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>auto_motor_design</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>SICP - The Elements of Programming</title>
         <link>https://mark-weng.com/posts/sicp_lec1a/</link>
         <pubDate>Mon, 10 Aug 2020 00:00:00 +0000</pubDate>
@@ -75,7 +102,7 @@
       </item>
       
       <item>
-        <title>PM motor 設計 &amp; 分析自動化 (透過 ansys maxwell) - 開啟ansys軟體、新增project</title>
+        <title>permanent-magnet synchronous motor 設計 &amp; 分析自動化 (透過 ansys maxwell) - 開啟ansys軟體、新增project</title>
         <link>https://mark-weng.com/posts/ansys_init/</link>
         <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
