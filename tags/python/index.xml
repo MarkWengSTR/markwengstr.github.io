@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>python on MarkWeng</title>
+    <link>https://mark-weng.com/tags/python/</link>
+    <description>Recent content in python on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://mark-weng.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title>分析自動化 (透過 ansys maxwell) - python fundamental concept</title>
+        <link>https://mark-weng.com/posts/python_fundamental/</link>
+        <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 31 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/python_fundamental/</guid>
+        <description>任何語言的基本概念 SICP有提到，或是可以參考網站內的文章 sicp_1a，當認識一個新語言，最重要的事情有四個
+ Primitive Object (語言的基本元素) Means of combination (組合基本對象的方法) Means of abstraction (如何抽象) Capturing common patterns (如何利用領域的專業，找到通用函數)  第四點雖然也很重要，但比較屬於系統複雜度增加後採取的作法，目前先不討論
+Primitive Object (語言的基本元素) in python Expression and statement   Expression(表示式): 寫出一段文字 or 程式碼，python的解釋器讀了之後，幫你做完裡面的事，並且回傳給你一個值 (ex: 1 + 1 回傳 2)
+  statement(陳述式): 寫出一段文字 or 程式碼，python的解釋器讀了之後，幫你做完裡面的事，但不回傳任何東西 ( a = 1 )
+  (有個小問題可以思考一下，那回傳 nil算expresion還是statement呢?)
+Data   字串: str
+  數字: int(整數), float(分數)
+  有順序的集合: list(由[]包起來的集合, 元素可以被覆蓋), tuple(由()包起來的集合, 元素不能被覆蓋)</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python_ansys_script</category>
+            
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
