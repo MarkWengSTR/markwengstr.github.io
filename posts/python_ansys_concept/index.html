@@ -1484,7 +1484,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Sep 1, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1533,7 +1533,7 @@ if (!doNotTrack) {
 <li>Code represent design concept and step - 不管在公司或學校，很常會遇到，某人離開之後，只留下模擬檔，設計的概念與步驟沒有留下，這讓接手的人非常困擾，接手的人可能會不知道某個已設定好的東西是如何設定的，為什麼要這樣設定 ?  而當設計自動化之後，也就代表所有的概念與步驟都會留下，也不會因為原本的人員離開而讓專案有遭遇困難的風險。  當然，這也依賴著一個好的coding style與系統設計。</li>
 </ul>
 <h2 id="how-to-represent-motor-design-concept-and-step">How to represent motor design concept and step</h2>
-<p>專注在兩個非常重要卻又簡單的東西 <strong>data and function</strong></p>
+<p>專注在兩個非常重要卻又簡單的東西 <strong>data &amp; function</strong></p>
 <h3 id="input--output-data">Input &amp; Output Data</h3>
 <p>先思考 input 與 ouput的data是什麼</p>
 <ul>
@@ -1542,9 +1542,9 @@ if (!doNotTrack) {
 </ul>
 <h3 id="design-function-and-data">Design function and data</h3>
 <ol>
-<li>手算一次將規格data轉換成馬達模型data與電氣data</li>
-<li>將中間所有的<strong>步驟</strong>，以及當中用到的<strong>數據名稱</strong>記錄下來</li>
-<li>將<strong>數據名稱</strong>根據<strong>步驟</strong>的概念分類 (定轉子、磁石、電氣&hellip;等)。使用dict將其收起來，還不知道的參數就先給 <code>None</code>，用專案中馬達設計的部分呈現如下</li>
+<li>手算一次將 規格 轉換成 <strong>馬達模型數據</strong> 與 <strong>電氣數據</strong></li>
+<li>將中間所有的 <strong>步驟</strong>，以及當中用到的 <strong>數據名稱</strong> 記錄下來</li>
+<li>將 <strong>數據名稱</strong> 根據 <strong>步驟</strong> 的概念分類 (定轉子、磁石、電氣&hellip;等)。使用dict將其收起來，還不知道的參數就先給 <code>None</code>，用專案中馬達設計的部分呈現如下</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
