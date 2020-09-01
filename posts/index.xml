@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,7 +23,33 @@
 
       
       <item>
-        <title>分析自動化 (透過 ansys maxwell) - python fundamental concept</title>
+        <title>分析自動化 (透過 ansys maxwell) - python motor design concept</title>
+        <link>https://mark-weng.com/posts/python_ansys_concept/</link>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 01 Sep 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/python_ansys_concept/</guid>
+        <description>Why use program to design motor  Save labor cost - program具有自動化的好處，重複的步驟只要編寫一次，之後只需要執行程式就好 Code represent design concept and step - 不管在公司或學校，很常會遇到，某人離開之後，只留下模擬檔，設計的概念與步驟沒有留下，這讓接手的人非常困擾，接手的人可能會不知道某個已設定好的東西是如何設定的，為什麼要這樣設定 ? 而當設計自動化之後，也就代表所有的概念與步驟都會留下，也不會因為原本的人員離開而讓專案有遭遇困難的風險。 當然，這也依賴著一個好的coding style與系統設計。  How to represent motor design concept and step 專注在兩個非常重要卻又簡單的東西 data and function
+Input &amp;amp; Output Data 先思考 input 與 ouput的data是什麼
+ input data - 規格 output data - 定子外徑、馬達長度、匝數、BEMP(@1000rpm)、操作點數據(torque data, average torque, speed, torque ripple, current, current density, line voltage, coreloss, copperloss)  Design function and data  手算一次將規格data轉換成馬達模型data與電氣data 將中間所有的步驟，以及當中用到的數據名稱記錄下來 將數據名稱根據步驟的概念分類 (定轉子、磁石、電氣&amp;hellip;等)。使用dict將其收起來，還不知道的參數就先給 None，用專案中馬達設計的部分呈現如下  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64  motor_cal_params = { &amp;#34;stator&amp;#34;: { &amp;#34;OD_limit&amp;#34;: None, &amp;#34;slot&amp;#34;: 12, &amp;#34;shoes_height_front&amp;#34;: 1, &amp;#34;shoes_height_back&amp;#34;: 1, &amp;#34;slot_open&amp;#34;: 4.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python_ansys_script</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>分析自動化 (透過 ansys maxwell) - python fundamental concept 基礎概念</title>
         <link>https://mark-weng.com/posts/python_fundamental/</link>
         <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
