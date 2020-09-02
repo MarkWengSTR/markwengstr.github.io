@@ -1530,7 +1530,7 @@ if (!doNotTrack) {
       <h2 id="why-use-program-to-design-motor">Why use program to design motor</h2>
 <ul>
 <li>Save labor cost - program具有自動化的好處，重複的步驟只要編寫一次，之後只需要執行程式就好</li>
-<li>Code represent design concept and step - 不管在公司或學校，很常會遇到，某人離開之後，只留下模擬檔，設計的概念與步驟沒有留下，這讓接手的人非常困擾，接手的人可能會不知道某個已設定好的東西是如何設定的，為什麼要這樣設定 ?  而當設計自動化之後，也就代表所有的概念與步驟都會留下，也不會因為原本的人員離開而讓專案有遭遇困難的風險。  當然，這也依賴著一個好的coding style與系統設計。</li>
+<li>Code represent design concept and step - 當設計變成code，並且利用的是好理解且通用的 code structure ，人員轉換造成的工作問題就會下降，因為所有人只要能看懂code，就能看懂設計步驟，進而理解設計。</li>
 </ul>
 <h2 id="how-to-represent-motor-design-concept-and-step">How to represent motor design concept and step</h2>
 <p>專注在兩個非常重要卻又簡單的東西 <strong>data &amp; function</strong></p>
@@ -1542,9 +1542,9 @@ if (!doNotTrack) {
 </ul>
 <h3 id="design-function-and-data">Design function and data</h3>
 <ol>
-<li>手算一次將 規格 轉換成 <strong>馬達模型數據</strong> 與 <strong>電氣數據</strong></li>
-<li>將中間所有的 <strong>步驟</strong>，以及當中用到的 <strong>數據名稱</strong> 記錄下來</li>
-<li>將 <strong>數據名稱</strong> 根據 <strong>步驟</strong> 的概念分類 (定轉子、磁石、電氣&hellip;等)。使用dict將其收起來，還不知道的參數就先給 <code>None</code>，用專案中馬達設計的部分呈現如下</li>
+<li>手算一次將 規格 轉換成 <strong>馬達模型數據</strong> 與 <strong>電氣數據</strong>。</li>
+<li>將中間所有的 <strong>步驟</strong>，以及當中用到的 <strong>數據名稱</strong> 記錄下來。</li>
+<li>將 <strong>數據名稱</strong> 根據 <strong>步驟</strong> 的概念分類 (定轉子、磁石、電氣&hellip;等)。使用 <code>dict 這個 data structure</code>將其收起來，還不知道的值就先給 <code>None</code>，用專案中馬達設計的部分呈現如下。</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1772,8 +1772,8 @@ if (!doNotTrack) {
 <li>Ansys maxwell 的溝通部分也是用同樣的方式，可參考 <a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/tree/master/software">這裡</a></li>
 </ol>
 <h2 id="結論">結論</h2>
-<p>使用上述的方法，是不是很單純，且很直觀就能看懂設計的過程，debug也非常容易，直接在run的時候將data print出來看就好。</p>
-<p>當整個程式設計完成後，接下來就是去優化每一個function &amp; data讓它們更容易被看懂，更能直觀的對應馬達設計。</p>
+<p>使用上述的方法，是不是很單純，且很直觀就能看懂設計的過程，debug也非常容易，執行程式時將<code>total_cal_params</code> 印出來看就好。</p>
+<p>當整個程式設計完成後，接下來就是去優化每一個 function &amp; data 讓它們更容易被看懂，更能直觀的對應馬達設計。</p>
 <p>更詳細可參考<a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/blob/master/run.py">我的設計</a>，未來還會持續的優化設計。</p>
 
     </article>
