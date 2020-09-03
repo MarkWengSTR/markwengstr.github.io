@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://mark-weng.com/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -19,18 +19,18 @@
   
   <url>
     <loc>https://mark-weng.com/posts/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mark-weng.com/tags/python_ansys_script/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <loc>https://mark-weng.com/tags/mindset/</loc>
+    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mark-weng.com/tags/</loc>
-    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -41,6 +41,16 @@
                 hreflang="en"
                 href="https://mark-weng.com/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://mark-weng.com/posts/%E6%9C%89%E9%99%90%E8%88%87%E7%84%A1%E9%99%90%E7%9A%84%E9%81%8A%E6%88%B2/</loc>
+    <lastmod>2020-09-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mark-weng.com/tags/python_ansys_script/</loc>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -96,11 +106,6 @@
   <url>
     <loc>https://mark-weng.com/posts/identity_of_objects/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mark-weng.com/tags/blog/</loc>
-    <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
