@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Tue, 01 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Oct 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/motor_design_programming/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,7 +23,36 @@
 
       
       <item>
-        <title>motor design programming &amp; 分析自動化 (透過 ansys maxwell) - python motor design concept</title>
+        <title>motor design programming &amp; 分析自動化 (透過 ansys maxwell) - SPM motor design by python script</title>
+        <link>https://mark-weng.com/posts/spm_motor_design/</link>
+        <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 07 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/spm_motor_design/</guid>
+        <description>目標 由定子外徑限制、最大功率、DC bus電壓、最大轉矩、最高轉速 規格，推導出整個10p12s spm馬達的設計與細部尺寸，並不是一個優化的模型，但都是經由合理的計算與假設，實作出一個合乎規格的初始設計。
+設計概覽 規格如下
+1 2 3 4 5 6 7  { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, }   整個 設計計算 可以參考連結
+設計流程簡介 先看到整個script最底下的 mech_structure_cal 的計算
+1 2 3 4 5 6 7  def mech_stucture_cal(total_cal_params): assign_spec_value(total_cal_params) and \ ktke_calculation(total_cal_params) and \ expend_NBLR(total_cal_params) and \ expend_stator_teeth_york(total_cal_params) and \ expend_stator_slot(total_cal_params) and \ expend_magnet(total_cal_params)   清楚的看到，流程就是
+ 將規格參數先塞到整個計算流程會用到的參數上  為什麼要這樣呢? 因為將用到的參數(state)統整在同一個地方，這樣方便管理、修改與debug   計算ke, kt，馬達最重要的兩個參數 由ke展開 線圈匝數、氣隙磁密、馬達有效長度、氣隙半徑 展開定子槽尺寸參數 展開轉子磁石參數  設計流程說明 以下談到的參數與係數都在 設計所需參數 中。</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>motor design programming &amp; 分析自動化 (透過 ansys maxwell) - motor design programming concept in python</title>
         <link>https://mark-weng.com/posts/python_ansys_concept/</link>
         <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
