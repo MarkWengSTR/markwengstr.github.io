@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://mark-weng.com/</loc>
-    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -19,23 +19,23 @@
   
   <url>
     <loc>https://mark-weng.com/posts/</loc>
-    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mark-weng.com/posts/spm_motor_design/</loc>
-    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
+    <loc>https://mark-weng.com/tags/motor_design_programming/</loc>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mark-weng.com/tags/motor_design_programming/</loc>
-    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
+    <loc>https://mark-weng.com/posts/ansys_init_2/</loc>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://mark-weng.com/tags/</loc>
-    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-20T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -46,6 +46,11 @@
                 hreflang="en"
                 href="https://mark-weng.com/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://mark-weng.com/posts/spm_motor_design/</loc>
+    <lastmod>2020-10-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -64,18 +69,13 @@
   </url>
   
   <url>
-    <loc>https://mark-weng.com/posts/python_fundamental/</loc>
-    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mark-weng.com/tags/python/</loc>
     <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mark-weng.com/tags/auto_motor_design/</loc>
-    <lastmod>2020-08-10T00:00:00+00:00</lastmod>
+    <loc>https://mark-weng.com/posts/python_fundamental/</loc>
+    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -94,12 +94,12 @@
   </url>
   
   <url>
-    <loc>https://mark-weng.com/posts/motor_principle/</loc>
+    <loc>https://mark-weng.com/posts/ansys_init/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mark-weng.com/posts/ansys_init/</loc>
+    <loc>https://mark-weng.com/posts/motor_principle/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
