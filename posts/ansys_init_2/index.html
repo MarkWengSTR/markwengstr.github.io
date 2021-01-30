@@ -1523,6 +1523,7 @@ if (!doNotTrack) {
       </ul>
     </li>
     <li><a href="#解決方法---regserver">解決方法 - regserver</a></li>
+    <li><a href="#ansys-2021r1-找不到win32com-2021130-update">Ansys 2021R1 找不到win32com (2021/1/30 update)</a></li>
   </ul>
 </nav>
   </div>
@@ -1598,6 +1599,9 @@ if (!doNotTrack) {
 <p>經過了一段時間的找資料後，跟著 <a href="https://support.microsoft.com/zh-tw/help/249873/how-to-use-the-regsvr32-tool-and-troubleshoot-regsvr32-error-messages">windows官網指示</a> 做了之後還是不行，其實說實在我根本不知道要註冊哪一個dll，所以就到ansys的資料夾裡面，把所有跟ansoft有關的dll都註冊了一次，但還是不行呀!!!。</p>
 <h2 id="解決方法---regserver">解決方法 - regserver</h2>
 <p>又嘗試了一段時間，最後想到，其實只是單純想用python去開啟 <code>ansysedt.exe</code>，那有沒有方法是直接註冊 64位元的 <code>exe</code>檔呢，於是找到了 <a href="https://stackoverflow.com/questions/3051823/what-is-difference-between-regsvr-and-regserver">regserver</a> 的方式，在powershell中進到 <code>AnsysEM\AnsysEM19.5\Win64</code> 的資料夾中，執行 <code>.\ansysedt.exe /regserver</code> ，就可以成功開啟了，太開心拉!!!</p>
+<h2 id="ansys-2021r1-找不到win32com-2021130-update">Ansys 2021R1 找不到win32com (2021/1/30 update)</h2>
+<p>據同為 motor design programming的朋友來信，據說Ansys 2021R1的版本用regserver會抓不到win32com，解決方法是要安裝更新版的pywin32 <a href="https://github.com/mhammond/pywin32/releases">https://github.com/mhammond/pywin32/releases</a></p>
+<p>歡迎來信一起討論優~!</p>
 
     </article>
     
@@ -2949,6 +2953,7 @@ document.addEventListener('DOMContentLoaded', function () {
       </ul>
     </li>
     <li><a href="#解決方法---regserver">解決方法 - regserver</a></li>
+    <li><a href="#ansys-2021r1-找不到win32com-2021130-update">Ansys 2021R1 找不到win32com (2021/1/30 update)</a></li>
   </ul>
 </nav>
         </div>
