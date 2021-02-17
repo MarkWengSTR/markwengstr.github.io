@@ -14,13 +14,55 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Tue, 20 Oct 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Serious-Python note(0)</title>
+        <link>https://mark-weng.com/posts/serious-python1/</link>
+        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 16 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python1/</guid>
+        <description>緣起 最近因為工作關係，需要大量的使用python，想找一本書來好好精進自己的python功力，於是找了這本Serious-Python來讀，也把看書的心得做些紀錄。
+為什麼選這本書? 本書的作者 Julien Danjou 是一個非常多產出的developer，其中一個專案叫做hy ，用lisp的syntax來操作python (在書中也會提到怎麼做)。
+之前因為看了sicp的關係，一直想找用lisp與python的結合，在github找到了hy真的是非常的興奮，如此愛lisp的python developer的書一定非常精彩，就來好好研讀一下吧
+Introduction 簡單介紹一下本書的每個章節，每一章的結束都會跟一個python大神做訪問。
+Chapter 1:
+提供一些開始動手寫project 前的建議，例如: project 架構, 版本號, automated error checking。
+Chapter 2:
+介紹 python的 modules, libraries, and frameworks, 以及它們如何作用的
+Chapter 3:
+主要介紹 python 文件產生器Sphinx，且如何管理API
+Chapter 4:
+永遠甩不掉的issue: 時間，介紹 datetime, tzinfo
+Chapter 5:
+如何 packaging, distributions standards，介紹 distutils, setuptools
+Chapter 6:
+介紹最好的 pytest 實現 unitest的方式，且嘗試使用虛擬環境來做test。
+Chapter 7:
+深入的研究 methods 及 decorators，深入研究static, class, and abstract methods 以及如何混和它們來製作更紮實的專案。
+Chapter 8:</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>python開啟ansys軟體問題 (2147221164, &#39;類別未登錄&#39;)</title>
