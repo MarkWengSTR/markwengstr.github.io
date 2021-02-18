@@ -23,12 +23,12 @@
 
       
       <item>
-        <title>Serious-Python note(0)</title>
-        <link>https://mark-weng.com/posts/serious-python1/</link>
+        <title>Serious-Python note - 0. introduction</title>
+        <link>https://mark-weng.com/posts/serious-python0/</link>
         <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Tue, 16 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python1/</guid>
+        <guid>https://mark-weng.com/posts/serious-python0/</guid>
         <description>緣起 最近因為工作關係，需要大量的使用python，想找一本書來好好精進自己的python功力，於是找了這本Serious-Python來讀，也把看書的心得做些紀錄。
 為什麼選這本書? 本書的作者 Julien Danjou 是一個非常多產出的developer，其中一個專案叫做hy ，用lisp的syntax來操作python (在書中也會提到怎麼做)。
 之前因為看了sicp的關係，一直想找用lisp與python的結合，在github找到了hy真的是非常的興奮，如此愛lisp的python developer的書一定非常精彩，就來好好研讀一下吧
@@ -48,6 +48,35 @@ Chapter 6:
 Chapter 7:
 深入的研究 methods 及 decorators，深入研究static, class, and abstract methods 以及如何混和它們來製作更紮實的專案。
 Chapter 8:</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Serious-Python note - 1. start your project</title>
+        <link>https://mark-weng.com/posts/serious-python1/</link>
+        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 16 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python1/</guid>
+        <description>python版本  每一個小的進版都會有18個月的bug fix suport以及5年的安全性維護 作者建議新的專案，就不要再用python2了 (python2.7是最後一版，且2020已停止維護)  展開 project 好的觀念   讓hierarchy盡量平坦，不要太深
+  把unit test放到subpackage中。 因為如果使用 setuptools 或其他安裝工具，很可能不小心讓使用者把unit test也裝了進去。
+  project folder第一層主要是 安裝(setup.py and setup.cfg) 、文件(README and doc folder) 與 project name folder (主要程式)
+  第一層也可能包含 etc (sample configuration file), tools (shell scripts or related tools), bin (binary scripts) &amp;hellip;等 setup.py會call到的工具。
+  project name folder (主要程式) 除了主要程式之外，裡面需包含 __init__.py ，tests 與 額外資訊的資料夾(ex: 圖檔、data) 也放在這一層。
+  盡量避免  將資料夾或檔案根據 type 命名 (ex: function.</description>
         
         <dc:creator>Mark</dc:creator>
         
