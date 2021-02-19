@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Fri, 19 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,27 +23,9 @@
 
       
       <item>
-        <title>mindset</title>
-        <link>https://mark-weng.com/tags/mindset/</link>
-        <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        
-        <guid>https://mark-weng.com/tags/mindset/</guid>
-        <description></description>
-        
-        <dc:creator>Mark Weng</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
         <title>python</title>
         <link>https://mark-weng.com/tags/python/</link>
-        <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+        <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         
         <guid>https://mark-weng.com/tags/python/</guid>
@@ -83,6 +65,24 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         
         <guid>https://mark-weng.com/tags/sicp/</guid>
+        <description></description>
+        
+        <dc:creator>Mark Weng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>mindset</title>
+        <link>https://mark-weng.com/tags/mindset/</link>
+        <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        
+        <guid>https://mark-weng.com/tags/mindset/</guid>
         <description></description>
         
         <dc:creator>Mark Weng</dc:creator>
