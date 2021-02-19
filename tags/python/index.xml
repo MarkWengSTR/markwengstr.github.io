@@ -14,13 +14,66 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Tue, 16 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Serious-Python note - 2. modules, libaries and frameworks</title>
+        <link>https://mark-weng.com/posts/serious-python2/</link>
+        <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Thu, 18 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python2/</guid>
+        <description></description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Serious-Python note - 1. start your project</title>
+        <link>https://mark-weng.com/posts/serious-python1/</link>
+        <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 17 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python1/</guid>
+        <description>python版本  每一個小的進版都會有18個月的bug fix suport以及5年的安全性維護 作者建議新的專案，就不要再用python2了 (python2.7是最後一版，且2020已停止維護)  展開 project 好的觀念   讓hierarchy盡量平坦，不要太深
+  把unit test放到subpackage中。 因為如果使用 setuptools 或其他安裝工具，很可能不小心讓使用者把unit test也裝了進去。
+  project folder第一層主要是 安裝(setup.py and setup.cfg) 、文件(README and doc folder) 與 project name folder (主要程式)
+  第一層也可能包含 etc (sample configuration file), tools (shell scripts or related tools), bin (binary scripts) &amp;hellip;等 setup.py會call到的工具。
+  project name folder (主要程式) 除了主要程式之外，裡面需包含 __init__.py ，tests 與 額外資訊的資料夾(ex: 圖檔、data) 也放在這一層。
+  盡量避免  將資料夾或檔案根據 type 命名 (ex: function.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Serious-Python note - 0. introduction</title>
@@ -48,35 +101,6 @@ Chapter 6:
 Chapter 7:
 深入的研究 methods 及 decorators，深入研究static, class, and abstract methods 以及如何混和它們來製作更紮實的專案。
 Chapter 8:</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 1. start your project</title>
-        <link>https://mark-weng.com/posts/serious-python1/</link>
-        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Tue, 16 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python1/</guid>
-        <description>python版本  每一個小的進版都會有18個月的bug fix suport以及5年的安全性維護 作者建議新的專案，就不要再用python2了 (python2.7是最後一版，且2020已停止維護)  展開 project 好的觀念   讓hierarchy盡量平坦，不要太深
-  把unit test放到subpackage中。 因為如果使用 setuptools 或其他安裝工具，很可能不小心讓使用者把unit test也裝了進去。
-  project folder第一層主要是 安裝(setup.py and setup.cfg) 、文件(README and doc folder) 與 project name folder (主要程式)
-  第一層也可能包含 etc (sample configuration file), tools (shell scripts or related tools), bin (binary scripts) &amp;hellip;等 setup.py會call到的工具。
-  project name folder (主要程式) 除了主要程式之外，裡面需包含 __init__.py ，tests 與 額外資訊的資料夾(ex: 圖檔、data) 也放在這一層。
-  盡量避免  將資料夾或檔案根據 type 命名 (ex: function.</description>
         
         <dc:creator>Mark</dc:creator>
         
