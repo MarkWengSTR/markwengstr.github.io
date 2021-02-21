@@ -14,13 +14,37 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Wed, 17 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Serious-Python note - 2. modules, libaries and frameworks</title>
+        <link>https://mark-weng.com/posts/serious-python2/</link>
+        <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Thu, 18 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python2/</guid>
+        <description>The Import System  import itertools 實際上是 itertools=__import__(&amp;quot;itertools&amp;quot;) 的語法糖 import itertools as it 其實就是 it=__import__(&amp;quot;itertools&amp;quot;)  sys module  sys.module 是一個dictionary，包含目前所有load進環境中的modules，key是module名稱，value是module位置 (ex: &amp;quot;os&amp;quot;: &amp;quot;&amp;lt;module &#39;os&#39; from &#39;c:\\python39\\lib\\os.py&#39;&amp;gt;&amp;quot; ) 找尋build in的module list可以用 sys.builtin_module_names  import path  python是靠存在 sys.path 中的path list去找尋 module。 sys.path 的內容，是可以被改變的，sys.path.append(&#39;/foo/bar&#39;) 等同於 commen line執行 PYTHONPATH=/foo/bar python 。 sys.path 的內容的順序是很重要的，因為import的機制是疊代的去尋找需要的module，讓module越早找到，就等於加速程式運作。 sys.path 的內容是可以重複的，最早找到的就會被import project 目錄在sys.path的順序先於Standard Library，因此如果自己做了一個random.pyimport的時候就會先呼叫自己的random.py`，這個要小心。  Custom Importers  自己客製import 機制也是很不錯的，可以參考 PEP302所定義的 import hook mechanism ，像是直接import database的資料，或是在import前做些確認機制 (作者有建議可以看 hy 這個project的機制) python 提供了兩種方式來擴增import system sys.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Serious-Python note - 1. start your project</title>
