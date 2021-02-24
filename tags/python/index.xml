@@ -14,13 +14,38 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Thu, 18 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 24 Feb 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Serious-Python note - 3. Documentation and Good API Practice</title>
+        <link>https://mark-weng.com/posts/serious-python3/</link>
+        <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 24 Feb 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python3/</guid>
+        <description>Documenting with Sphinx  作者認為 Documentation 是非常重要的一件事，雖然寫doc是一件感覺非常煩雜的事，但其實不需要，python developer有很好的工具來幫助這件事。 大多的contributer都喜歡寫code甚於寫文件，甚至有doc跟project
+是分開的，doc根本趕不上開發的速度。 最常用的python documentation是 reStructuredText 與 * reST* ，輕量級的markup 語言(類似 Markdown)，好撰寫也好閱讀，而 **Sphinx**是開發它們最常用的工具。 Project的doc一定要包含:  1~2句話簡短描述 此project想要解決的問題 Under哪個lisence 給個最核心的作用的example 介紹如何安裝 有沒有哪個社群支持，給個連結 Bug的追蹤機制 如果有developer想要contribute的話要去哪找source code?   可以利用reST加在README.rst，GitHub 或 PyPI 都可以讀取reST的format  Getting Started with Sphinx and reST  pip install sphinx 然後在project的最外層 run sphinx-quickstart 在 source 資料夾裡面可以看到 conf.py 與 index.rst 兩個檔案  index.rst 有點像是文˙件的封面 conf.py 就是你在 quick-start command 中輸入的資訊，當中有許多變數，這些是之後build之後會顯示在html中的資訊   做好之後用 sphinx-build.exe source build 就會build一個文件的靜態頁面摟 index.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Serious-Python note - 2. modules, libaries and frameworks</title>
