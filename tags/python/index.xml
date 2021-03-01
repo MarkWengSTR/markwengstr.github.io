@@ -14,13 +14,38 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Wed, 24 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Serious-Python note - 4. Handling Timestamps and Time Zones</title>
+        <link>https://mark-weng.com/posts/serious-python4/</link>
+        <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 01 Mar 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python4/</guid>
+        <description>Time zone其實是一個非常複雜的問題，不單單只是UTC +- 12 hours而已呀，這章就來好好探討這個問題。
+The Problem of Missing Time Zones  當timestamp沒有time zone資訊，那就等於沒有用，因為無法得知確切可以比較的時間。 在把timestamp儲存起來的時候也要特別小心，因為當times zone不同時，轉換出來的時間也不同，接下來會詳細說明。 python 提供了 datetime.datetime 可以存放 時間與日期，精度至微秒(ms)，但可惜的是，這個object都沒有提供timezone的資訊。  Building Default datetime Objects  如果想找目前 UTC region 的日期與時間，可以用  datetime.datetime.utcnow() ，想找在目前機器上的日期與時間可以用 datetime.datetime.now() 但沒有time zone aware真的是不太好用，接下來討論如何加上 time zone。  Time Zone–Aware Timestamps with dateutil  雖然datetime.datetime object沒有timezone資訊，難道就要自己開發自己的datetime object了嗎，其實不用，這邊介紹一個module是 dateutil 的 tz，可以進到os系統層面找到系統的timezone。 需要  pip install python-dateutil ，然後 from dateutil import tz tz.gettz(&amp;lt;地點可由/etc/timezone得知，沒給的話會回傳 tzlocal()&amp;gt;) 就會回傳一個time zone object，我們可以利用這個object來填入 datetime的tzinfo  1 2 3 4 5  import datetime from dateutil import tz now = datetime.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Serious-Python note - 3. Documentation and Good API Practice</title>
