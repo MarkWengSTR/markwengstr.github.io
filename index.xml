@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Mon, 01 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,32 @@
         
       
 
+      
+      <item>
+        <title>Serious-Python note - 6. Unit Testing</title>
+        <link>https://mark-weng.com/posts/serious-python6/</link>
+        <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sun, 07 Mar 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python6/</guid>
+        <description>寫code如果沒有test的話，基本上是沒有用，因為沒有辦法證明它是有效的。
+The Basics of Testing 在python中寫test與跑test是非常簡單的，並沒有侵入與破壞性，而test會大大的幫助你和其他開發者維護你的專案，接下來就會介紹基本的testing觀念。
+Some Simple Tests  把test放在submodule中 讓test中的階層模仿主要module的階層，可以更好的維護tests。 (如 mylib/foobar.py 的test就會放在 * mylib/tests/test_foobar.py.*中) 最簡單的test就像下面的function，單純執行 test_true()就好。  1 2 3 4  def test_true(): assert True test_true()    當然如果這樣一個一個執行test會非常的痛苦，可以使用 pytest這個module (需要pip install) ，它會幫你執行所有以 test_ 開頭的function。 pytest -v test_true.py ，全部通過的話就會顯示 PASSED，有沒˙通過的話，就會把沒通過的部分顯示出來。 pytest好用的關鍵是，當test越來越複雜時，它顯示出來的資訊可以幫助我們很好理解test fail的原因。  Skipping Tests  有時候有些test想要跳過，pytest 也有提供幾個方式  在function中  pytest.skip(&amp;quot;skip this test&amp;quot;) ，跑test時就會顯示 SKIPPED (skip this test) 在function上方用 @pytest.mark.skip(&amp;quot;skip this test&amp;quot;) 裝飾器也可以達成上述結果 也可以用 skip_if，判斷某種情況下才需要跑此test function，@pytest.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Serious-Python note - 4. Handling Timestamps and Time Zones</title>

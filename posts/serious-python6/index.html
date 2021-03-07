@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Serious-Python note - 4. Handling Timestamps and Time Zones – MarkWeng</title>
+    <title>Serious-Python note - 6. Unit Testing – MarkWeng</title>
     
 
 
@@ -556,7 +556,7 @@
     
     var baseurl = JSON.parse("\"https://mark-weng.com\"");
     
-    var permalink = JSON.parse("\"https://mark-weng.com/posts/serious-python4/\"");
+    var permalink = JSON.parse("\"https://mark-weng.com/posts/serious-python6/\"");
     
     var langprefix = JSON.parse("\"\"");
     var searchResults = null;
@@ -1221,24 +1221,24 @@
 
 
     
-<meta name="description" content="Serious-Python 讀書筆記(4)" />
+<meta name="description" content="Serious-Python 讀書筆記(6)" />
 
 
 <meta name="keywords" content="python">
 
-<meta name="created" content="2021-03-01T00:00:00&#43;0000">
-<meta name="modified" content="2021-03-01T00:00:00&#43;0000">
-<meta property="article:published_time" content="2021-03-01T00:00:00&#43;0000">
+<meta name="created" content="2021-03-07T00:00:00&#43;0000">
+<meta name="modified" content="2021-03-07T00:00:00&#43;0000">
+<meta property="article:published_time" content="2021-03-07T00:00:00&#43;0000">
 
 <meta name="author" content="Mark">
-<meta property="article:author" content="https://mark-weng.com/posts/serious-python4/@Mark">
+<meta property="article:author" content="https://mark-weng.com/posts/serious-python6/@Mark">
 
 
 <meta property="og:site_name" content="MarkWeng">
-<meta property="og:title" content="Serious-Python note - 4. Handling Timestamps and Time Zones">
-<meta property="og:url" content="https://mark-weng.com/posts/serious-python4/">
+<meta property="og:title" content="Serious-Python note - 6. Unit Testing">
+<meta property="og:url" content="https://mark-weng.com/posts/serious-python6/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="Serious-Python 讀書筆記(4)">
+<meta property="og:description" content="Serious-Python 讀書筆記(6)">
 
 <meta name="generator" content="Hugo 0.74.3" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1249,7 +1249,7 @@
 
 <meta name="apple-mobile-web-app-status-bar-style" content="#fff">
 
-<link rel="canonical" href="https://mark-weng.com/posts/serious-python4/">
+<link rel="canonical" href="https://mark-weng.com/posts/serious-python6/">
 
 <link rel="manifest" href="/manifest.json">
 
@@ -1263,11 +1263,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Serious-Python note - 4. Handling Timestamps and Time Zones",
-    "datePublished": "2021-03-01T00:00:00Z",
-    "dateModified": "2021-03-01T00:00:00Z",
-    "url" : "https://mark-weng.com/posts/serious-python4/",
-    "description": "Serious-Python 讀書筆記(4)",
+    "headline": "Serious-Python note - 6. Unit Testing",
+    "datePublished": "2021-03-07T00:00:00Z",
+    "dateModified": "2021-03-07T00:00:00Z",
+    "url" : "https://mark-weng.com/posts/serious-python6/",
+    "description": "Serious-Python 讀書筆記(6)",
     "keywords": ["python"],
     "author": {
       "@type": "Person",
@@ -1466,7 +1466,7 @@ if (!doNotTrack) {
   
   <li  class="is-active" >
     
-      <span>Serious-Python note - 4. Handling Timestamps and Time Zones</span>
+      <span>Serious-Python note - 6. Unit Testing</span>
     
   </li>
   
@@ -1478,13 +1478,13 @@ if (!doNotTrack) {
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Serious-Python note - 4. Handling Timestamps and Time Zones</h2>
+    <h2 class="single__title" data-ani="true">Serious-Python note - 6. Unit Testing</h2>
     <div class="single__meta">
       
 <div class="single__infos">
-  <time class="single__info" title="Written At">📅&nbsp;Mar 1, 2021 </time>
+  <time class="single__info" title="Written At">📅&nbsp;Mar 7, 2021 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1514,32 +1514,164 @@ if (!doNotTrack) {
   <div class="expand__content expand__content--toc">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#the-problem-of-missing-time-zones">The Problem of Missing Time Zones</a></li>
-    <li><a href="#building-default-datetime-objects">Building Default datetime Objects</a></li>
-    <li><a href="#time-zoneaware-timestamps-with-dateutil">Time Zone–Aware Timestamps with dateutil</a></li>
-    <li><a href="#serializing-time-zoneaware-datetime-objects">Serializing Time Zone–Aware datetime Objects</a></li>
+    <li><a href="#the-basics-of-testing">The Basics of Testing</a>
+      <ul>
+        <li><a href="#some-simple-tests">Some Simple Tests</a></li>
+        <li><a href="#skipping-tests">Skipping Tests</a></li>
+        <li><a href="#running-particular-tests">Running Particular Tests</a></li>
+        <li><a href="#running-tests-in-parallel">Running Tests in Parallel</a></li>
+        <li><a href="#creating-objects-used-in-tests-with-fixtures">Creating Objects Used in Tests with Fixtures</a></li>
+        <li><a href="#running-test-scenarios">Running Test Scenarios</a></li>
+        <li><a href="#controlled-tests-using-mocking">Controlled Tests Using Mocking</a></li>
+        <li><a href="#revealing-untested-code-with-coverage">Revealing Untested Code with coverage</a></li>
+      </ul>
+    </li>
+    <li><a href="#virtual-environments">Virtual Environments</a>
+      <ul>
+        <li><a href="#setting-up-a-virtual-environment">Setting Up a Virtual Environment</a></li>
+        <li><a href="#using-virtualenv-with-tox">Using virtualenv with tox</a></li>
+        <li><a href="#testing-policy">Testing Policy</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
   </div>
 </div>
 
-      <p>Time zone其實是一個非常複雜的問題，不單單只是UTC +- 12 hours而已呀，這章就來好好探討這個問題。</p>
-<h2 id="the-problem-of-missing-time-zones">The Problem of Missing Time Zones</h2>
+      <p>寫code如果沒有test的話，基本上是沒有用，因為沒有辦法證明它是有效的。</p>
+<h2 id="the-basics-of-testing">The Basics of Testing</h2>
+<p>在python中寫test與跑test是非常簡單的，並沒有侵入與破壞性，而test會大大的幫助你和其他開發者維護你的專案，接下來就會介紹基本的testing觀念。</p>
+<h3 id="some-simple-tests">Some Simple Tests</h3>
 <ul>
-<li>當timestamp沒有time zone資訊，那就等於沒有用，因為無法得知確切可以比較的時間。</li>
-<li>在把timestamp儲存起來的時候也要特別小心，因為當times zone不同時，轉換出來的時間也不同，接下來會詳細說明。</li>
-<li>python 提供了 <code>datetime.datetime</code> 可以存放 時間與日期，精度至微秒(ms)，但可惜的是，這個object都沒有提供timezone的資訊。</li>
+<li>把test放在submodule中</li>
+<li>讓test中的階層模仿主要module的階層，可以更好的維護tests。 (如 <em>mylib/foobar.py</em> 的test就會放在 * mylib/tests/test_foobar.py.*中)</li>
+<li>最簡單的test就像下面的function，單純執行 <code>test_true()</code>就好。</li>
 </ul>
-<h2 id="building-default-datetime-objects">Building Default datetime Objects</h2>
-<ul>
-<li>如果想找目前 UTC region 的日期與時間，可以用 <code> datetime.datetime.utcnow()</code> ，想找在目前機器上的日期與時間可以用 <code>datetime.datetime.now()</code></li>
-<li>但沒有time zone aware真的是不太好用，接下來討論如何加上 time zone。</li>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test_true</span><span class="p">():</span>
+     <span class="k">assert</span> <span class="bp">True</span>
+    
+<span class="n">test_true</span><span class="p">()</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>當然如果這樣一個一個執行test會非常的痛苦，可以使用 <em>pytest</em>這個module (需要pip install) ，它會幫你執行所有以 <code>test_</code> 開頭的function。 <code>pytest -v test_true.py</code> ，全部通過的話就會顯示 PASSED，有沒˙通過的話，就會把沒通過的部分顯示出來。</li>
+<li>pytest好用的關鍵是，當test越來越複雜時，它顯示出來的資訊可以幫助我們很好理解test fail的原因。</li>
 </ul>
-<h2 id="time-zoneaware-timestamps-with-dateutil">Time Zone–Aware Timestamps with dateutil</h2>
+<h3 id="skipping-tests">Skipping Tests</h3>
 <ul>
-<li>雖然datetime.datetime object沒有timezone資訊，難道就要自己開發自己的datetime object了嗎，其實不用，這邊介紹一個module是 <code>dateutil</code> 的 <code>tz</code>，可以進到os系統層面找到系統的timezone。</li>
-<li>需要 <code> pip install python-dateutil</code> ，然後 <code>from dateutil import tz</code></li>
-<li><code>tz.gettz(&lt;地點可由/etc/timezone得知，沒給的話會回傳 tzlocal()&gt;)</code> 就會回傳一個time zone object，我們可以利用這個object來填入 datetime的tzinfo</li>
+<li>有時候有些test想要跳過，pytest 也有提供幾個方式
+<ul>
+<li>在function中 <code> pytest.skip(&quot;skip this test&quot;)</code> ，跑test時就會顯示 <em>SKIPPED (skip this test)</em></li>
+<li>在function上方用 <code>@pytest.mark.skip(&quot;skip this test&quot;)</code> 裝飾器也可以達成上述結果</li>
+<li>也可以用 <strong>skip_if</strong>，判斷某種情況下才需要跑此test function，<code>@pytest.mark.skipif(&lt;condition&gt;, reason=&quot;if condition then skip this test&quot;)</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="running-particular-tests">Running Particular Tests</h3>
+<ul>
+<li>pytest 在CLI中，可以接收檔案或是資料夾當作參數，若接收資料夾的話會對跑資料夾內所有符合 *test_*.py* 的檔案跑Test。</li>
+<li>若是在檔案後面再放 <code>-k function</code> ，就可以限制只跑哪一個test function。</li>
+<li>也可以幫 test 限定某些name scope，在function上用 <code>@pytest.mark.&lt;scope name&gt;</code>，在CLI上給定參數 <code>-m &lt;scope name&gt;</code> ，就會只跑給定name的test。</li>
+<li><code>-m</code> 後面是可以接各種operator的(and, or, not)。 ex: 加上 <code>&quot;not &lt;scope name&gt;&quot;</code> 也可以跑不是scope name的test。</li>
+</ul>
+<h3 id="running-tests-in-parallel">Running Tests in Parallel</h3>
+<ul>
+<li>用 <code>pytest-xdist</code> (需 pip install) ，可以用 pytest 代 <code>-n &lt;number&gt;</code> 來用 <number> 個CPU運算tests。</li>
+</ul>
+<h3 id="creating-objects-used-in-tests-with-fixtures">Creating Objects Used in Tests with Fixtures</h3>
+<ul>
+<li>有時候test需要做一些前置作業(object initial, temp file creation&hellip;)，<em>pytest</em>提供了<em>fixture</em>  裝飾器 <code>@pytest.fixture</code>，這個裝飾器下的function1需要return某個object，要使用function1的return值的話，就把function1當作自己的參數之一，範例如下。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+
+
+<span class="n">c1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&#34;Tesla&#34;</span><span class="p">)</span>
+
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">car</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&#34;Tesla&#34;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">test_car_name</span><span class="p">(</span><span class="n">car</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">car</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&#34;Tesla&#34;</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>如果fixture裡面是DB，需要執行完test馬上關閉呢? 可以用 <code>yield</code> 範例如下</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="nd">@pytest.fixture</span>
+<span class="k">def</span> <span class="nf">database</span><span class="p">():</span>
+    <span class="n">db</span><span class="o">=&lt;</span><span class="n">database</span> <span class="n">connection</span><span class="o">&gt;</span>
+    <span class="k">yield</span> <span class="n">db</span>
+    <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">test_insert</span><span class="p">(</span><span class="n">database</span><span class="p">):</span>
+    <span class="n">database</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p>如果有很多個test都需要用到db，但只想開關一次呢? 可以加入 <code>scope=&quot;module&quot;</code> 參數 -&gt;<code>@pytest.fixture(scope=&quot;module&quot;)</code> 。</p>
+</li>
+<li>
+<p>那如果不需要return db參數的話呢，可能單純是改變某個背景參數，但可以用 <code>autouse=True</code> -&gt; <code>@pytest.fixture(autouse=True)</code> 。</p>
+</li>
+</ul>
+<h3 id="running-test-scenarios">Running Test Scenarios</h3>
+<ul>
+<li>如果有很多種情境，但是call的方式是一樣的，可以使用 <em>parameterized fixtures</em> 如下，實際上&quot;mysql&rdquo;, &ldquo;postgresql&quot;都有被call到。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1548,23 +1680,63 @@ if (!doNotTrack) {
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">datetime</span>
-<span class="kn">from</span> <span class="nn">dateutil</span> <span class="kn">import</span> <span class="n">tz</span>
-<span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
-<span class="n">tz</span> <span class="o">=</span> <span class="n">tz</span><span class="o">.</span><span class="n">gettz</span><span class="p">(</span><span class="s1">&#39;Asia/Taipei&#39;</span><span class="p">)</span>
-<span class="n">now</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">tzinfo</span><span class="o">=</span><span class="n">tz</span><span class="p">)</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;mysql&#34;</span><span class="p">,</span> <span class="s2">&#34;postgresql&#34;</span><span class="p">])</span>
+<span class="k">def</span> <span class="nf">database</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">myapp</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="k">yield</span> <span class="n">d</span>
+    <span class="n">d</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">test_insert</span><span class="p">(</span><span class="n">database</span><span class="p">):</span>
+    <span class="n">database</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s2">&#34;somedata&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="controlled-tests-using-mocking">Controlled Tests Using Mocking</h3>
+<ul>
+<li>Mock objects是用來在模仿真實app的行為，但是在可控且特定的方式，通常用mock的時機就是，雖然真實清況所要測的物件A的與其他物件B,C有互動，但利用mock B, C物件的行為，來達成獨立測試物件A的功能。 (ex: HTTP client，不太可能在測試的時候真的請別人打request過來)</li>
+<li>使用非常簡單， python3.3後已經進入標準的Library - unittest，因此需要<em>from unittest import mock</em></li>
+<li>基礎的使用方法</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">mock</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">m</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="n">m</span><span class="o">.</span><span class="n">some_attribute</span> <span class="o">=</span> <span class="s2">&#34;hello&#34;</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">m</span><span class="o">.</span><span class="n">some_attribute</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="s1">&#39;hello&#39;</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>如果dateutil進去不你的os抓這個資料的話，可以用 <code>datetutil.zoneinfo</code> 來抓</li>
-<li>有的時候，系統不知道目前的time zone，就可以直接用 <code>datetutil.tz.gettz()</code> 來找出local的time zone，也可以用這個來替換 <code>tzinfo</code></li>
+<li>也可以動態的創造method，例如創造一個假的method，永遠都return 42，無論給定什麼參數。</li>
 </ul>
-<h2 id="serializing-time-zoneaware-datetime-objects">Serializing Time Zone–Aware datetime Objects</h2>
-<ul>
-<li>目前看到 datetime 物件回傳的都是 <code>datetime.datetime(2021, 2, 25, 22, 27, 59, 871981)</code> 這種資訊，但如果是不同語言透過HTTP REST API來call的話，應該要回傳一個格式化的資訊回去，可以使用 <code>isoformat</code> 這個method來做。</li>
-<li>以下開發了一個 utcnow 的function來做這件事，得確保包含 timezone資訊(+00:00 part)</li>
+<pre><code>&gt;&gt;&gt; from unittest import mock
+&gt;&gt;&gt; m = mock.Mock()
+&gt;&gt;&gt; m.method.return_value = 42
+&gt;&gt;&gt; m.method()
+42
+&gt;&gt;&gt; m.method(&quot;with&quot;, &quot;arguments&quot;)
+42
+</code></pre><ul>
+<li>也可以在method被呼叫的同時放入side_effect</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1580,22 +1752,224 @@ if (!doNotTrack) {
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">datetime</span>
-  <span class="n">fom</span> <span class="n">dateutil</span> <span class="kn">import</span> <span class="nn">tz</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">print_hello</span><span class="p">():</span>
+   <span class="o">...</span><span class="p">:</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&#34;hello world&#34;</span><span class="p">)</span>
+   <span class="o">...</span><span class="p">:</span>     <span class="k">return</span> <span class="mi">43</span>
+   <span class="o">...</span><span class="p">:</span>
 
-  <span class="k">def</span> <span class="nf">utcnow</span><span class="p">():</span>
-      <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">(</span><span class="n">tz</span><span class="o">=</span><span class="n">tz</span><span class="o">.</span><span class="n">tzutc</span><span class="p">())</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">9</span><span class="p">]:</span> <span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="n">print_hello</span>
 
-  <span class="k">print</span><span class="p">(</span><span class="n">utcnow</span><span class="p">())</span>
-  <span class="c1">#  datetime.datetime(2021, 2, 26, 3, 16, 26, 323306, tzinfo=tzutc())</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">utcnow</span><span class="p">()</span><span class="o">.</span><span class="n">isoformat</span><span class="p">())</span>
-  <span class="c1"># &#39;2021-02-26T03:17:05.038592+00:00&#39;</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="p">()</span>
+<span class="n">hello</span> <span class="n">world</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">10</span><span class="p">]:</span> <span class="mi">43</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>那如果有iso format要怎麼轉回來呢? 需要先  <code>pip install iso8601</code> ，可以用  <code> iso8601.parse_date(&lt;iso format&gt;)</code></li>
+<li>那也可以計算method到底被call幾次</li>
 </ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="o">.</span><span class="n">call_count</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">11</span><span class="p">]:</span> <span class="mi">2</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>如果從mock創造一個接收參數的method，且想確認mock method的參數，可用 <code> assert_called_once_with()</code> ，參數不知道要代什麼的話可以用 <code>mock.ANY</code>。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">mock</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">Mock</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;mock.some_method()&#39;</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;26144272&#39;</span><span class="o">&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">mock</span><span class="o">.</span><span class="n">ANY</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">)</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+ <span class="n">File</span> <span class="s2">&#34;&lt;stdin&gt;&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+ <span class="n">File</span> <span class="s2">&#34;/usr/lib/python2.7/dist-packages/mock.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">846</span><span class="p">,</span> <span class="ow">in</span> <span class="n">assert_called_</span>
+<span class="n">once_with</span>
+ <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">assert_called_with</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+ <span class="n">File</span> <span class="s2">&#34;/usr/lib/python2.7/dist-packages/mock.py&#34;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">835</span><span class="p">,</span> <span class="ow">in</span> <span class="n">assert_called_</span>
+<span class="k">with</span>
+ <span class="k">raise</span> <span class="ne">AssertionError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="ne">AssertionError</span><span class="p">:</span> <span class="n">Expected</span> <span class="n">call</span><span class="p">:</span> <span class="n">some_method</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">)</span>
+<span class="n">Actual</span> <span class="n">call</span><span class="p">:</span> <span class="n">some_method</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
 
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>mock這個東西到底怎麼用在test裡面呢，就是拿來代替某個function被call的時後的回傳值，以下就示範一個最基本的方式</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">In</span> <span class="p">[</span><span class="mi">35</span><span class="p">]:</span> <span class="k">def</span> <span class="nf">fake_os_unlink</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="o">...</span><span class="p">:</span>     <span class="k">print</span><span class="p">(</span><span class="s2">&#34;fake fake&#34;</span><span class="p">)</span>
+    <span class="o">...</span><span class="p">:</span>
+
+<span class="n">In</span> <span class="p">[</span><span class="mi">36</span><span class="p">]:</span> <span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;os.unlink&#39;</span><span class="p">,</span> <span class="n">fake_os_unlink</span><span class="p">):</span>
+    <span class="o">...</span><span class="p">:</span>     <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s2">&#34;C:/&#34;</span><span class="p">)</span>
+    <span class="o">...</span><span class="p">:</span>
+<span class="n">fake</span> <span class="n">fake</span>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>也可以用裝飾器 <code>@mock.patch('&lt;function&gt;', &lt;mock_function&gt;)</code> 放在測試的function上來mock某個東西，非常的簡潔明瞭</li>
+</ul>
+<h3 id="revealing-untested-code-with-coverage">Revealing Untested Code with coverage</h3>
+<ul>
+<li>測試的覆蓋率也是專案很重要的指標</li>
+<li>利用 <em>coverage</em> 這個Library (需要 pip install)，配合<em>pytest</em>在CLI打上 <code>pytest --cov=&lt;code file&gt; &lt;test file&gt;</code></li>
+</ul>
+<h2 id="virtual-environments">Virtual Environments</h2>
+<ul>
+<li>前幾章有說到使用external library會有的問題
+<ul>
+<li>系統有些library沒裝到</li>
+<li>系統有裝library但版本不對</li>
+<li>有時候系統需要兩個版本的library來給兩個application使用</li>
+</ul>
+</li>
+<li>這時候就需要一個資料夾(或稱為環境)，獨立外部環境，且其中已經安裝好自己所有需要的library，稱為虛擬環境 (Virtual Environments)</li>
+</ul>
+<h3 id="setting-up-a-virtual-environment">Setting Up a Virtual Environment</h3>
+<ul>
+<li>作者推薦使用 <em>virtualenv</em> 這個套件 (不過其實現在比較常用的是conda)，需要先 pip install</li>
+<li>安裝完後非常單純地用 <code> python3 -m venv myvenv</code> 就會創造出一個myvenv的虛擬環境出來</li>
+<li>簡單看一下 myvenv資料夾裡面，有 <em>bin</em>,<em>include</em>, <em>lib</em>, <em>pyvenv.cfg</em>四個資料夾，而在虛擬環境中用pip安裝的套件都會存在<em>myvene/lib</em>中。</li>
+<li>啟動虛擬環境 <code> (source) myvenv/bin/activate</code></li>
+<li>離開虛擬環境 <code>deactivate</code></li>
+<li>非常單純的連續技</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-basic" data-lang="basic"><span class="vg">virtualenv</span><span class="w"> </span><span class="vg">myappvenv</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">創造虛擬環境</span>
+<span class="vg">source</span><span class="w"> </span><span class="vg">myappvenv</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">activate</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">進入虛擬環境</span>
+<span class="vg">pip</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="o">-</span><span class="vg">r</span><span class="w"> </span><span class="vg">requirements</span><span class="o">.</span><span class="vg">txt</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">安裝所有套件</span>
+<span class="vg">deactivate</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">離開虛擬環境</span>
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="using-virtualenv-with-tox">Using virtualenv with tox</h3>
+<ul>
+<li>測試是跟環境與各套件的依賴性非常大的關聯，會不會有一種情況是，以為自己有測到，但其實忽略了某些關聯，這時候就需要直接用script來自動測試，確認這些環境與套件關聯，就是tox。</li>
+<li>安裝完tox後，需要在<em>setup.py</em>(當然是要已經建好的，因為第一個就會去call它) 的旁邊新增一個 <em>tox.ini</em> 的檔案。<br />
+-可以直接run <code>tox</code> 這個指令， tox 會創造一個用預設的python環境在.tox/python創造虛擬環境，且用<em>setup.py</em>安裝好所需的套件。</li>
+<li><em>tox.ini</em>裡面可以做許多的動作，例如執行commend</li>
+</ul>
+<pre><code>[testenv]
+deps=pytest
+commands=pytest
+</code></pre><ul>
+<li>
+<p>當然如果要執行pytest，一定要有pytest library，加上deps可以方便檢查一下library安裝。</p>
+</li>
+<li>
+<p>如果想要同時測試各種python版本，可以加上</p>
+</li>
+</ul>
+<pre><code>[tox]
+envlist=py35,py36,pypy
+</code></pre><ul>
+<li>也可以加上integration test 像是flake8</li>
+</ul>
+<pre><code>[tox]
+envlist=py35,py36,pypy,pep8
+[testenv]
+deps=pytest
+commands=pytest
+[testenv:pep8]
+deps=flake8
+commands=flake8
+</code></pre><h3 id="testing-policy">Testing Policy</h3>
+<ul>
+<li>既然都做到script自動測試了，不如就直接要push的時候就測吧，如果是使用Github的話，作者推薦<em>Travis CI</em>，只要定義像是以下的yaml檔，就能成功執行自動化測試瞜。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">language</span><span class="p">:</span><span class="w"> </span>python<span class="w">
+</span><span class="w"></span><span class="k">python</span><span class="p">:</span><span class="w">
+</span><span class="w"> </span>- <span class="s2">&#34;2.7&#34;</span><span class="w">
+</span><span class="w"> </span>- <span class="s2">&#34;3.6&#34;</span><span class="w">
+</span><span class="w"></span><span class="c"># command to install dependencies</span><span class="w">
+</span><span class="w"></span><span class="k">install</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;pip install -r requirements.txt --use-mirrors&#34;</span><span class="w">
+</span><span class="w"></span><span class="c"># command to run tests</span><span class="w">
+</span><span class="w"></span><span class="k">script</span><span class="p">:</span><span class="w"> </span>pytest<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>要跟tox一起使用的話，還可以安裝 <em>tox-travis</em>，把yml檔改一下。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">sudo</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="w"></span><span class="k">language</span><span class="p">:</span><span class="w"> </span>python<span class="w">
+</span><span class="w"></span><span class="k">python</span><span class="p">:</span><span class="w">
+</span><span class="w"> </span>- <span class="s2">&#34;2.7&#34;</span><span class="w">
+</span><span class="w"> </span>- <span class="s2">&#34;3.4&#34;</span><span class="w">
+</span><span class="w"></span><span class="k">install</span><span class="p">:</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>tox-travis<span class="w">
+</span><span class="w"></span><span class="k">script</span><span class="p">:</span><span class="w"> </span>tox<span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div>
     </article>
     
     <script>
@@ -1787,6 +2161,10 @@ if (!doNotTrack) {
     <ul class="related-ul">
         
         <li>
+          <a href="/posts/serious-python4/" class="related__link">Serious-Python note - 4. Handling Timestamps and Time Zones</a>
+        </li>
+        
+        <li>
           <a href="/posts/serious-python3/" class="related__link">Serious-Python note - 3. Documentation and Good API Practice</a>
         </li>
         
@@ -1802,10 +2180,6 @@ if (!doNotTrack) {
           <a href="/posts/serious-python0/" class="related__link">Serious-Python note - 0. introduction</a>
         </li>
         
-        <li>
-          <a href="/posts/python_fundamental/" class="related__link">python fundamental concept 基礎概念</a>
-        </li>
-        
     </ul>
     
   </section>
@@ -1813,21 +2187,14 @@ if (!doNotTrack) {
 <nav class="pagination-single">
   
     
-      <a href="https://mark-weng.com/posts/serious-python3/" class="pagination-single__left">
+      <a href="https://mark-weng.com/posts/serious-python4/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Serious-Python note - 3. Documentation and Good API Practice</div>      
+        <div class="pagination-single__left-title">Serious-Python note - 4. Handling Timestamps and Time Zones</div>      
       </a>
     
     <div class="grow"></div>
-    
-      <a href="https://mark-weng.com/posts/serious-python6/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Serious-Python note - 6. Unit Testing</div>
-        <div class="pagination-single__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
-        </div>
-      </a>
     
   
 </nav>
@@ -2958,10 +3325,25 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#the-problem-of-missing-time-zones">The Problem of Missing Time Zones</a></li>
-    <li><a href="#building-default-datetime-objects">Building Default datetime Objects</a></li>
-    <li><a href="#time-zoneaware-timestamps-with-dateutil">Time Zone–Aware Timestamps with dateutil</a></li>
-    <li><a href="#serializing-time-zoneaware-datetime-objects">Serializing Time Zone–Aware datetime Objects</a></li>
+    <li><a href="#the-basics-of-testing">The Basics of Testing</a>
+      <ul>
+        <li><a href="#some-simple-tests">Some Simple Tests</a></li>
+        <li><a href="#skipping-tests">Skipping Tests</a></li>
+        <li><a href="#running-particular-tests">Running Particular Tests</a></li>
+        <li><a href="#running-tests-in-parallel">Running Tests in Parallel</a></li>
+        <li><a href="#creating-objects-used-in-tests-with-fixtures">Creating Objects Used in Tests with Fixtures</a></li>
+        <li><a href="#running-test-scenarios">Running Test Scenarios</a></li>
+        <li><a href="#controlled-tests-using-mocking">Controlled Tests Using Mocking</a></li>
+        <li><a href="#revealing-untested-code-with-coverage">Revealing Untested Code with coverage</a></li>
+      </ul>
+    </li>
+    <li><a href="#virtual-environments">Virtual Environments</a>
+      <ul>
+        <li><a href="#setting-up-a-virtual-environment">Setting Up a Virtual Environment</a></li>
+        <li><a href="#using-virtualenv-with-tox">Using virtualenv with tox</a></li>
+        <li><a href="#testing-policy">Testing Policy</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
         </div>
