@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sun, 07 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -42,6 +42,31 @@
         
       
 
+      
+      <item>
+        <title>Serious-Python note - 7. Methods and Decorators</title>
+        <link>https://mark-weng.com/posts/serious-python7/</link>
+        <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sun, 14 Mar 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python7/</guid>
+        <description>python 2.2的時候發表了 decorator的使用方式 classmethod()與classmethod()，後續也繼續support了許多decotators的開發，但仍有很多人不太清楚背後的運作。 這個章節首先探討decorator，接著來討論使用它來產生static, class, method，最後來講一下 super()這個function
+Decorators and When to Use Them  Decorator是一個拿別的function來當作引數的function，且替換或調整丟進來的function成為一個新的funciton。 最主要的的使用方式是精簡通用的code (需要在前或後或在多個function中間呼叫的)  Creating Decorators  最簡單的decorator就是 identity() function，就是單純回傳原本的funciton。  1 2 3 4 5 6  def identity(): return f @identity def foo(): return &amp;#39;bar&amp;#39;    上述的code其實等同於  1 2 3 4  def foo(): return &amp;#39;bar&amp;#39; foo = identity(foo)    雖然看起來沒什麼用，但是它可行，讓我們來看看另一個好用的例子  1 2 3 4 5 6 7 8 9 10 11 12  _functions = {} def register(f): global _functions _functions[f.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Serious-Python note - 6. Unit Testing</title>
