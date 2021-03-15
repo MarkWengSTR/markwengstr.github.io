@@ -14,13 +14,38 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Serious-Python note - 8. functional programming</title>
+        <link>https://mark-weng.com/posts/serious-python8/</link>
+        <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 15 Mar 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/serious-python8/</guid>
+        <description>來討論一下在python中如何利用functional programming來寫更簡潔有效的code。
+Creating Pure Functions  當想把code寫成functional style時，function就要盡量設計成沒有side effect。也就是並不會改變送進去的參數的state，比較一下以下兩個case  1 2 3 4 5 6 7  # state change def remove_last_item(mylist): mylist.pop(-1) # pure function def remove_last_item(mylist): return mylist[:-1] # This returns a copy of mylist    實際上functional style 的好處  Modularity: 其實會迫使我們在寫的時候，將問題拆解成好幾個小的問題的function，會非常自然的讓code可以重用 Brevity: 通常會比較簡潔 Concurrency: 因為不會共用state，併發的時候就不會互相影響 Testability : test在functional program非常的簡單， 因為不用考慮到function中的會不會有其他影響，單純準備輸入，測試輸出，而且每次的結果都會一樣。    Generators  generator 是個行為像是 iteractor的object，會一直回傳每一次call next() 的結果，直到 StopIteration 錯誤產生。 最早引進在PEP255，簡單的在object中實現 iterator protocol，雖然在functional programming中不是必要，但這是實務上非常好寫也方便除錯的方式。 要創造 Generator，簡單的在function中加上 yield statement，當執行到yield ，function會回傳東西像是執行 return 一樣，但是有一個顯著的差別，解釋器會把這個stack reference存起來，直到執行到*next()*的時候再去call它。 當function被執行時，整串function執行的鏈稱為stack (function的呼叫是一個一的堆積起來的)，當function被執行後，它就被這個stack刪除，且回傳執行後的值，但在generator中，function 執行後回傳的不是值而是yield，python會把這個function的狀態存起來稱為 stack reference ，而在iteration中的下一個generator要被呼叫的時候才會執行。  Creating a Generator  來實際做一個看看吧  1 2 3 4 5 6 7 8 9 10 11 12  def mygenerator(): yield 1 yield 2 yield &amp;#39;a&amp;#39; print(mygenerator()) # &amp;lt;generator object mygenerator at 0x000001ECF7FF0820&amp;gt; g = mygenerator() print(next(g)) # 1 print(next(g)) # 2 print(next(g)) # &amp;#39;a&amp;#39; print(next(g)) # StopIteration    那為什麼要開發這個方法呢，讓我們思考一個例子 &amp;ldquo;在 1 - 10,000,000 中 找到符合 50,000的數字&amp;rdquo; ，聽起來很簡單，但想想看光要產生 1 - 10,000,000的list，可能就會耗盡記憶體  1 2 3 4  for value in range(100000000): if value == 5000: print(&amp;#34;Found it&amp;#34;) break    python3中，*range()*會回傳generator，所以可以執行上述程式，不會出錯摟，因為它會動態的產生需要的list中的整數值，generator可以讓我們處理大量的資料集，且節省記憶體。 ( range是generator，但不是iterator，不可以直接call next喔，這篇寫得蠻詳細的 https://home.</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Serious-Python note - 7. Methods and Decorators</title>
