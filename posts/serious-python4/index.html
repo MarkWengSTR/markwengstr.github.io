@@ -1221,7 +1221,7 @@
 
 
     
-<meta name="description" content="Serious-Python 讀書筆記(4)" />
+<meta name="description" content="Serious-Python 讀書筆記(4) - Time zone其實是一個非常複雜的問題，不單單只是UTC &#43;- 12 hours而已呀，這章就來好好探討這個問題。" />
 
 
 <meta name="keywords" content="python">
@@ -1238,7 +1238,7 @@
 <meta property="og:title" content="Serious-Python note - 4. Handling Timestamps and Time Zones">
 <meta property="og:url" content="https://mark-weng.com/posts/serious-python4/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="Serious-Python 讀書筆記(4)">
+<meta property="og:description" content="Serious-Python 讀書筆記(4) - Time zone其實是一個非常複雜的問題，不單單只是UTC &#43;- 12 hours而已呀，這章就來好好探討這個問題。">
 
 <meta name="generator" content="Hugo 0.74.3" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1267,7 +1267,7 @@
     "datePublished": "2021-03-01T00:00:00Z",
     "dateModified": "2021-03-01T00:00:00Z",
     "url" : "https://mark-weng.com/posts/serious-python4/",
-    "description": "Serious-Python 讀書筆記(4)",
+    "description": "Serious-Python 讀書筆記(4) - Time zone其實是一個非常複雜的問題，不單單只是UTC +- 12 hours而已呀，這章就來好好探討這個問題。",
     "keywords": ["python"],
     "author": {
       "@type": "Person",
@@ -1523,8 +1523,7 @@ if (!doNotTrack) {
   </div>
 </div>
 
-      <p>Time zone其實是一個非常複雜的問題，不單單只是UTC +- 12 hours而已呀，這章就來好好探討這個問題。</p>
-<h2 id="the-problem-of-missing-time-zones">The Problem of Missing Time Zones</h2>
+      <h2 id="the-problem-of-missing-time-zones">The Problem of Missing Time Zones</h2>
 <ul>
 <li>當timestamp沒有time zone資訊，那就等於沒有用，因為無法得知確切可以比較的時間。</li>
 <li>在把timestamp儲存起來的時候也要特別小心，因為當times zone不同時，轉換出來的時間也不同，接下來會詳細說明。</li>
@@ -1822,8 +1821,8 @@ if (!doNotTrack) {
     
     <div class="grow"></div>
     
-      <a href="https://mark-weng.com/posts/serious-python6/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Serious-Python note - 6. Unit Testing</div>
+      <a href="https://mark-weng.com/posts/serious-python5/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Serious-Python note - 5. Distributing Your Software (順便distributing我的project &#34;anmotordesign&#34; 到pypi上)</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
