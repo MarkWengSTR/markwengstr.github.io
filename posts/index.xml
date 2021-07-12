@@ -14,13 +14,71 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     
 
+      
+      <item>
+        <title>Wordpress plugin development by Vue.js (vue-cli setting, hot reload)</title>
+        <link>https://mark-weng.com/posts/vue-wordpress/</link>
+        <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 05 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/vue-wordpress/</guid>
+        <description>前言 ​	最近也剛好有朋友有個wordpress後台功能擴增的需求，一個小型的商品ERP，由於在wordpress裡面，因此直接使用wordpress當後端API而前端就用Vue，練一下這兩個這幾年非常夯的framework。
+Use Vue-cli in Wordpress admin page 以為Vue跟wordpress都是很多人在使用的工具，應該很好找學習資源，個別找是真的蠻多資源沒錯，但是兩個加在一起的教學就非常的少，不然就是非常複雜，沒有比較簡單能上手的工具，找了很久之後終於找到了這篇文章， 需要做一些設定，之後再使用vue-cli在wordpress裡面hot-reload開發Vue。
+專案連結在此。
+Wordpress wp_rest_controller 後端部分因為已經習慣使用model與controller的方式開發，還好wordpress也提供了wp_rest_controller的工具，讓我們可以做好router與controller的部分，然後再把跟db溝通的部分拆出一個repository來，為了讓以後開發能夠有基礎可以參考，我製作了一個簡單的CURD的branch，把前端Vue與後端wordpress串起來。
+這個專案也有將常用的vue-boostrap, fontawsone裝到切開的branch供以後的專案使用，歡迎有興趣使用Vue開發wordpress plugin的朋友們一起討論~~。</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>vue</category>
+            
+          
+            
+              <category>wordpress</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>現實總是變化多端，因此在原則下保持最大的彈性是重要的</title>
+        <link>https://mark-weng.com/posts/mind_renew/</link>
+        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sun, 04 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/mind_renew/</guid>
+        <description>現實總是變化多端 好久寫文章了，最近做的東西離馬達設計的開發越來越遠，有時真是有點徬徨，感覺跟當初回台南的預期不太相符，慢慢地體會到現實總是無法掌控的，畢竟世界不是繞著自己旋轉，不過在持續學習的原則下保持彈性是好的。工作上也使用了一些以前沒有接觸過的工具，還蠻有趣的像是elasticsearch (ELK)的架設、logstash設定、各種ES的API操作&amp;hellip;等等，之後也可以來寫一下。
+上帝的意念高過我們的意念 耶穌升天後，進入了初代教會使徒的時代，各種神蹟彰顯，教會人數倍增，弟兄姊妹和平相處，凡物共用，聖靈時常充滿門徒，我想如果我是當時的門徒，一定覺得初代教會的狀態根本就是上帝給門徒們最終的命定，一定會持續擴張，用這樣的方式把福音傳到全世界。 因為傳福音的目標很明顯，還會自己找上門，且各種徵兆都象徵上帝的同在，但這樣美好的景況卻在司提凡被處死之後瓦解，門徒逃到四處各地。
+而門徒逃到各地之後，逃到哪裡，就把福音傳到哪裡，保羅也在這時候被興起。 仔細想想這也許才是上帝要門徒做的，如果還是維持在原本初代教會的狀態，也許上帝很難讓保羅興起，福音需要很久才能傳的更廣，心意更新而變化，才能查驗何為神良善、純全、可喜悅的旨意，所以換個角度想，也許上帝最終要我走的方向是個更全面的開發者，而不單單只是開發馬達設計工具，持續的學習與進步才是最重要的。</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mindset</category>
+            
+          
+        
+        
+        
+      </item>
       
       <item>
         <title>Serious-Python note - 8. functional programming</title>
