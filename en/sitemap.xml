@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://mark-weng.com/</loc>
-    <lastmod>2021-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -19,13 +19,18 @@
   
   <url>
     <loc>https://mark-weng.com/posts/</loc>
-    <lastmod>2021-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://mark-weng.com/tags/mindset#/</loc>
+    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/</loc>
-    <lastmod>2021-07-05T00:00:00+00:00</lastmod>
+    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -36,6 +41,11 @@
                 hreflang="en"
                 href="https://mark-weng.com/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://mark-weng.com/posts/work_exp1/</loc>
+    <lastmod>2021-11-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
