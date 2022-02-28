@@ -144,11 +144,6 @@
   </url>
   
   <url>
-    <loc>https://mark-weng.com/posts/python_fundamental/</loc>
-    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mark-weng.com/posts/motor_principle/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
@@ -161,6 +156,11 @@
   <url>
     <loc>https://mark-weng.com/posts/ansys_init/</loc>
     <lastmod>2020-07-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mark-weng.com/posts/python_fundamental/</loc>
+    <lastmod>2020-07-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>

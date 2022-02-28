@@ -29,7 +29,7 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Fri, 10 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/sicp_lec1a/</guid>
-        <description>SICP 1a - The Elements of Programming What is computer science  Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo; Method: 組成process的元素，而method的名稱應該要陳述出裡面的知識  Computer science 的特性  處理&amp;rdquo; 理想化的元件&amp;rdquo;: 因為我們對所有要組合在一起的 data 與 function都能完全的掌控， 因此在理想與現實之間是差不多的 (如果是電子或機械工程師 那可能會需要考慮很多真實世界的限制)。 一個工程中的 &amp;ldquo;抽象形式&amp;rdquo;: 因為不需考慮現實的限制  Computer science 的技術 - 控制複雜度  black-box abstraction: 將功能封裝起來，使用的人不需要知道裡面的技術，只要呼叫它，丟入值就會輸出結果，而使用者又可以拿這個功能再去組合成更多功能。  將細節隱藏 (用以構建更大型的盒子) 具有通用性 (generality)   Conventional interface: 如果系統裡的數據有許多不一樣的類型，計算的時候總不能混雜在一起，那怎麼辦呢?  Generic operations large-scale structure and modularity object-oriented programming operations on aggregate (流)   Metalinguistic Abstraction: 定義一個新語言 (用lisp做一個解析器來解析lisp)  black-box abstraction Example: Square root algorithm process of algorithm (find an approximation to x^0.</description>
+        <description>SICP 1a - The Elements of Programming What is computer science Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo; Method: 組成process的元素，而method的名稱應該要陳述出裡面的</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -53,18 +53,7 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Wed, 01 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/identity_of_objects/</guid>
-        <description>本文介紹 為计算机程序的构造和解释（Lec5b：计算对象) 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。
-定義最簡單的資料結構 首先討論，什麼是 最簡單的資料結構(data structure)，任何 object 的最小單位就是一個pair， 而如何組成pair呢。
-就要談到組成pair的方法，叫做 cons 。
-以下是 cons 的定義
-1 2 3  ;;對於任何的 x, y (car (cons x y)) = x (cdr (cons x y)) = y   簡單來說 (cons x y) 就是一個pair，也是最基本的資料結構。
-但其實上述定義並沒有闡述，到底cons是否有像人一樣的身份(identity)？
-未引入賦值 就上述的定義來說，其實是一種抽象，cons包含兩個參數，如果兩個cons包含的參數是一樣的，那這兩個cons就是一樣的。
-引入賦值後 上述定義就不完整了，因為如果我想修改兩個包含一樣參數cons的car，那兩個cons都同時會被我修改嗎？
-如果兩個cons代表的是數學，那其實沒差，就算是兩個一樣的 3/4，就還是3/4，變成同把兩個3/4變成1/4，反正就是1/4，並沒有所謂 身份 的區別，
-但物件導向的世界中，我們描述的是真實的世界，是有 身份 的，改變car可能就像是做變性手術一樣的。
-何謂身份 如何解釋以下這段code ?
-1  (def a (cons 1 2))   指的是在一個環境裡面，創造了一個名為 a 的 pair，這個pair裡面包含兩個指針一個指向1，一個指向2。</description>
+        <description>本文介紹 為计算机程序的构造和解释（Lec5b：计算对象) 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開</description>
         
         <dc:creator>Mark</dc:creator>
         

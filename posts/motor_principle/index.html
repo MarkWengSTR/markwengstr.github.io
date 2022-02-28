@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>淺談永磁馬達設計原理 – MarkWeng</title>
+    <title>淺談永磁馬達設計原理 (Surface Permanent Magnet Motor Design Fundamental) – MarkWeng</title>
     
 
 
@@ -1235,7 +1235,7 @@
 
 
 <meta property="og:site_name" content="MarkWeng">
-<meta property="og:title" content="淺談永磁馬達設計原理">
+<meta property="og:title" content="淺談永磁馬達設計原理 (Surface Permanent Magnet Motor Design Fundamental)">
 <meta property="og:url" content="https://mark-weng.com/posts/motor_principle/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="馬達是一種能讓 電能 轉換成 機械能 的元件，其中的各種原理其實非常簡單。">
@@ -1263,7 +1263,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "淺談永磁馬達設計原理",
+    "headline": "淺談永磁馬達設計原理 (Surface Permanent Magnet Motor Design Fundamental)",
     "datePublished": "2020-08-01T00:00:00Z",
     "dateModified": "2020-08-01T00:00:00Z",
     "url" : "https://mark-weng.com/posts/motor_principle/",
@@ -1466,7 +1466,7 @@ if (!doNotTrack) {
   
   <li  class="is-active" >
     
-      <span>淺談永磁馬達設計原理</span>
+      <span>淺談永磁馬達設計原理 (Surface Permanent Magnet Motor Design Fundamental)</span>
     
   </li>
   
@@ -1478,13 +1478,13 @@ if (!doNotTrack) {
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">淺談永磁馬達設計原理</h2>
+    <h2 class="single__title" data-ani="true">淺談永磁馬達設計原理 (Surface Permanent Magnet Motor Design Fundamental)</h2>
     <div class="single__meta">
       
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Aug 1, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;4&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1514,8 +1514,8 @@ if (!doNotTrack) {
   <div class="expand__content expand__content--toc">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#馬達-電動機-是什麼">馬達 (電動機) 是什麼?</a></li>
-    <li><a href="#馬達設計-是什麼">馬達設計 是什麼?</a></li>
+    <li><a href="#馬達-電動機-是什麼-whats-electric-machine">馬達 (電動機) 是什麼? (What&rsquo;s electric machine)</a></li>
+    <li><a href="#馬達設計-是什麼-what-is-motor-design">馬達設計 是什麼? (What is motor design)</a></li>
     <li><a href="#勞倫茲力-lorentz-force">勞倫茲力 (Lorentz force)</a>
       <ul>
         <li>
@@ -1526,27 +1526,39 @@ if (!doNotTrack) {
         </li>
       </ul>
     </li>
-    <li><a href="#馬達參數-kt-ke">馬達參數 Kt, Ke</a></li>
-    <li><a href="#馬達設計重點參數">馬達設計重點參數</a></li>
+    <li><a href="#馬達參數-motor-constant-kt-ke">馬達參數 (motor constant) Kt, Ke</a></li>
+    <li><a href="#馬達設計重點參數-parameters-of-motor-design">馬達設計重點參數 (Parameters of motor design)</a></li>
   </ul>
 </nav>
   </div>
 </div>
 
-      <h2 id="馬達-電動機-是什麼">馬達 (電動機) 是什麼?</h2>
+      <h2 id="馬達-電動機-是什麼-whats-electric-machine">馬達 (電動機) 是什麼? (What&rsquo;s electric machine)</h2>
 <p>最近可以看到電動車在路上到處跑了，雖然目前還算是有錢人的玩具，但未來普及應是不在話下，而電動車的動力來源，就是 <strong>馬達</strong> 。 當然不只電動車用到馬達，其實日常生活中到處都是馬達，筆電風扇、洗衣機、機器手臂&hellip;等，任何要讓機械動起來的源頭都是馬達。</p>
 <p>而馬達是什麼? <a href="https://zh.wikipedia.org/wiki/%E7%94%B5%E5%8A%A8%E6%9C%BA">維基百科</a> 裡面提到，最重要的原理就是 <strong>電能 -&gt; 機械能</strong> ，描述的更準確一點，其實是  <strong>電能 -&gt; 磁能 -&gt; 機械能</strong>  。</p>
-<h2 id="馬達設計-是什麼">馬達設計 是什麼?</h2>
+<hr />
+<p>Recently, electric vehicles can be seen running everywhere on the road. Although they are still considered toys for rich people, their popularity in the future should not be a problem. The power source of electric vehicles is the <strong>motor</strong>. Of course, motors are not only used in electric vehicles. In fact, there are motors everywhere in our daily life, such as laptop fans, washing machines, robotic arms, etc. The source of any machine that needs to be moved is the motor.</p>
+<p>What is a motor? <a href="https://zh.wikipedia.org/wiki/Motor">Wikipedia</a> It is mentioned that the most important principle is <strong>electrical energy -&gt; mechanical energy</strong>, the description is more accurate, in fact is <strong>electrical energy-&gt;magnetic energy-&gt;mechanical energy</strong>.</p>
+<h2 id="馬達設計-是什麼-what-is-motor-design">馬達設計 是什麼? (What is motor design)</h2>
 <p>馬達設計，就是設計 <strong>電能 -&gt; 磁能 -&gt; 機械能</strong>  中間的 <strong>磁能</strong>， 讓電能 <strong>有效率</strong> 的轉換為機械能。</p>
+<p>Motor design is to design <strong>electrical energy -&gt; magnetic energy -&gt; mechanical energy</strong> in the middle of <strong>magnetic energy</strong>, so that electrical energy can be converted into mechanical energy <strong>efficiently</strong>.</p>
 <h2 id="勞倫茲力-lorentz-force">勞倫茲力 (Lorentz force)</h2>
 <p><a href="https://zh.wikipedia.org/wiki/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8A%9B">勞倫茲力 (Lorentz force)</a>  :  <strong>F (force density) =  $\sigma$( charge density) E (electric field)+ J (current density) x B (magnetic density)</strong></p>
 <p>先來談談電磁力的源頭 - <strong>勞倫茲力</strong> ，為了讓大家不要看到這邊就關掉，不考慮第一項電場力，我們可以回想一下高中一個很簡單的公式，長直導體電流在磁場裡的作用力 - <strong>f (電磁作用力) = i (電流) * l (磁場中的導線長度) * B (磁通密度) * sin (垂直分量)</strong> ，其實就是勞倫茲力計算得到的。</p>
+<p>Let&rsquo;s talk about the source of electromagnetic force first - <strong>Lorentz force</strong>, in order to let everyone not to turn it off now, regardless of the first electric field force, we can recall a very simple formula in high school, long The force of a straight conductor current in a magnetic field - <strong>f (electromagnetic force) = i (current) * l (wire length in the magnetic field) * B (magnetic flux density) * sin (perpendicular component)</strong> , which is actually Lorentz force is calculated.</p>
 <h4 id="換算馬達轉矩-torque">換算馬達轉矩 Torque</h4>
 <p>如果是旋轉電機的話，<strong>f = ilB</strong> 會怎麼樣變化呢 ?</p>
 <ul>
 <li>單極的電磁轉矩： 首先加上轉軸距離 (轉子半徑) <strong>r</strong> -&gt; <strong>T = ilBr</strong></li>
-<li>NS極：馬達裡的磁鐵有NS極，線圈也是一進一出，因此真正的轉矩為  <strong>T = 2ilBr</strong></li>
-<li>Ｎ條導線：若是不只一條導線有Ｎ條導線，則轉矩為   <strong>T = 2ilBrN</strong></li>
+<li>N, S極：馬達裡的磁鐵有N, S極，線圈也是一進一出，因此真正的轉矩為  <strong>T = 2ilBr</strong></li>
+<li>n條導線：若是不只一條導線有n條導線，則轉矩為   <strong>T = 2ilBrn</strong></li>
+</ul>
+<hr />
+<p>If it&rsquo;s a rotating motor, how will <strong>f = ilB</strong> change?</p>
+<ul>
+<li>Electromagnetic torque for unipolar: first add the shaft distance (rotor radius) <strong>r</strong> -&gt; <strong>T = ilBr</strong></li>
+<li>N, S pole: The magnet in the motor has N, S pole, and the coil is also one in and one out, so the real torque is <strong>T = 2ilBr</strong></li>
+<li>n conductors: if more than one conductor has n conductors, the torque is <strong>T = 2ilBrn</strong></li>
 </ul>
 <h4 id="反電動勢--back---emf">反電動勢 ( Back - EMF)</h4>
 <p>$\epsilon=vBl$</p>
@@ -1555,21 +1567,53 @@ if (!doNotTrack) {
 <ul>
 <li>v = $\omega$ * r : <strong>$\epsilon= \omega rBl$</strong></li>
 <li>NS極：馬達裡的磁鐵有NS極，線圈也是一進一出，因此 <strong>$\epsilon= 2 \omega rBl$</strong></li>
-<li>Ｎ條導線：若是不只一條導線有Ｎ條導線，則轉矩為<strong>$\epsilon= 2 N \omega rBl$</strong></li>
+<li>n條導線：若是不只一條導線有n條導線，則轉矩為<strong>$\epsilon= 2 n \omega rBl$</strong></li>
 </ul>
-<h2 id="馬達參數-kt-ke">馬達參數 Kt, Ke</h2>
+<hr />
+<p>$\epsilon=vBl$</p>
+<p>I believe that the above formula is familiar to everyone. The long straight wire moves at the speed of v in the fixed magnetic field. Also, because of the magnetic force of the Lorentz force, an electric field (voltage) will be generated on the long straight wire.</p>
+<p>Consider to a rotating motor, what will happen to <strong>$\epsilon=vBl$</strong>?</p>
+<ul>
+<li>v = $\omega$ * r : <strong>$\epsilon= \omega rBl$</strong></li>
+<li>N, S pole: The magnet in the motor has an N, S pole, and the coil is one in and one out, so <strong>$\epsilon= 2 \omega rBl$</strong></li>
+<li>n conductors: if more than one conductor has n conductors, the torque is <strong>$\epsilon= 2 n \omega rBl$</strong></li>
+</ul>
+<h2 id="馬達參數-motor-constant-kt-ke">馬達參數 (motor constant) Kt, Ke</h2>
 <p>將上述兩個計算公式的結果擺在一起，來對照一下差異</p>
-<p><strong>T = 2ilBrN</strong></p>
-<p><strong>$\epsilon= 2 N \omega rBl$</strong></p>
+<p><strong>T = 2ilBrn</strong></p>
+<p><strong>$\epsilon= 2 n \omega rBl$</strong></p>
 <p>稍微整理一下</p>
-<p><strong>T = 2NBlri = Kt i</strong></p>
-<p><strong>$\epsilon= 2 NBlr \omega$ = Ke $\omega$</strong></p>
-<p>有沒有發現，其中的 <strong>2NBlr</strong> 是重複的，又可稱為馬達參數 <strong>Kt, Ke</strong>，而兩側的 <strong>T, i, $\epsilon , \omega$</strong> 其實就是電氣規格與機械規格，</p>
+<p><strong>T = 2nBlri = Kt i</strong></p>
+<p><strong>$\epsilon= 2 nBlr \omega$ = Ke $\omega$</strong></p>
+<p>有沒有發現，其中的 <strong>2nBlr</strong> 是重複的，又可稱為馬達參數 <strong>Kt, Ke</strong>，而兩側的 <strong>T, i, $\epsilon , \omega$</strong> 其實就是電氣規格與機械規格，</p>
 <p>如果把上述兩個公式相除，交叉相乘後，  <strong>$\epsilon$ * i</strong> 其實就是電功率， <strong>T * $\omega$</strong> 其實就是所謂的 <strong>機械功率</strong> ，再將時間項除掉後，其實就呼應文章最一開始的  <strong>電能 -&gt; 機械能</strong> 。</p>
-<h2 id="馬達設計重點參數">馬達設計重點參數</h2>
-<p><strong>2NBlr</strong>  自然就是磁的部分了，也點出了馬達裡面最重要的四個參數，<strong>N(線圈匝數)、B(定轉子氣隙磁通密度)、l(馬達有效長度)、r(定轉子氣隙半徑)</strong>，永磁馬達設計就是圍繞著這四個參數來執行設計。</p>
+<hr />
+<p>Put the results of the above two calculation formulas together to compare the differences.</p>
+<p><strong>T = 2ilBrn</strong></p>
+<p><strong>$\epsilon= 2 n \omega rBl$</strong></p>
+<p>Tidy up a bit</p>
+<p><strong>T = 2nBlri = Kt i</strong></p>
+<p><strong>$\epsilon= 2 nBlr \omega$ = Ke $\omega$</strong></p>
+<p>Have you found that <strong>2nBlr</strong> is repeated, and can also be called motor parameters <strong>Kt, Ke</strong>, and <strong>T, i, $\epsilon , \omega$</strong> on both sides are actually electrical and mechanical specifications,</p>
+<p>If the above two formulas are divided and cross-multiplied, <strong>$\epsilon$ * i</strong> is actually the electrical power, <strong>T * $\omega$</strong> is actually the so-called <strong>mechanical power</strong>, and then After removing the time item, it actually echoes the <strong>electric energy-&gt;mechanical energy</strong> at the beginning of the article.</p>
+<h2 id="馬達設計重點參數-parameters-of-motor-design">馬達設計重點參數 (Parameters of motor design)</h2>
+<p><strong>2nBlr</strong>  自然就是磁的部分了，也點出了馬達裡面最重要的四個參數</p>
+<p><strong>n(線圈匝數)</strong> 、</p>
+<p><strong>B(定轉子氣隙磁通密度)</strong>、</p>
+<p><strong>l(馬達有效長度)</strong>、</p>
+<p><strong>r(定轉子氣隙半徑)</strong>，</p>
+<p>永磁馬達設計就是圍繞著這四個參數來執行設計。</p>
 <p>接下來的文章就會實際的來設計拉，大家有問題的話都可以留言或是mail來討論</p>
 <p>謝謝收看</p>
+<hr />
+<p><strong>2NBlr</strong> is the magnetic part, and also points out the four most important parameters in the motor,</p>
+<p><strong>n (the number of coil turns)</strong>,</p>
+<p><strong>B (the stator and rotor air gap magnetic flux density)</strong>,</p>
+<p><strong>l (the effective length of the motor)</strong>,</p>
+<p><strong>r (radius of stator and rotor air gap)</strong>,</p>
+<p>the permanent magnet motor design is designed around these four parameters.</p>
+<p>The next article will actually be designed and pulled. If you have any questions, you can leave a message or mail to discuss</p>
+<p>Thanks for watching</p>
 
     </article>
     
@@ -1762,11 +1806,15 @@ if (!doNotTrack) {
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/auto_design_intro/" class="related__link">python script for ansys maxwell 自動化設計 demo</a>
+          <a href="/posts/auto_design_intro/" class="related__link">Python script for ansys maxwell, Surface Permanent Magnet Motor design automation demo</a>
         </li>
         
         <li>
           <a href="/posts/ansys_init/" class="related__link">python開啟ansys軟體、新增project</a>
+        </li>
+        
+        <li>
+          <a href="/posts/python_fundamental/" class="related__link">python fundamental concept 基礎概念</a>
         </li>
         
     </ul>
@@ -1780,13 +1828,13 @@ if (!doNotTrack) {
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">python script for ansys maxwell 自動化設計 demo</div>      
+        <div class="pagination-single__left-title">Python script for ansys maxwell, Surface Permanent Magnet Motor design automation demo</div>      
       </a>
     
     <div class="grow"></div>
     
-      <a href="https://mark-weng.com/posts/python_fundamental/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">python fundamental concept 基礎概念</div>
+      <a href="https://mark-weng.com/posts/python_ansys_concept/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">Surface Permanent Magnet Motor design programming concept in python</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -2921,8 +2969,8 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#馬達-電動機-是什麼">馬達 (電動機) 是什麼?</a></li>
-    <li><a href="#馬達設計-是什麼">馬達設計 是什麼?</a></li>
+    <li><a href="#馬達-電動機-是什麼-whats-electric-machine">馬達 (電動機) 是什麼? (What&rsquo;s electric machine)</a></li>
+    <li><a href="#馬達設計-是什麼-what-is-motor-design">馬達設計 是什麼? (What is motor design)</a></li>
     <li><a href="#勞倫茲力-lorentz-force">勞倫茲力 (Lorentz force)</a>
       <ul>
         <li>
@@ -2933,8 +2981,8 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
       </ul>
     </li>
-    <li><a href="#馬達參數-kt-ke">馬達參數 Kt, Ke</a></li>
-    <li><a href="#馬達設計重點參數">馬達設計重點參數</a></li>
+    <li><a href="#馬達參數-motor-constant-kt-ke">馬達參數 (motor constant) Kt, Ke</a></li>
+    <li><a href="#馬達設計重點參數-parameters-of-motor-design">馬達設計重點參數 (Parameters of motor design)</a></li>
   </ul>
 </nav>
         </div>

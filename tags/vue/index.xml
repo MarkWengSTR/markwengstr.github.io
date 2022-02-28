@@ -29,11 +29,7 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Mon, 05 Jul 2021 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/vue-wordpress/</guid>
-        <description>前言 ​	最近也剛好有朋友有個wordpress後台功能擴增的需求，一個小型的商品ERP，由於在wordpress裡面，因此直接使用wordpress當後端API而前端就用Vue，練一下這兩個這幾年非常夯的framework。
-Use Vue-cli in Wordpress admin page 以為Vue跟wordpress都是很多人在使用的工具，應該很好找學習資源，個別找是真的蠻多資源沒錯，但是兩個加在一起的教學就非常的少，不然就是非常複雜，沒有比較簡單能上手的工具，找了很久之後終於找到了這篇文章， 需要做一些設定，之後再使用vue-cli在wordpress裡面hot-reload開發Vue。
-專案連結在此。
-Wordpress wp_rest_controller 後端部分因為已經習慣使用model與controller的方式開發，還好wordpress也提供了wp_rest_controller的工具，讓我們可以做好router與controller的部分，然後再把跟db溝通的部分拆出一個repository來，為了讓以後開發能夠有基礎可以參考，我製作了一個簡單的CURD的branch，把前端Vue與後端wordpress串起來。
-這個專案也有將常用的vue-boostrap, fontawsone裝到切開的branch供以後的專案使用，歡迎有興趣使用Vue開發wordpress plugin的朋友們一起討論~~。</description>
+        <description>前言 ​ 最近也剛好有朋友有個wordpress後台功能擴增的需求，一個小型的商品ERP，由於在wordpress裡面，因此直接使用wordpr</description>
         
         <dc:creator>Mark</dc:creator>
         
