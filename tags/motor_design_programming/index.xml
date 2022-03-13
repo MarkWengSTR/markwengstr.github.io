@@ -47,13 +47,15 @@
       </item>
       
       <item>
-        <title>Surface Permanent Magnet Motor Design by python script</title>
-        <link>https://mark-weng.com/posts/spm_motor_design/</link>
-        <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+        <title>Real Example of Surface Permanent Magnet Motor Design by python script</title>
+        <link>https://mark-weng.com/posts/spm_motor_design_en/</link>
+        <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Wed, 07 Oct 2020 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/spm_motor_design/</guid>
-        <description>目標 (Goal) 由定子外徑限制、最大功率、DC bus電壓、最大轉矩、最高轉速 規格，推導出整個10p12s spm馬達的設計與細部尺寸，並不是一個優化的模</description>
+        <atom:modified>Mon, 12 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/spm_motor_design_en/</guid>
+        <description>Goal The design and detailed dimensions of the entire 10p12s spm motor are derived from the stator outer diameter limit, maximum power, DC bus voltage, maximum torque, and maximum speed specifications. It is not an optimized model, but it is based on reasonable calculations and assumptions. Implement an initial design that meets specifications.
+Contents of Design Required Specification
+1 2 3 4 5 6 7  { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, }   The whole design calculation can refer to the link</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -72,6 +74,78 @@
       
       <item>
         <title>Surface Permanent Magnet Motor design programming concept in python</title>
+        <link>https://mark-weng.com/posts/python_ansys_concept_en/</link>
+        <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sun, 11 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/python_ansys_concept_en/</guid>
+        <description>Why use program to design motor Save labor cost - program has the advantage of automation, repeating steps only need to be written once, and then only need to execute the program Code represent design concept and step - When the design becomes code, and a well-understood and universal code structure is used, the work problems caused by personnel switching will be reduced, because as long as everyone can understand</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Surface Permanent Magnet Motor Design Fundamental</title>
+        <link>https://mark-weng.com/posts/motor_principle_en/</link>
+        <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 10 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/motor_principle_en/</guid>
+        <description>What&amp;rsquo;s electric machine Recently, electric vehicles can be seen running everywhere on the road. Although they are still considered toys for rich people, their popularity in the future should not be a problem. The power source of electric vehicles is the motor. Of course, motors are not only used in electric vehicles. In fact, there are motors everywhere in our daily life, such as laptop fans, washing machines, robotic arms,</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>程式化永磁馬達設計 by python 真實範例</title>
+        <link>https://mark-weng.com/posts/spm_motor_design/</link>
+        <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 07 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/spm_motor_design/</guid>
+        <description>目標 由定子外徑限制、最大功率、DC bus電壓、最大轉矩、最高轉速 規格，推導出整個10p12s spm馬達的設計與細部尺寸，並不是一個優化的模型</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>程式化永磁馬達設計概念 by python</title>
         <link>https://mark-weng.com/posts/python_ansys_concept/</link>
         <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
@@ -95,7 +169,7 @@
       </item>
       
       <item>
-        <title>淺談永磁馬達設計原理 (Surface Permanent Magnet Motor Design Fundamental)</title>
+        <title>淺談永磁馬達設計原理</title>
         <link>https://mark-weng.com/posts/motor_principle/</link>
         <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>

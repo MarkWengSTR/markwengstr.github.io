@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Surface Permanent Magnet Motor design programming concept in python – MarkWeng</title>
+    <title>程式化永磁馬達設計概念 by python – MarkWeng</title>
     
 
 
@@ -1235,7 +1235,7 @@
 
 
 <meta property="og:site_name" content="MarkWeng">
-<meta property="og:title" content="Surface Permanent Magnet Motor design programming concept in python">
+<meta property="og:title" content="程式化永磁馬達設計概念 by python">
 <meta property="og:url" content="https://mark-weng.com/posts/python_ansys_concept/">
 <meta property="og:type" content="article">
 <meta property="og:description" content="Introduce how to use python in motor design and why use program to design motor。">
@@ -1263,7 +1263,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "Surface Permanent Magnet Motor design programming concept in python",
+    "headline": "程式化永磁馬達設計概念 by python",
     "datePublished": "2020-09-01T00:00:00Z",
     "dateModified": "2020-09-01T00:00:00Z",
     "url" : "https://mark-weng.com/posts/python_ansys_concept/",
@@ -1466,7 +1466,7 @@ if (!doNotTrack) {
   
   <li  class="is-active" >
     
-      <span>Surface Permanent Magnet Motor design programming concept in python</span>
+      <span>程式化永磁馬達設計概念 by python</span>
     
   </li>
   
@@ -1478,13 +1478,13 @@ if (!doNotTrack) {
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">Surface Permanent Magnet Motor design programming concept in python</h2>
+    <h2 class="single__title" data-ani="true">程式化永磁馬達設計概念 by python</h2>
     <div class="single__meta">
       
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Sep 1, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;4&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1532,38 +1532,19 @@ if (!doNotTrack) {
 <li>Save labor cost - program 具有自動化的好處，重複的步驟只要編寫一次，之後只需要執行程式就好</li>
 <li>Code represent design concept and step - 當設計變成code，並且利用的是好理解且通用的 code structure ，人員轉換造成的工作問題就會下降，因為所有人只要能看懂code，就能看懂設計步驟，進而理解設計。</li>
 </ul>
-<hr />
-<ul>
-<li>Save labor cost - program has the advantage of automation, repeating steps only need to be written once, and then only need to execute the program</li>
-<li>Code represent design concept and step - When the design becomes code, and a well-understood and universal code structure is used, the work problems caused by personnel switching will be reduced, because as long as everyone can understand the code, they can understand the design steps and then understand the design.</li>
-</ul>
 <h2 id="how-to-represent-motor-design-concept-and-step">How to represent motor design concept and step</h2>
 <p>專注在兩個非常重要卻又簡單的東西 <strong>data &amp; function</strong>。</p>
-<hr />
-<p>Just need to focus on two simple but very important stuff <strong>Data &amp; Function</strong></p>
 <h3 id="input--output-data">Input &amp; Output Data</h3>
 <p>先思考 input 與 ouput的data是什麼</p>
 <ul>
 <li>input data - 規格</li>
 <li>output data - 定子外徑、馬達長度、匝數、BEMP(@1000rpm)、操作點數據(torque data, average torque, speed, torque ripple, current, current density, line voltage, coreloss, copperloss)</li>
 </ul>
-<hr />
-<p>First think about what the data of input and ouput are</p>
-<ul>
-<li>input data - specifications</li>
-<li>output data - stator outer diameter, motor length, number of turns, BEMP(@1000rpm), operating point data (torque data, average torque, speed, torque ripple, current, current density, line voltage, coreloss, copperloss)</li>
-</ul>
 <h3 id="design-function-and-data">Design function and data</h3>
 <ol>
 <li>手算一次將 規格 轉換成 <strong>馬達模型數據</strong> 與 <strong>電氣數據</strong>。</li>
 <li>將中間所有的 <strong>步驟</strong>，以及當中用到的 <strong>數據名稱</strong> 記錄下來。</li>
 <li>將 <strong>數據名稱</strong> 根據 <strong>步驟</strong> 的概念分類 (定轉子、磁石、電氣&hellip;等)。使用 <code>dict 這個 data structure</code>將其收起來，還不知道的值就先給 <code>None</code>，用專案中馬達設計的部分呈現如下。</li>
-</ol>
-<hr />
-<ol>
-<li>Convert Specifications to <strong>Motor Model Data</strong> and <strong>Electrical Data</strong> by hand.</li>
-<li>Record all the <strong>steps</strong> in the middle, and the <strong>data name</strong> used in them.</li>
-<li>Classify <strong>Data Name</strong> according to the concept of <strong>Step</strong> (stator, magnet, electrical&hellip;etc). Use the <code>dict data structure</code> to collect it, and give it to <code>None</code> if you don&rsquo;t know the value. The motor design part of the project is presented as follows.</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1700,7 +1681,7 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div><ol start="4">
-<li>將步驟拆成小的function，專案中馬達設計的部分如下 [Divide the steps into small functions, the motor design part of the project is as follows]</li>
+<li>將步驟拆成小的function，專案中馬達設計的部分如下</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1757,7 +1738,7 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div><ol start="5">
-<li>將 3. 的數值dict貫穿 4. 的所有function (3.的 <code>motor_cal_params</code> 放在 <code>ctx[params]</code>中) [Put data dict from step 3 in step 4 functions pipeline]</li>
+<li>將 3. 的數值dict貫穿 4. 的所有function (3.的 <code>motor_cal_params</code> 放在 <code>ctx[params]</code>中)</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1788,16 +1769,12 @@ if (!doNotTrack) {
 </code></pre></td></tr></table>
 </div>
 </div><ol start="6">
-<li>Ansys maxwell 的溝通部分也是用同樣的方式，可參考 <a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/tree/master/software">這裡</a> [The communication part of Ansys maxwell is also in the same way, please refer to <a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/tree/master/software">here</a>]</li>
+<li>Ansys maxwell 的溝通部分也是用同樣的方式，可參考 <a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/tree/master/software">這裡</a></li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
 <p>使用上述的方法，是不是很單純，且很直觀就能看懂設計的過程，debug也非常容易，執行程式時將<code>total_cal_params</code> 印出來看就好。</p>
 <p>當整個程式設計完成後，接下來就是去優化每一個 function &amp; data 讓它們更容易被看懂，更能直觀的對應馬達設計。</p>
 <p>更詳細可參考<a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/blob/master/run.py">我的設計</a>，未來還會持續的優化設計。</p>
-<hr />
-<p>Using the above method, is it very simple and intuitive to understand the design process, and debugging is also very easy, just print <code>total_cal_params</code> when executing the program.</p>
-<p>When the entire program design is completed, the next step is to optimize each function &amp; data to make them easier to understand and more intuitive to correspond to the motor design.</p>
-<p>For more details, please refer to <a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/blob/master/run.py">My Design</a>, and the design will continue to be optimized in the future.</p>
 
     </article>
     
@@ -1990,7 +1967,7 @@ if (!doNotTrack) {
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/motor_principle/" class="related__link">淺談永磁馬達設計原理 (Surface Permanent Magnet Motor Design Fundamental)</a>
+          <a href="/posts/motor_principle/" class="related__link">淺談永磁馬達設計原理</a>
         </li>
         
         <li>
@@ -2016,13 +1993,13 @@ if (!doNotTrack) {
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">淺談永磁馬達設計原理 (Surface Permanent Magnet Motor Design Fundamental)</div>      
+        <div class="pagination-single__left-title">淺談永磁馬達設計原理</div>      
       </a>
     
     <div class="grow"></div>
     
       <a href="https://mark-weng.com/posts/spm_motor_design/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Surface Permanent Magnet Motor Design by python script</div>
+        <div class="pagination-single__right-title">程式化永磁馬達設計 by python 真實範例</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
