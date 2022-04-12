@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Serious-Python 讀書筆記(7) - python 2.2的時候發表了 decorator的使用方式 `classmethod()`與`classmethod()`，後續也繼續support了許多decotators的開發，但仍有很多人不太清楚背後的運作。 這個章節首先探討decorator，接著來討論使用它來產生static, class, method，最後來講一下 `super()`這個function">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1545,7 +1544,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1553,37 +1552,37 @@ if (!doNotTrack) {
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">identity</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">f</span>
-
-<span class="nd">@identity</span>
-<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">identity</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@identity</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>上述的code其實等同於</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span>
-    
-<span class="n">foo</span> <span class="o">=</span> <span class="n">identity</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">foo</span> <span class="o">=</span> <span class="n">identity</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>雖然看起來沒什麼用，但是它可行，讓我們來看看另一個好用的例子</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1597,19 +1596,19 @@ if (!doNotTrack) {
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">_functions</span> <span class="o">=</span> <span class="p">{}</span>
-
-<span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">_functions</span>
-    <span class="n">_functions</span><span class="p">[</span><span class="n">f</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
-    <span class="k">return</span> <span class="n">f</span>
-    
-<span class="nd">@register</span>
-<span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
-    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span>
-
-<span class="c1"># 當執行foo之後，_functions中就會加上 {&#39;foo&#39;: &lt;function foo at 0x0000024E84035280&gt;}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">_functions</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">global</span> <span class="n">_functions</span>
+</span></span><span class="line"><span class="cl">    <span class="n">_functions</span><span class="p">[</span><span class="n">f</span><span class="o">.</span><span class="vm">__name__</span><span class="p">]</span> <span class="o">=</span> <span class="n">f</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">f</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="nd">@register</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s1">&#39;bar&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 當執行foo之後，_functions中就會加上 {&#39;foo&#39;: &lt;function foo at 0x0000024E84035280&gt;}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="writing-decorators">Writing Decorators</h3>
 <ul>
@@ -1617,7 +1616,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1662,50 +1661,50 @@ if (!doNotTrack) {
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-      <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="k">if</span> <span class="n">username</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
-         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-
-      <span class="k">def</span> <span class="nf">put_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="k">if</span> <span class="n">username</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-
-        
-  <span class="c1"># 簡化如下 ------------</span>
-  <span class="k">def</span> <span class="nf">check_is_admin</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
-      <span class="k">if</span> <span class="n">username</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
-         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
-
-  <span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-      <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="n">check_is_admin</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
-         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-
-      <span class="k">def</span> <span class="nf">put_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="n">check_is_admin</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-
-        
-  <span class="c1"># 使用 decorator 簡化如下 ------------</span>
-  <span class="k">def</span> <span class="nf">check_is_admin</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-      <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-         <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
-         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-      <span class="k">return</span> <span class="n">wrapper</span>
-
-  <span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-     <span class="nd">@check_is_admin</span> 
-     <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-
-     <span class="nd">@check_is_admin</span> 
-      <span class="k">def</span> <span class="nf">put_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="n">username</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">put_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="n">username</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">  <span class="c1"># 簡化如下 ------------</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">check_is_admin</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="k">if</span> <span class="n">username</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="n">check_is_admin</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">put_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="n">check_is_admin</span><span class="p">(</span><span class="n">username</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        
+</span></span><span class="line"><span class="cl">  <span class="c1"># 使用 decorator 簡化如下 ------------</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">check_is_admin</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">     <span class="nd">@check_is_admin</span> 
+</span></span><span class="line"><span class="cl">     <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     <span class="nd">@check_is_admin</span> 
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">put_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">put</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>介紹一下上述 <code>check_is_admin</code> decorator的寫法，外面傳進來的引數可以從<em>kwargs</em>中拿到，做完處理後，同樣的執行函數</li>
@@ -1716,7 +1715,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1733,22 +1732,22 @@ if (!doNotTrack) {
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">check_user_is_not</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
-      <span class="k">def</span> <span class="nf">user_check_deco</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-         <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">username</span><span class="p">:</span>
-               <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-         <span class="k">return</span> <span class="n">wrapper</span>
-      <span class="k">return</span> <span class="n">user_check_deco</span>
-
-
-  <span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-      <span class="nd">@check_user_is_not</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">)</span>
-      <span class="nd">@check_user_is_not</span><span class="p">(</span><span class="s1">&#39;user1234&#39;</span><span class="p">)</span>
-      <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">check_user_is_not</span><span class="p">(</span><span class="n">username</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">user_check_deco</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="n">username</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">               <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">arg</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl">      <span class="k">return</span> <span class="n">user_check_deco</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="nd">@check_user_is_not</span><span class="p">(</span><span class="s1">&#39;admin&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="nd">@check_user_is_not</span><span class="p">(</span><span class="s1">&#39;user1234&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -1764,7 +1763,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1776,17 +1775,17 @@ if (!doNotTrack) {
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">uuid</span>
-
-<span class="k">def</span> <span class="nf">set_class_name_and_id</span><span class="p">(</span><span class="n">klass</span><span class="p">):</span>
-    <span class="n">klass</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
-    <span class="n">klass</span><span class="o">.</span><span class="n">random_id</span> <span class="o">=</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">klass</span>
-
-<span class="nd">@set_class_name_and_id</span>
-<span class="k">class</span> <span class="nc">SomeClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">pass</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">uuid</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">set_class_name_and_id</span><span class="p">(</span><span class="n">klass</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">klass</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">klass</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">klass</span><span class="o">.</span><span class="n">random_id</span> <span class="o">=</span> <span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">klass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@set_class_name_and_id</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">SomeClass</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">pass</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="retrieving-original-attributes-with-the-update_wrapper-decorator">Retrieving Original Attributes with the update_wrapper Decorator</h3>
 <ul>
@@ -1795,7 +1794,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1812,29 +1811,29 @@ if (!doNotTrack) {
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">functools</span>
-
-<span class="k">def</span> <span class="nf">check_is_admin</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapper</span>
-
-<span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="nd">@check_is_admin</span>
-    <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="s2">&#34;&#34;&#34;Get food from storage.&#34;&#34;&#34;</span>
-         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">functools</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">check_is_admin</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@check_is_admin</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;&#34;&#34;Get food from storage.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>目前為止，對於call function的時候丟進來的值，例如 <code> username</code> 並沒有做任何的保護，這有點危險，這裡介紹一個module <em>inspect</em>，它的function <code>getcallargs</code>，會輸出所有的引數成為一個dict，可以幫助我們完成這件事。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1853,24 +1852,24 @@ if (!doNotTrack) {
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">functools</span>
-<span class="kn">import</span> <span class="nn">inspect</span>
-
-<span class="k">def</span> <span class="nf">check_is_admin</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
-    <span class="nd">@functools.wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
-    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="n">func_args</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getcallargs</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">func_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">wrapper</span>
-    
-<span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="nd">@check_is_admin</span>
-    <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
-         <span class="s2">&#34;&#34;&#34;Get food from storage.&#34;&#34;&#34;</span>
-         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">functools</span>
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">inspect</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">check_is_admin</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@functools</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">func_args</span> <span class="o">=</span> <span class="n">inspect</span><span class="o">.</span><span class="n">getcallargs</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">func_args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;username&#39;</span><span class="p">)</span> <span class="o">!=</span> <span class="s1">&#39;admin&#39;</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&#34;This user is not allowed to get food&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">wrapper</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Store</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@check_is_admin</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_food</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">username</span><span class="p">,</span> <span class="n">food</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="s2">&#34;&#34;&#34;Get food from storage.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="how-methods-work-in-python">How Methods Work in Python</h2>
 <ul>
@@ -1879,7 +1878,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1892,18 +1891,18 @@ if (!doNotTrack) {
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
-    <span class="k">def</span> <span class="nf">get_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span>
-
-<span class="n">Pizza</span><span class="o">.</span><span class="n">get_size</span> <span class="c1"># &lt;function Pizza.get_size at 0x7fdbfd1a8b90&gt;</span>
-<span class="n">Pizza</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span> <span class="c1"># TypeError: get_size() missing 1 required positional argument: &#39;self&#39;</span>
-<span class="n">Pizza</span><span class="o">.</span><span class="n">get_size</span><span class="p">(</span><span class="n">Pizza</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span> <span class="c1"># 42</span>
-<span class="n">Pizza</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">get_size</span> <span class="c1"># &lt;bound method Pizza.get_size of &lt;__main__.Pizza object at 0x7f3138827910&gt;&gt;</span>
-<span class="n">Pizza</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span> <span class="c1"># 42</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="n">Object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">size</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="n">size</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_size</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Pizza</span><span class="o">.</span><span class="n">get_size</span> <span class="c1"># &lt;function Pizza.get_size at 0x7fdbfd1a8b90&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pizza</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span> <span class="c1"># TypeError: get_size() missing 1 required positional argument: &#39;self&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pizza</span><span class="o">.</span><span class="n">get_size</span><span class="p">(</span><span class="n">Pizza</span><span class="p">(</span><span class="mi">42</span><span class="p">))</span> <span class="c1"># 42</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pizza</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">get_size</span> <span class="c1"># &lt;bound method Pizza.get_size of &lt;__main__.Pizza object at 0x7f3138827910&gt;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pizza</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span><span class="o">.</span><span class="n">get_size</span><span class="p">()</span> <span class="c1"># 42</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>因為現在<code>get_size</code> 這個function已經與特定的obejct黏在一起了，不能把它當成一個普通的function，只能透過<em>Pizza</em>的instance來call <code>get_size</code></li>
@@ -1915,7 +1914,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1927,17 +1926,17 @@ if (!doNotTrack) {
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">mix_ingredients</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-    <span class="k">def</span> <span class="nf">cook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mix_ingredients</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cheese</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="p">)</span>
-
-<span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">cook</span> <span class="ow">is</span> <span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">cook</span> <span class="c1"># False</span>
-<span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">mix_ingredients</span> <span class="ow">is</span> <span class="n">Pizza</span><span class="o">.</span><span class="n">mix_ingredients</span> <span class="c1"># True</span>
-<span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">mix_ingredients</span> <span class="ow">is</span> <span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">mix_ingredients</span> <span class="c1"># True</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@staticmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">mix_ingredients</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">cook</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">mix_ingredients</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cheese</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vegetables</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">cook</span> <span class="ow">is</span> <span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">cook</span> <span class="c1"># False</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">mix_ingredients</span> <span class="ow">is</span> <span class="n">Pizza</span><span class="o">.</span><span class="n">mix_ingredients</span> <span class="c1"># True</span>
+</span></span><span class="line"><span class="cl"><span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">mix_ingredients</span> <span class="ow">is</span> <span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">mix_ingredients</span> <span class="c1"># True</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>這次就不用先產生Object再call了，不過其實實際上還是有產生object的，雖然會多消耗資源，但使用<code>@staticmethod</code> 可以容易的通用化，且可讀性好，在繼承時也可覆蓋原本的function，好處多多的。</li>
@@ -1948,7 +1947,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1962,26 +1961,26 @@ if (!doNotTrack) {
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-      <span class="n">radius</span> <span class="o">=</span> <span class="mi">42</span>
-
-      <span class="nd">@classmethod</span>
-      <span class="k">def</span> <span class="nf">get_radius</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">radius</span>
-
-
-  <span class="k">print</span><span class="p">(</span><span class="n">Pizza</span><span class="o">.</span><span class="n">get_radius</span><span class="p">)</span> <span class="c1"># &lt;bound method type.get_radius of &lt;class &#39;__main__.Pizza&#39;&gt;&gt;</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">get_radius</span><span class="p">)</span> <span class="c1"># &lt;bound method type.get_radius of &lt;class &#39;__main__.Pizza&#39;&gt;&gt;</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">Pizza</span><span class="o">.</span><span class="n">get_radius</span> <span class="o">==</span> <span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">get_radius</span><span class="p">)</span> <span class="c1"># True</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">Pizza</span><span class="o">.</span><span class="n">get_radius</span><span class="p">())</span> <span class="c1"># 42</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="n">radius</span> <span class="o">=</span> <span class="mi">42</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="nd">@classmethod</span>
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">get_radius</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">radius</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">Pizza</span><span class="o">.</span><span class="n">get_radius</span><span class="p">)</span> <span class="c1"># &lt;bound method type.get_radius of &lt;class &#39;__main__.Pizza&#39;&gt;&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">get_radius</span><span class="p">)</span> <span class="c1"># &lt;bound method type.get_radius of &lt;class &#39;__main__.Pizza&#39;&gt;&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">Pizza</span><span class="o">.</span><span class="n">get_radius</span> <span class="o">==</span> <span class="n">Pizza</span><span class="p">()</span><span class="o">.</span><span class="n">get_radius</span><span class="p">)</span> <span class="c1"># True</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">Pizza</span><span class="o">.</span><span class="n">get_radius</span><span class="p">())</span> <span class="c1"># 42</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><em>class method</em> 原則上適合用來做 <em>factory method</em>，像以下這樣</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1990,14 +1989,14 @@ if (!doNotTrack) {
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ingredients</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">ingredients</span> <span class="o">=</span> <span class="n">ingredients</span>
-    
-    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">from_fridge</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fridge</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">fridge</span><span class="o">.</span><span class="n">get_cheese</span><span class="p">()</span> <span class="o">+</span> <span class="n">fridge</span><span class="o">.</span><span class="n">get_vegetables</span><span class="p">())</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Pizza</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ingredients</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="bp">self</span><span class="o">.</span><span class="n">ingredients</span> <span class="o">=</span> <span class="n">ingredients</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="nd">@classmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">from_fridge</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">fridge</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">cls</span><span class="p">(</span><span class="n">fridge</span><span class="o">.</span><span class="n">get_cheese</span><span class="p">()</span> <span class="o">+</span> <span class="n">fridge</span><span class="o">.</span><span class="n">get_vegetables</span><span class="p">())</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>只要你想要寫一個method，但不知道要用class還是object，且你也不知道object的狀態，那就用class method吧</li>
@@ -2008,7 +2007,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -2016,13 +2015,13 @@ if (!doNotTrack) {
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">abc</span>
-
-<span class="k">class</span> <span class="nc">BasePizza</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">):</span>
-    <span class="nd">@abc.abstractmethod</span>
-    <span class="k">def</span> <span class="nf">get_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;Method that should do something.&#34;&#34;&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">abc</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BasePizza</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_radius</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Method that should do something.&#34;&#34;&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="mixing-static-class-and-abstract-methods">Mixing Static, Class, and Abstract Methods</h2>
 <ul>
@@ -2030,7 +2029,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2051,33 +2050,33 @@ if (!doNotTrack) {
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">abc</span>
-
-<span class="c1"># base class</span>
-<span class="k">class</span> <span class="nc">BasePizza</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">):</span>
-    <span class="nd">@abc.abstractmethod</span>
-    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;Returns the ingredient list.&#34;&#34;&#34;</span>
-
-<span class="c1"># object method</span>
-<span class="k">class</span> <span class="nc">Calzone</span><span class="p">(</span><span class="n">BasePizza</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">with_egg</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
-        <span class="n">egg</span> <span class="o">=</span> <span class="n">Egg</span><span class="p">()</span> <span class="k">if</span> <span class="n">with_egg</span> <span class="k">else</span> <span class="bp">None</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ingredients</span> <span class="o">+</span> <span class="p">[</span><span class="n">egg</span><span class="p">]</span>
-
-<span class="c1"># static method</span>
-<span class="k">class</span> <span class="nc">DietPizza</span><span class="p">(</span><span class="n">BasePizza</span><span class="p">):</span>
-    <span class="nd">@staticmethod</span>
-    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">():</span>
-        <span class="k">return</span> <span class="bp">None</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">abc</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># base class</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BasePizza</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Returns the ingredient list.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># object method</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Calzone</span><span class="p">(</span><span class="n">BasePizza</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">with_egg</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="n">egg</span> <span class="o">=</span> <span class="n">Egg</span><span class="p">()</span> <span class="k">if</span> <span class="n">with_egg</span> <span class="k">else</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ingredients</span> <span class="o">+</span> <span class="p">[</span><span class="n">egg</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># static method</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">DietPizza</span><span class="p">(</span><span class="n">BasePizza</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@staticmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="kc">None</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>如果 base class就想做成 class method</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2089,34 +2088,34 @@ if (!doNotTrack) {
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">abc</span>
-
-<span class="k">class</span> <span class="nc">BasePizza</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">):</span>
-    <span class="n">ingredients</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cheese&#39;</span><span class="p">]</span>
-
-    <span class="nd">@classmethod</span>
-    <span class="nd">@abc.abstractmethod</span>
-    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
-        <span class="s2">&#34;&#34;&#34;Returns the ingredient list.&#34;&#34;&#34;</span>
-        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">ingredients</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">abc</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">BasePizza</span><span class="p">(</span><span class="nb">object</span><span class="p">,</span> <span class="n">metaclass</span><span class="o">=</span><span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ingredients</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;cheese&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nd">@classmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="nd">@abc</span><span class="o">.</span><span class="n">abstractmethod</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">(</span><span class="bp">cls</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;&#34;&#34;Returns the ingredient list.&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">ingredients</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>想要繼承某些base class的method的東西在來更改呢，用 <code>super()</code></li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="c1"># base class 如上一個範例</span>
-<span class="k">class</span> <span class="nc">DietPizza</span><span class="p">(</span><span class="n">BasePizza</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">Egg</span><span class="p">()]</span> <span class="o">+</span> <span class="nb">super</span><span class="p">(</span><span class="n">DietPizza</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">get_ingredients</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># base class 如上一個範例</span>
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">DietPizza</span><span class="p">(</span><span class="n">BasePizza</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">get_ingredients</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">        <span class="k">return</span> <span class="p">[</span><span class="n">Egg</span><span class="p">()]</span> <span class="o">+</span> <span class="nb">super</span><span class="p">(</span><span class="n">DietPizza</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">get_ingredients</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="the-truth-about-super">The Truth About super</h2>
 <ul>
@@ -2126,7 +2125,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -2148,27 +2147,27 @@ if (!doNotTrack) {
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">  <span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-      <span class="n">bar</span> <span class="o">=</span> <span class="mi">42</span>
-
-      <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-         <span class="k">pass</span>
-
-
-  <span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-      <span class="n">bar</span> <span class="o">=</span> <span class="mi">0</span>
-
-
-  <span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
-      <span class="n">xyz</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
-
-
-  <span class="k">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">mro</span><span class="p">())</span>
-  <span class="k">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">mro</span><span class="p">())</span> <span class="c1"># [&lt;class &#39;__main__.C&#39;&gt;, &lt;class &#39;__main__.A&#39;&gt;, &lt;class &#39;__main__.B&#39;&gt;, &lt;class &#39;object&#39;&gt;]</span>
-  <span class="k">print</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">())</span><span class="o">.</span><span class="n">bar</span><span class="p">)</span>  <span class="c1"># 42</span>
-  <span class="k">print</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">.</span><span class="vm">__self__</span><span class="p">)</span>  <span class="c1"># None</span>
-  <span class="k">print</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">B</span><span class="p">())</span><span class="o">.</span><span class="vm">__self__</span><span class="p">)</span>  <span class="c1"># &lt;__main__.B object at 0x000002780C2FF5B0&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="n">bar</span> <span class="o">=</span> <span class="mi">42</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">foo</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">pass</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="n">bar</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="n">xyz</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">mro</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="n">C</span><span class="o">.</span><span class="n">mro</span><span class="p">())</span> <span class="c1"># [&lt;class &#39;__main__.C&#39;&gt;, &lt;class &#39;__main__.A&#39;&gt;, &lt;class &#39;__main__.B&#39;&gt;, &lt;class &#39;object&#39;&gt;]</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">C</span><span class="p">,</span> <span class="n">C</span><span class="p">())</span><span class="o">.</span><span class="n">bar</span><span class="p">)</span>  <span class="c1"># 42</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">B</span><span class="p">)</span><span class="o">.</span><span class="vm">__self__</span><span class="p">)</span>  <span class="c1"># None</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">print</span><span class="p">(</span><span class="nb">super</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">B</span><span class="p">())</span><span class="o">.</span><span class="vm">__self__</span><span class="p">)</span>  <span class="c1"># &lt;__main__.B object at 0x000002780C2FF5B0&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -2180,32 +2179,32 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="nb">super</span><span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="c1"># &lt;super: &lt;class &#39;C&#39;&gt;, NULL&gt;</span>
-<span class="nb">super</span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="o">.</span><span class="n">foo</span> <span class="c1"># AttributeError: &#39;super&#39; object has no attribute &#39;foo&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">super</span><span class="p">(</span><span class="n">C</span><span class="p">)</span> <span class="c1"># &lt;super: &lt;class &#39;C&#39;&gt;, NULL&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">super</span><span class="p">(</span><span class="n">C</span><span class="p">)</span><span class="o">.</span><span class="n">foo</span> <span class="c1"># AttributeError: &#39;super&#39; object has no attribute &#39;foo&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>這樣看來，難道 unbound 的super object就沒有用了呀，那幹嘛發明它呢，不過其實 super 最好用的是它的class加入了一個好用的descriptor protocol <em><strong>get</strong></em> ，讓unbound的時候也非常的有用。  (descriptor protocol - python實作的機制，讓object將自己以外的東西儲存成為一個attribute)</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
-    <span class="n">sup</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
-
-<span class="n">D</span><span class="p">()</span><span class="o">.</span><span class="n">sup</span> <span class="c1"># 可以寫成 `super(C).__get__(D())` -&gt; &lt;super: &lt;class &#39;C&#39;&gt;, &lt;D object&gt;&gt; </span>
-<span class="n">D</span><span class="p">()</span><span class="o">.</span><span class="n">sup</span><span class="o">.</span><span class="n">bar</span> <span class="c1"># 42</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">C</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">sup</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">C</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">D</span><span class="p">()</span><span class="o">.</span><span class="n">sup</span> <span class="c1"># 可以寫成 `super(C).__get__(D())` -&gt; &lt;super: &lt;class &#39;C&#39;&gt;, &lt;D object&gt;&gt; </span>
+</span></span><span class="line"><span class="cl"><span class="n">D</span><span class="p">()</span><span class="o">.</span><span class="n">sup</span><span class="o">.</span><span class="n">bar</span> <span class="c1"># 42</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>python3之後，super()不用給任何參數就能直接去parent class找attribute，這樣其實最直覺，作者鼓勵盡量用這樣的方式來寫super。</li>
@@ -2515,7 +2514,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

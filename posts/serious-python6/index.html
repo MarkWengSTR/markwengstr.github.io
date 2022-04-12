@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Serious-Python 讀書筆記(6) - 寫code如果沒有test的話，基本上是沒有用，因為沒有辦法證明它是有效的。">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1548,17 +1547,17 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">test_true</span><span class="p">():</span>
-     <span class="k">assert</span> <span class="bp">True</span>
-    
-<span class="n">test_true</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_true</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">     <span class="k">assert</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl"><span class="n">test_true</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>當然如果這樣一個一個執行test會非常的痛苦，可以使用 <em>pytest</em>這個module (需要pip install) ，它會幫你執行所有以 <code>test_</code> 開頭的function。 <code>pytest -v test_true.py</code> ，全部通過的話就會顯示 PASSED，沒有通過的話，就會把沒通過的部分顯示出來。</li>
@@ -1591,7 +1590,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1610,31 +1609,31 @@ if (!doNotTrack) {
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pytest</span>
-
-<span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-       <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
-
-
-<span class="n">c1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&#34;Tesla&#34;</span><span class="p">)</span>
-
-
-<span class="nd">@pytest.fixture</span>
-<span class="k">def</span> <span class="nf">car</span><span class="p">():</span>
-    <span class="k">return</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&#34;Tesla&#34;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">test_car_name</span><span class="p">(</span><span class="n">car</span><span class="p">):</span>
-    <span class="k">assert</span> <span class="n">car</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&#34;Tesla&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Car</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">       <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">c1</span> <span class="o">=</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&#34;Tesla&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">car</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">Car</span><span class="p">(</span><span class="s2">&#34;Tesla&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_car_name</span><span class="p">(</span><span class="n">car</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">assert</span> <span class="n">car</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="s2">&#34;Tesla&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>如果fixture裡面是DB，需要執行完test馬上關閉呢? 可以用 <code>yield</code> 範例如下</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1647,18 +1646,18 @@ if (!doNotTrack) {
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">pytest</span>
-
-<span class="nd">@pytest.fixture</span>
-<span class="k">def</span> <span class="nf">database</span><span class="p">():</span>
-    <span class="n">db</span><span class="o">=&lt;</span><span class="n">database</span> <span class="n">connection</span><span class="o">&gt;</span>
-    <span class="k">yield</span> <span class="n">db</span>
-    <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">test_insert</span><span class="p">(</span><span class="n">database</span><span class="p">):</span>
-    <span class="n">database</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">pytest</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">database</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="o">=&lt;</span><span class="n">database</span> <span class="n">connection</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">yield</span> <span class="n">db</span>
+</span></span><span class="line"><span class="cl">    <span class="n">db</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_insert</span><span class="p">(</span><span class="n">database</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">database</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -1670,11 +1669,11 @@ if (!doNotTrack) {
 </ul>
 <h3 id="running-test-scenarios">Running Test Scenarios</h3>
 <ul>
-<li>如果有很多種情境，但是call的方式是一樣的，可以使用 <em>parameterized fixtures</em> 如下，實際上&quot;mysql&rdquo;, &ldquo;postgresql&quot;都有被call到。</li>
+<li>如果有很多種情境，但是call的方式是一樣的，可以使用 <em>parameterized fixtures</em> 如下，實際上&quot;mysql&quot;, &ldquo;postgresql&quot;都有被call到。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1685,16 +1684,16 @@ if (!doNotTrack) {
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="nd">@pytest.fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;mysql&#34;</span><span class="p">,</span> <span class="s2">&#34;postgresql&#34;</span><span class="p">])</span>
-<span class="k">def</span> <span class="nf">database</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="n">myapp</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-    <span class="k">yield</span> <span class="n">d</span>
-    <span class="n">d</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">test_insert</span><span class="p">(</span><span class="n">database</span><span class="p">):</span>
-    <span class="n">database</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s2">&#34;somedata&#34;</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span><span class="p">(</span><span class="n">params</span><span class="o">=</span><span class="p">[</span><span class="s2">&#34;mysql&#34;</span><span class="p">,</span> <span class="s2">&#34;postgresql&#34;</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">database</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span> <span class="o">=</span> <span class="n">myapp</span><span class="o">.</span><span class="n">driver</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">param</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="k">yield</span> <span class="n">d</span>
+</span></span><span class="line"><span class="cl">    <span class="n">d</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">test_insert</span><span class="p">(</span><span class="n">database</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">database</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="s2">&#34;somedata&#34;</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="controlled-tests-using-mocking">Controlled Tests Using Mocking</h3>
 <ul>
@@ -1704,7 +1703,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1712,29 +1711,29 @@ if (!doNotTrack) {
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">mock</span>
-
-<span class="n">m</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>
-<span class="n">m</span><span class="o">.</span><span class="n">some_attribute</span> <span class="o">=</span> <span class="s2">&#34;hello&#34;</span>
-
-<span class="n">m</span><span class="o">.</span><span class="n">some_attribute</span> <span class="c1">#&#39;hello&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">mock</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">some_attribute</span> <span class="o">=</span> <span class="s2">&#34;hello&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">some_attribute</span> <span class="c1">#&#39;hello&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>也可以動態的創造method，例如創造一個假的method，永遠都return 42，無論給定什麼參數。</li>
 </ul>
-<pre><code>from unittest import mock
+<pre tabindex="0"><code>from unittest import mock
 m = mock.Mock()
 m.method.return_value = 42
 
 m.method() # 42
-m.method(&quot;with&quot;, &quot;arguments&quot;) # 42
+m.method(&#34;with&#34;, &#34;arguments&#34;) # 42
 </code></pre><ul>
 <li>也可以在method被呼叫的同時放入side_effect</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1744,33 +1743,33 @@ m.method(&quot;with&quot;, &quot;arguments&quot;) # 42
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">print_hello</span><span class="p">():</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;hello world&#34;</span><span class="p">)</span>
-    <span class="k">return</span> <span class="mi">43</span>
-
-<span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="n">print_hello</span>
-
-<span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="p">()</span> <span class="c1"># hello world </span>
-           <span class="c1"># 43</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">print_hello</span><span class="p">():</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;hello world&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="mi">43</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="o">.</span><span class="n">side_effect</span> <span class="o">=</span> <span class="n">print_hello</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="p">()</span> <span class="c1"># hello world </span>
+</span></span><span class="line"><span class="cl">           <span class="c1"># 43</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>那也可以計算method到底被call幾次</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="o">.</span><span class="n">call_count</span> <span class="c1"># 2</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">method</span><span class="o">.</span><span class="n">call_count</span> <span class="c1"># 2</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>如果從mock創造一個接收參數的method，且想確認mock method的參數，可用 <code> assert_called_once_with()</code> ，參數不知道要代什麼的話可以用 <code>mock.ANY</code>。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1785,33 +1784,31 @@ m.method(&quot;with&quot;, &quot;arguments&quot;) # 42
 </span><span class="lnt">13
 </span><span class="lnt">14
 </span><span class="lnt">15
-</span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">mock</span>
-
-<span class="n">m</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>
-<span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span> <span class="c1"># &lt;Mock name=&#39;mock.some_method()&#39; id=&#39;26144272&#39;&gt;</span>
-<span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">mock</span><span class="o">.</span><span class="n">ANY</span><span class="p">)</span>
-<span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">)</span>
-<span class="c1"># Traceback (most recent call last):</span>
-<span class="c1"># File &#34;&lt;stdin&gt;&#34;, line 1, in &lt;module&gt;</span>
-<span class="c1"># File &#34;/usr/lib/python2.7/dist-packages/mock.py&#34;, line 846, in assert_called_once_with</span>
-<span class="c1"># return self.assert_called_with(*args, **kwargs)</span>
-<span class="c1"># File &#34;/usr/lib/python2.7/dist-packages/mock.py&#34;, line 835, in assert_called_with</span>
-<span class="c1"># raise AssertionError(msg)</span>
-<span class="c1"># AssertionError: Expected call: some_method(&#39;foo&#39;, &#39;baz&#39;)</span>
-<span class="c1"># Actual call: some_method(&#39;foo&#39;, &#39;bar&#39;)</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">unittest</span> <span class="kn">import</span> <span class="n">mock</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">m</span> <span class="o">=</span> <span class="n">mock</span><span class="o">.</span><span class="n">Mock</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span> <span class="c1"># &lt;Mock name=&#39;mock.some_method()&#39; id=&#39;26144272&#39;&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;bar&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="n">mock</span><span class="o">.</span><span class="n">ANY</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">m</span><span class="o">.</span><span class="n">some_method</span><span class="o">.</span><span class="n">assert_called_once_with</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">,</span> <span class="s1">&#39;baz&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Traceback (most recent call last):</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># File &#34;&lt;stdin&gt;&#34;, line 1, in &lt;module&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># File &#34;/usr/lib/python2.7/dist-packages/mock.py&#34;, line 846, in assert_called_once_with</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># return self.assert_called_with(*args, **kwargs)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># File &#34;/usr/lib/python2.7/dist-packages/mock.py&#34;, line 835, in assert_called_with</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># raise AssertionError(msg)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># AssertionError: Expected call: some_method(&#39;foo&#39;, &#39;baz&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Actual call: some_method(&#39;foo&#39;, &#39;bar&#39;)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>mock這個東西到底怎麼用在test裡面呢，就是拿來代替某個function被call的時後的回傳值，以下就示範一個最基本的方式</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1821,15 +1818,15 @@ m.method(&quot;with&quot;, &quot;arguments&quot;) # 42
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">fake_os_unlink</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="s2">&#34;fake fake&#34;</span><span class="p">)</span>
-
-
-<span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;os.unlink&#39;</span><span class="p">,</span> <span class="n">fake_os_unlink</span><span class="p">):</span>
-    <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s2">&#34;C:/&#34;</span><span class="p">)</span>
-
-<span class="c1"># &gt;&gt; fake fake</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">fake_os_unlink</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="s2">&#34;fake fake&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">with</span> <span class="n">mock</span><span class="o">.</span><span class="n">patch</span><span class="p">(</span><span class="s1">&#39;os.unlink&#39;</span><span class="p">,</span> <span class="n">fake_os_unlink</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">os</span><span class="o">.</span><span class="n">unlink</span><span class="p">(</span><span class="s2">&#34;C:/&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># &gt;&gt; fake fake</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>也可以用裝飾器 <code>@mock.patch('&lt;function&gt;', &lt;mock_function&gt;)</code> 放在測試的function上來mock某個東西，非常的簡潔明瞭</li>
@@ -1861,17 +1858,17 @@ m.method(&quot;with&quot;, &quot;arguments&quot;) # 42
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-basic" data-lang="basic"><span class="vg">virtualenv</span><span class="w"> </span><span class="vg">myappvenv</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">創造虛擬環境</span>
-<span class="vg">source</span><span class="w"> </span><span class="vg">myappvenv</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">activate</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">進入虛擬環境</span>
-<span class="vg">pip</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="o">-</span><span class="vg">r</span><span class="w"> </span><span class="vg">requirements</span><span class="o">.</span><span class="vg">txt</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">安裝所有套件</span>
-<span class="vg">deactivate</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">離開虛擬環境</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-basic" data-lang="basic"><span class="line"><span class="cl"><span class="vg">virtualenv</span><span class="w"> </span><span class="vg">myappvenv</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">創造虛擬環境</span>
+</span></span><span class="line"><span class="cl"><span class="vg">source</span><span class="w"> </span><span class="vg">myappvenv</span><span class="o">/</span><span class="vg">bin</span><span class="o">/</span><span class="vg">activate</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">進入虛擬環境</span>
+</span></span><span class="line"><span class="cl"><span class="vg">pip</span><span class="w"> </span><span class="vg">install</span><span class="w"> </span><span class="o">-</span><span class="vg">r</span><span class="w"> </span><span class="vg">requirements</span><span class="o">.</span><span class="vg">txt</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">安裝所有套件</span>
+</span></span><span class="line"><span class="cl"><span class="vg">deactivate</span><span class="w"> </span><span class="err">#</span><span class="w"> </span><span class="vg">離開虛擬環境</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="using-virtualenv-with-tox">Using virtualenv with tox</h3>
 <ul>
@@ -1880,7 +1877,7 @@ m.method(&quot;with&quot;, &quot;arguments&quot;) # 42
 -可以直接run <code>tox</code> 這個指令， tox 會創造一個用預設的python環境在.tox/python創造虛擬環境，且用<em>setup.py</em>安裝好所需的套件。</li>
 <li><em>tox.ini</em>裡面可以做許多的動作，例如執行commend</li>
 </ul>
-<pre><code>[testenv]
+<pre tabindex="0"><code>[testenv]
 deps=pytest
 commands=pytest
 </code></pre><ul>
@@ -1891,12 +1888,12 @@ commands=pytest
 <p>如果想要同時測試各種python版本，可以加上</p>
 </li>
 </ul>
-<pre><code>[tox]
+<pre tabindex="0"><code>[tox]
 envlist=py35,py36,pypy
 </code></pre><ul>
 <li>也可以加上integration test 像是flake8</li>
 </ul>
-<pre><code>[tox]
+<pre tabindex="0"><code>[tox]
 envlist=py35,py36,pypy,pep8
 [testenv]
 deps=pytest
@@ -1910,7 +1907,7 @@ commands=flake8
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1920,22 +1917,22 @@ commands=flake8
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">language</span><span class="p">:</span><span class="w"> </span>python<span class="w">
-</span><span class="w"></span><span class="k">python</span><span class="p">:</span><span class="w">
-</span><span class="w"> </span>- <span class="s2">&#34;2.7&#34;</span><span class="w">
-</span><span class="w"> </span>- <span class="s2">&#34;3.6&#34;</span><span class="w">
-</span><span class="w"></span><span class="c"># command to install dependencies</span><span class="w">
-</span><span class="w"></span><span class="k">install</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;pip install -r requirements.txt --use-mirrors&#34;</span><span class="w">
-</span><span class="w"></span><span class="c"># command to run tests</span><span class="w">
-</span><span class="w"></span><span class="k">script</span><span class="p">:</span><span class="w"> </span>pytest<span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l">python</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">python</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span>- <span class="s2">&#34;2.7&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span>- <span class="s2">&#34;3.6&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># command to install dependencies</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">install</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;pip install -r requirements.txt --use-mirrors&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># command to run tests</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="l">pytest</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>要跟tox一起使用的話，還可以安裝 <em>tox-travis</em>，把yml檔改一下。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1944,14 +1941,14 @@ commands=flake8
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">sudo</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
-</span><span class="w"></span><span class="k">language</span><span class="p">:</span><span class="w"> </span>python<span class="w">
-</span><span class="w"></span><span class="k">python</span><span class="p">:</span><span class="w">
-</span><span class="w"> </span>- <span class="s2">&#34;2.7&#34;</span><span class="w">
-</span><span class="w"> </span>- <span class="s2">&#34;3.4&#34;</span><span class="w">
-</span><span class="w"></span><span class="k">install</span><span class="p">:</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>tox-travis<span class="w">
-</span><span class="w"></span><span class="k">script</span><span class="p">:</span><span class="w"> </span>tox<span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">sudo</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">language</span><span class="p">:</span><span class="w"> </span><span class="l">python</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">python</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span>- <span class="s2">&#34;2.7&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"> </span>- <span class="s2">&#34;3.4&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">install</span><span class="p">:</span><span class="w"> </span><span class="l">pip install tox-travis</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">script</span><span class="p">:</span><span class="w"> </span><span class="l">tox</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
     </article>
@@ -2258,7 +2255,7 @@ commands=flake8
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

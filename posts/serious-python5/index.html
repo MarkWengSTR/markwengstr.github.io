@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Serious-Python 讀書筆記(5) - 當project build到某一個程度，你會希望能有一個方便安裝的方式提供給終端的使用者，在python當中提供了許多工具來完成這個部分，通常都會放在 setup.py 中，接下來就來好好探討這個部分，順便distributing我的project &#34;anmotordesign&#34; 到pypi上。">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1540,7 +1539,7 @@ if (!doNotTrack) {
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1549,21 +1548,21 @@ if (!doNotTrack) {
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
-<span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;rebuildd&#34;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Debian packages rebuild tool&#34;</span><span class="p">,</span>
-    <span class="n">author</span><span class="o">=</span><span class="s2">&#34;Julien Danjou&#34;</span><span class="p">,</span>
-    <span class="n">author_email</span><span class="o">=</span><span class="s2">&#34;acid@debian.org&#34;</span><span class="p">,</span>
-    <span class="n">url</span><span class="o">=</span><span class="s2">&#34;http://julien.danjou.info/software/rebuildd.html&#34;</span><span class="p">,</span>
-    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;rebuildd&#39;</span><span class="p">])</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">distutils.core</span> <span class="kn">import</span> <span class="n">setup</span>
+</span></span><span class="line"><span class="cl"><span class="n">setup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&#34;rebuildd&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Debian packages rebuild tool&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">author</span><span class="o">=</span><span class="s2">&#34;Julien Danjou&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">author_email</span><span class="o">=</span><span class="s2">&#34;acid@debian.org&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span><span class="o">=</span><span class="s2">&#34;http://julien.danjou.info/software/rebuildd.html&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;rebuildd&#39;</span><span class="p">])</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>而 <em>distutils</em> 在2000的時候停止了開發，而其他的開發者把還是有接著繼續開發，<em>setuptools</em> 就是其中一個，且提供更進階的功能來打包project</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1582,33 +1581,31 @@ if (!doNotTrack) {
 </span><span class="lnt">17
 </span><span class="lnt">18
 </span><span class="lnt">19
-</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">setuptools</span>
-<span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span>
-    <span class="n">name</span><span class="o">=</span><span class="s2">&#34;rebuildd&#34;</span><span class="p">,</span>
-    <span class="n">version</span><span class="o">=</span><span class="s2">&#34;0.2&#34;</span><span class="p">,</span>
-    <span class="n">author</span><span class="o">=</span><span class="s2">&#34;Julien Danjou&#34;</span><span class="p">,</span>
-    <span class="n">author_email</span><span class="o">=</span><span class="s2">&#34;acid@debian.org&#34;</span><span class="p">,</span>
-    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Debian packages rebuild tool&#34;</span><span class="p">,</span>
-    <span class="n">license</span><span class="o">=</span><span class="s2">&#34;GPL&#34;</span><span class="p">,</span>
-    <span class="n">url</span><span class="o">=</span><span class="s2">&#34;http://julien.danjou.info/software/rebuildd/&#34;</span><span class="p">,</span>
-    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;rebuildd&#39;</span><span class="p">],</span><span class="n">pyt</span>
-    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
-        <span class="s2">&#34;Development Status :: 2 - Pre-Alpha&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;Intended Audience :: Developers&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;Intended Audience :: Information Technology&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;License :: OSI Approved :: GNU General Public License (GPL)&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;Operating System :: OS Independent&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;Programming Language :: Python&#34;</span>
-   <span class="p">],</span>
-<span class="p">)</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">setuptools</span>
+</span></span><span class="line"><span class="cl"><span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="n">name</span><span class="o">=</span><span class="s2">&#34;rebuildd&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">version</span><span class="o">=</span><span class="s2">&#34;0.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">author</span><span class="o">=</span><span class="s2">&#34;Julien Danjou&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">author_email</span><span class="o">=</span><span class="s2">&#34;acid@debian.org&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Debian packages rebuild tool&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">license</span><span class="o">=</span><span class="s2">&#34;GPL&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">url</span><span class="o">=</span><span class="s2">&#34;http://julien.danjou.info/software/rebuildd/&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">packages</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;rebuildd&#39;</span><span class="p">],</span><span class="n">pyt</span>
+</span></span><span class="line"><span class="cl">    <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Development Status :: 2 - Pre-Alpha&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Intended Audience :: Developers&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Intended Audience :: Information Technology&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;License :: OSI Approved :: GNU General Public License (GPL)&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Operating System :: OS Independent&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;Programming Language :: Python&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
-<li>另外還有 * distribute* module提供更多好用的功能，還有一些bug，而在2013年時，*distribute* 與 *setuptools* 合併在 *setuptools version 0.7* 底下。</li>
+<li>另外還有 * distribute* module提供更多好用的功能，還有一些bug，而在2013年時，<em>distribute</em> 與 <em>setuptools</em> 合併在 <em>setuptools version 0.7</em> 底下。</li>
 <li>而 <em>distutils2</em> 用不一樣的方式，將所有的metadata都放在 setup.cfg 中，後來改名 <em>packaging</em> ，在2012的時候也停止開發</li>
 <li>目前 <em>setuptools</em> 還是最多開發者使用的，而接下來也可以密切注意 <em>distlib</em> 這個module，它會替代最原始的 <em>distutils</em>，且繼承 <em>packaging</em>的所有好處。</li>
 </ul>
@@ -1619,18 +1616,18 @@ if (!doNotTrack) {
 <p>setup.py中的資訊</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">setuptools</span>
-<span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">setuptools</span>
+</span></span><span class="line"><span class="cl"><span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>setup.cfg的資訊</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1648,36 +1645,36 @@ if (!doNotTrack) {
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="p">[</span><span class="n">metadata</span><span class="p">]</span>
-<span class="n">name</span> <span class="o">=</span> <span class="n">foobar</span>
-<span class="n">author</span> <span class="o">=</span> <span class="n">Dave</span> <span class="n">Null</span>
-<span class="n">author</span><span class="o">-</span><span class="n">email</span> <span class="o">=</span> <span class="n">foobar</span><span class="nd">@example.org</span>
-<span class="n">license</span> <span class="o">=</span> <span class="n">MIT</span>
-<span class="n">long_description</span> <span class="o">=</span> <span class="nb">file</span><span class="p">:</span> <span class="n">README</span><span class="o">.</span><span class="n">rst</span>
-<span class="n">url</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">foobar</span>
-<span class="n">requires</span><span class="o">-</span><span class="n">python</span> <span class="o">=</span> <span class="o">&gt;=</span><span class="mf">2.6</span>
-<span class="n">classifiers</span> <span class="o">=</span>
-    <span class="n">Development</span> <span class="n">Status</span> <span class="p">::</span> <span class="mi">4</span> <span class="o">-</span> <span class="n">Beta</span>
-    <span class="n">Environment</span> <span class="p">::</span> <span class="n">Console</span>
-    <span class="n">Intended</span> <span class="n">Audience</span> <span class="p">::</span> <span class="n">Developers</span>
-    <span class="n">Intended</span> <span class="n">Audience</span> <span class="p">::</span> <span class="n">Information</span> <span class="n">Technology</span>
-    <span class="n">License</span> <span class="p">::</span> <span class="n">OSI</span> <span class="n">Approved</span> <span class="p">::</span> <span class="n">Apache</span> <span class="n">Software</span> <span class="n">License</span>
-    <span class="n">Operating</span> <span class="n">System</span> <span class="p">::</span> <span class="n">OS</span> <span class="n">Independent</span>
-    <span class="n">Programming</span> <span class="n">Language</span> <span class="p">::</span> <span class="n">Python</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">[</span><span class="n">metadata</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">name</span> <span class="o">=</span> <span class="n">foobar</span>
+</span></span><span class="line"><span class="cl"><span class="n">author</span> <span class="o">=</span> <span class="n">Dave</span> <span class="n">Null</span>
+</span></span><span class="line"><span class="cl"><span class="n">author</span><span class="o">-</span><span class="n">email</span> <span class="o">=</span> <span class="n">foobar</span><span class="nd">@example</span><span class="o">.</span><span class="n">org</span>
+</span></span><span class="line"><span class="cl"><span class="n">license</span> <span class="o">=</span> <span class="n">MIT</span>
+</span></span><span class="line"><span class="cl"><span class="n">long_description</span> <span class="o">=</span> <span class="n">file</span><span class="p">:</span> <span class="n">README</span><span class="o">.</span><span class="n">rst</span>
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">=</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">pypi</span><span class="o">.</span><span class="n">python</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pypi</span><span class="o">/</span><span class="n">foobar</span>
+</span></span><span class="line"><span class="cl"><span class="n">requires</span><span class="o">-</span><span class="n">python</span> <span class="o">=</span> <span class="o">&gt;=</span><span class="mf">2.6</span>
+</span></span><span class="line"><span class="cl"><span class="n">classifiers</span> <span class="o">=</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Development</span> <span class="n">Status</span> <span class="p">::</span> <span class="mi">4</span> <span class="o">-</span> <span class="n">Beta</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Environment</span> <span class="p">::</span> <span class="n">Console</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Intended</span> <span class="n">Audience</span> <span class="p">::</span> <span class="n">Developers</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Intended</span> <span class="n">Audience</span> <span class="p">::</span> <span class="n">Information</span> <span class="n">Technology</span>
+</span></span><span class="line"><span class="cl">    <span class="n">License</span> <span class="p">::</span> <span class="n">OSI</span> <span class="n">Approved</span> <span class="p">::</span> <span class="n">Apache</span> <span class="n">Software</span> <span class="n">License</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Operating</span> <span class="n">System</span> <span class="p">::</span> <span class="n">OS</span> <span class="n">Independent</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Programming</span> <span class="n">Language</span> <span class="p">::</span> <span class="n">Python</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>另一個好用的打包工具是 <code>pbr</code> (Python Build Reasonableness)，pkg是依附在 <em>setuptools</em> 一起使用的。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">setuptools</span>
-<span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">setup_requires</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pbr&#39;</span><span class="p">],</span> <span class="n">pbr</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">setuptools</span>
+</span></span><span class="line"><span class="cl"><span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span><span class="n">setup_requires</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;pbr&#39;</span><span class="p">],</span> <span class="n">pbr</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>pkg 可以
@@ -1714,7 +1711,7 @@ if (!doNotTrack) {
 <ul>
 <li>Test還沒寫，所以用<tests/>表示，接下來就要慢慢補上摟</li>
 </ul>
-<pre><code>project-directory/
+<pre tabindex="0"><code>project-directory/
 ├── LICENSE.txt
 ├── MANIFEST.in
 ├── README.md
@@ -1727,7 +1724,7 @@ if (!doNotTrack) {
 </code></pre><h3 id="setuppy-file">setup.py file</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1766,44 +1763,44 @@ if (!doNotTrack) {
 </span><span class="lnt">37
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">  <span class="kn">import</span> <span class="nn">setuptools</span>
-
-  <span class="n">install_requires</span> <span class="o">=</span> <span class="p">[</span>
-      <span class="s2">&#34;setuptools&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;pywin32==227&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;ramda==0.5.5&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;six==1.13.0&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;functional-pipeline==0.3.1&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;ipdb==0.12.3&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;Flask==1.1.2&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;Flask-Cors==3.0.8&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;pandas==1.0.1&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;numpy==1.18.1&#34;</span><span class="p">,</span>
-      <span class="s2">&#34;requests==2.24.0&#34;</span><span class="p">,</span>
-  <span class="p">]</span>
-
-  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;README.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
-      <span class="n">long_description</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-
-  <span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span>
-      <span class="n">name</span><span class="o">=</span><span class="s2">&#34;anmotordesign&#34;</span><span class="p">,</span>
-      <span class="n">version</span><span class="o">=</span><span class="s2">&#34;0.1a&#34;</span><span class="p">,</span>
-      <span class="n">author</span><span class="o">=</span><span class="s2">&#34;Mark Weng&#34;</span><span class="p">,</span>
-      <span class="n">author_email</span><span class="o">=</span><span class="s2">&#34;bskin0330@gmail.com&#34;</span><span class="p">,</span>
-      <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Electrical Machines Design Automation by Ansys Maxwell Script&#34;</span><span class="p">,</span>
-      <span class="n">long_description</span><span class="o">=</span><span class="n">long_description</span><span class="p">,</span>
-      <span class="n">long_description_content_type</span><span class="o">=</span><span class="s2">&#34;text/markdown&#34;</span><span class="p">,</span>
-      <span class="n">url</span><span class="o">=</span><span class="s2">&#34;https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online&#34;</span><span class="p">,</span>
-      <span class="n">packages</span><span class="o">=</span><span class="n">setuptools</span><span class="o">.</span><span class="n">find_packages</span><span class="p">(),</span>
-      <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
-          <span class="s2">&#34;Programming Language :: Python :: 3&#34;</span><span class="p">,</span>
-          <span class="s2">&#34;License :: OSI Approved :: MIT License&#34;</span><span class="p">,</span>
-          <span class="s2">&#34;Operating System :: OS Independent&#34;</span><span class="p">,</span>
-      <span class="p">],</span>
-      <span class="n">install_requires</span><span class="o">=</span><span class="n">install_requires</span><span class="p">,</span>
-      <span class="n">python_requires</span><span class="o">=</span><span class="s2">&#34;&gt;=3.6&#34;</span><span class="p">,</span>
-  <span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl">  <span class="kn">import</span> <span class="nn">setuptools</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">install_requires</span> <span class="o">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;setuptools&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;pywin32==227&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;ramda==0.5.5&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;six==1.13.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;functional-pipeline==0.3.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;ipdb==0.12.3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;Flask==1.1.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;Flask-Cors==3.0.8&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;pandas==1.0.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;numpy==1.18.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="s2">&#34;requests==2.24.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&#34;README.md&#34;</span><span class="p">,</span> <span class="s2">&#34;r&#34;</span><span class="p">)</span> <span class="k">as</span> <span class="n">fh</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      <span class="n">long_description</span> <span class="o">=</span> <span class="n">fh</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">setuptools</span><span class="o">.</span><span class="n">setup</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="n">name</span><span class="o">=</span><span class="s2">&#34;anmotordesign&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">version</span><span class="o">=</span><span class="s2">&#34;0.1a&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">author</span><span class="o">=</span><span class="s2">&#34;Mark Weng&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">author_email</span><span class="o">=</span><span class="s2">&#34;bskin0330@gmail.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">description</span><span class="o">=</span><span class="s2">&#34;Electrical Machines Design Automation by Ansys Maxwell Script&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">long_description</span><span class="o">=</span><span class="n">long_description</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">long_description_content_type</span><span class="o">=</span><span class="s2">&#34;text/markdown&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">url</span><span class="o">=</span><span class="s2">&#34;https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">packages</span><span class="o">=</span><span class="n">setuptools</span><span class="o">.</span><span class="n">find_packages</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">      <span class="n">classifiers</span><span class="o">=</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;Programming Language :: Python :: 3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;License :: OSI Approved :: MIT License&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">          <span class="s2">&#34;Operating System :: OS Independent&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">],</span>
+</span></span><span class="line"><span class="cl">      <span class="n">install_requires</span><span class="o">=</span><span class="n">install_requires</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="n">python_requires</span><span class="o">=</span><span class="s2">&#34;&gt;=3.6&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>沒有再包成 setup.cfg，目前覺得還沒有很雜，等project開始複雜之後再來優化</li>
@@ -1812,12 +1809,12 @@ if (!doNotTrack) {
 <p>直接去 <a href="https://choosealicense.com/">https://choosealicense.com/</a> 找，變成LICENSE.txt</p>
 <h3 id="manifestin">MANIFEST.in</h3>
 <p>這個可有可無，如果有設定 <code>include_package_data=True</code> 的話就會需要，就是額外需要包進去的data file，像是</p>
-<pre><code>include LICENSE.txt
+<pre tabindex="0"><code>include LICENSE.txt
 include README.md
 </code></pre><h3 id="指令集">指令集</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1828,16 +1825,16 @@ include README.md
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 產生 tar wheel 的壓縮檔在 dist/ 中</span>
-python setup.py sdist bdist_wheel
-
-<span class="c1"># 上傳到測試的伺服器上</span>
-python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/* 
-<span class="c1"># 上傳完後會給一個project的位置，像我的是 https://test.pypi.org/project/anmotordesign/</span>
-
-<span class="c1"># 上傳到真正的pypi伺服器上</span>
-python -m twine upload dist/*
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 產生 tar wheel 的壓縮檔在 dist/ 中</span>
+</span></span><span class="line"><span class="cl">python setup.py sdist bdist_wheel
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 上傳到測試的伺服器上</span>
+</span></span><span class="line"><span class="cl">python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/* 
+</span></span><span class="line"><span class="cl"><span class="c1"># 上傳完後會給一個project的位置，像我的是 https://test.pypi.org/project/anmotordesign/</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 上傳到真正的pypi伺服器上</span>
+</span></span><span class="line"><span class="cl">python -m twine upload dist/*
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>上傳完後，可以自己試試 pip install <project> 能不能載下來瞜</p>
 <h2 id="future-work">Future work</h2>
@@ -2147,7 +2144,7 @@ python -m twine upload dist/*
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

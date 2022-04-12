@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Introduce how to use python in motor design and why use program to design motor。">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1552,7 +1551,7 @@ if (!doNotTrack) {
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1618,78 +1617,78 @@ if (!doNotTrack) {
 </span><span class="lnt">64
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">motor_cal_params</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s2">&#34;stator&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&#34;OD_limit&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;slot&#34;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-        <span class="s2">&#34;shoes_height_front&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&#34;shoes_height_back&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&#34;slot_open&#34;</span><span class="p">:</span> <span class="mf">4.5</span><span class="p">,</span>
-        <span class="s2">&#34;slot_corner_arc&#34;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s2">&#34;rotor&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&#34;pole&#34;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-        <span class="s2">&#34;mag_emb&#34;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>  <span class="c1"># easier magetization</span>
-    <span class="p">},</span>
-    <span class="s2">&#34;coil&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&#34;conductor_OD&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&#34;y_para&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&#34;membrane_ratio&#34;</span><span class="p">:</span> <span class="mf">1.075</span><span class="p">,</span>
-        <span class="s2">&#34;slot_fill_factor&#34;</span><span class="p">:</span> <span class="mf">0.43</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s2">&#34;estimate&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&#34;kt_ke_ratio&#34;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
-        <span class="s2">&#34;max_J&#34;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-        <span class="s2">&#34;voltage_buffer&#34;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
-        <span class="s2">&#34;torque_density&#34;</span><span class="p">:</span>   <span class="mi">25</span><span class="p">,</span>
-        <span class="s2">&#34;teeth_mag_ang_ratio&#34;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>
-        <span class="s2">&#34;york_teeth_ratio&#34;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
-        <span class="s2">&#34;rotor_OD_ratio&#34;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>
-        <span class="s2">&#34;bg&#34;</span><span class="p">:</span> <span class="mf">1.2</span><span class="p">,</span>
-        <span class="s2">&#34;mag_pc&#34;</span><span class="p">:</span> <span class="mf">7.5</span><span class="p">,</span>  <span class="c1"># for not easy to broke</span>
-    <span class="p">},</span>
-    <span class="s2">&#34;calculation&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&#34;est_rotor_OD&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;est_stator_OD&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;mag_thick&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;teeth_width&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;york_width&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;slot_height&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;slot_width_front&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;slot_width_back&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;para_conductor&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;coil_turns&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-        <span class="s2">&#34;real_slot_fill_factor&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s2">&#34;material&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&#34;stator&#34;</span><span class="p">:</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">35CS250_steel</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;rotor&#34;</span><span class="p">:</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">35CS250_steel</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;magnet&#34;</span><span class="p">:</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">N44SH_20deg_mag</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">,</span>
-        <span class="s2">&#34;coil&#34;</span><span class="p">:</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">copper</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">,</span>
-    <span class="p">},</span>
-    <span class="s2">&#34;setting&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s2">&#34;cycle&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="s2">&#34;split_step&#34;</span><span class="p">:</span> <span class="mi">50</span>
-    <span class="p">},</span>
-    <span class="s2">&#34;voltage_dc&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-    <span class="s2">&#34;length&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-    <span class="s2">&#34;airgap&#34;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-    <span class="s2">&#34;w_factor_10p12s&#34;</span><span class="p">:</span> <span class="mf">0.933</span><span class="p">,</span>
-    <span class="s2">&#34;ke&#34;</span><span class="p">:</span>               <span class="bp">None</span><span class="p">,</span>
-    <span class="s2">&#34;kt&#34;</span><span class="p">:</span>               <span class="bp">None</span><span class="p">,</span>
-    <span class="s2">&#34;corner_speed_rpm&#34;</span><span class="p">:</span> <span class="bp">None</span><span class="p">,</span>
-    <span class="s2">&#34;max_speed_rpm&#34;</span><span class="p">:</span>    <span class="bp">None</span><span class="p">,</span>
-    <span class="s2">&#34;max_current_rms&#34;</span><span class="p">:</span>  <span class="bp">None</span><span class="p">,</span>
-    <span class="s2">&#34;core_loss_factor&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">motor_cal_params</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;stator&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;OD_limit&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;slot&#34;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;shoes_height_front&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;shoes_height_back&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;slot_open&#34;</span><span class="p">:</span> <span class="mf">4.5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;slot_corner_arc&#34;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;rotor&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;pole&#34;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;mag_emb&#34;</span><span class="p">:</span> <span class="mf">0.8</span><span class="p">,</span>  <span class="c1"># easier magetization</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;coil&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;conductor_OD&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;y_para&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;membrane_ratio&#34;</span><span class="p">:</span> <span class="mf">1.075</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;slot_fill_factor&#34;</span><span class="p">:</span> <span class="mf">0.43</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;estimate&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;kt_ke_ratio&#34;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;max_J&#34;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;voltage_buffer&#34;</span><span class="p">:</span> <span class="mf">0.9</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;torque_density&#34;</span><span class="p">:</span>   <span class="mi">25</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;teeth_mag_ang_ratio&#34;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;york_teeth_ratio&#34;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;rotor_OD_ratio&#34;</span><span class="p">:</span> <span class="mf">0.6</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;bg&#34;</span><span class="p">:</span> <span class="mf">1.2</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;mag_pc&#34;</span><span class="p">:</span> <span class="mf">7.5</span><span class="p">,</span>  <span class="c1"># for not easy to broke</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;calculation&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;est_rotor_OD&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;est_stator_OD&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;mag_thick&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;teeth_width&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;york_width&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;slot_height&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;slot_width_front&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;slot_width_back&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;para_conductor&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;coil_turns&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;real_slot_fill_factor&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;material&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;stator&#34;</span><span class="p">:</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">35CS250_steel</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;rotor&#34;</span><span class="p">:</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">35CS250_steel</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;magnet&#34;</span><span class="p">:</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">N44SH_20deg_mag</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;coil&#34;</span><span class="p">:</span> <span class="s2">&#34;</span><span class="se">\&#34;</span><span class="s2">copper</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;setting&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;cycle&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;split_step&#34;</span><span class="p">:</span> <span class="mi">50</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;voltage_dc&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;length&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;airgap&#34;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;w_factor_10p12s&#34;</span><span class="p">:</span> <span class="mf">0.933</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;ke&#34;</span><span class="p">:</span>               <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;kt&#34;</span><span class="p">:</span>               <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;corner_speed_rpm&#34;</span><span class="p">:</span> <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;max_speed_rpm&#34;</span><span class="p">:</span>    <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;max_current_rms&#34;</span><span class="p">:</span>  <span class="kc">None</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;core_loss_factor&#34;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="4">
 <li>Divide the steps into small functions, the motor design part of the project is as follows</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1715,38 +1714,38 @@ if (!doNotTrack) {
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">ktke_calculation</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
-    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
-    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
-    <span class="k">return</span> <span class="n">total_cal_params</span>
-<span class="k">def</span> <span class="nf">assign_spec_value</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
-    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
-    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
-    <span class="k">return</span> <span class="n">total_cal_params</span>
-<span class="k">def</span> <span class="nf">expend_NBLR</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
-    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
-    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
-    <span class="k">return</span> <span class="n">total_cal_params</span>
-<span class="k">def</span> <span class="nf">expend_stator_teeth_york</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
-    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
-    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
-    <span class="k">return</span> <span class="n">total_cal_params</span>
-<span class="k">def</span> <span class="nf">expend_stator_slot</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
-    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
-    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
-    <span class="k">return</span> <span class="n">total_cal_params</span>
-<span class="k">def</span> <span class="nf">expend_magnet</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
-    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
-    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
-    <span class="k">return</span> <span class="n">total_cal_params</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">ktke_calculation</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">total_cal_params</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">assign_spec_value</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">total_cal_params</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">expend_NBLR</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">total_cal_params</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">expend_stator_teeth_york</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">total_cal_params</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">expend_stator_slot</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">total_cal_params</span>
+</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">expend_magnet</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 計算 total_cal_params 的某個值 [calculating some value of total_cal_params dict]</span>
+</span></span><span class="line"><span class="cl">    <span class="c1"># 將 計算值 替算掉原本在total_cal_params中的未定值 [Replace the dict value by calculated results]</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="n">total_cal_params</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="5">
 <li>Put data dict from step 3 in step 4 functions pipeline</li>
 </ol>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1756,21 +1755,19 @@ if (!doNotTrack) {
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
-</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="n">total_cal_params</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">[</span><span class="s2">&#34;params&#34;</span><span class="p">]</span>
-
-<span class="n">ktke_calculation</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-    <span class="n">assign_spec_value</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-    <span class="n">expend_NBLR</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-    <span class="n">expend_stator_teeth_york</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-    <span class="n">expend_stator_slot</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-    <span class="n">expend_magnet</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span>
-
-    <span class="k">print</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span>
-
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">total_cal_params</span> <span class="o">=</span> <span class="n">ctx</span><span class="p">[</span><span class="s2">&#34;params&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">ktke_calculation</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">    <span class="n">assign_spec_value</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">    <span class="n">expend_NBLR</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">    <span class="n">expend_stator_teeth_york</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">    <span class="n">expend_stator_slot</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">    <span class="n">expend_magnet</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="nb">print</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="6">
 <li>The communication part of Ansys maxwell is also in the same way, please refer to <a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/tree/master/software">here</a></li>
@@ -2084,7 +2081,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

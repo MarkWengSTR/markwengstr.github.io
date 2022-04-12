@@ -199,7 +199,7 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Tue, 28 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/auto_design_intro/</guid>
-        <description>影片介紹 (Vedio Intro) 目前的成果，拍成影片上傳到youtube上 輸入所需的參數 spec_params [input the required parameters] 1 2 3 4 5 6 7 8 9 10 11 spec_params = { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, &amp;#34;export_path&amp;#34;: None, &amp;#34;pj_key&amp;#34;: str(int(time.mktime(datetime.datetime.now().timetuple()))), &amp;#34;res_url&amp;#34;: None, }</description>
+        <description>影片介紹 (Vedio Intro) 目前的成果，拍成影片上傳到youtube上 輸入所需的參數 spec_params [input the required parameters] 1 2 3 4 5 6 7 8 9 10 spec_params = { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, &amp;#34;export_path&amp;#34;: None, &amp;#34;pj_key&amp;#34;: str(int(time.mktime(datetime.datetime.now().timetuple()))), &amp;#34;res_url&amp;#34;: None, } 稍</description>
         
         <dc:creator>Mark</dc:creator>
         

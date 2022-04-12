@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="simple describe problem of identity of object and church encoding use clojure">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1540,15 +1539,15 @@ if (!doNotTrack) {
 <p>以下是 cons 的定義</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="c1">;;對於任何的 x, y</span>
-<span class="p">(</span><span class="nf">car</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">x</span>
-<span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">y</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="c1">;;對於任何的 x, y</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">car</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">x</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">y</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>簡單來說 <code>(cons x y)</code> 就是一個pair，也是最基本的資料結構。</p>
 <p>但其實上述定義並沒有闡述，到底cons是否有像人一樣的身份(identity)？</p>
@@ -1562,11 +1561,11 @@ if (!doNotTrack) {
 <p>如何解釋以下這段code ?</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="k">def </span><span class="nv">a</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="p">(</span><span class="k">def </span><span class="nv">a</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>指的是在一個環境裡面，創造了一個名為 a 的 pair，這個pair裡面包含兩個指針一個指向1，一個指向2。</p>
 <p>接下來來探討幾個哲學的問題</p>
@@ -1595,15 +1594,15 @@ if (!doNotTrack) {
 <h3 id="演示一下用lambda憑空製造一個-cons----by-alonzo-church">演示一下用lambda憑空製造一個 cons ! - by Alonzo Church</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="kd">defn </span><span class="nv">cus-cons</span> <span class="p">[</span><span class="nv">x</span> <span class="nv">y</span><span class="p">]</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">fc</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
-<span class="p">(</span><span class="kd">defn </span><span class="nv">cus-car</span> <span class="p">[</span><span class="nv">fc2</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc2</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">a</span> <span class="nv">d</span><span class="p">]</span> <span class="nv">a</span><span class="p">)))</span>
-<span class="p">(</span><span class="nf">cus-car</span> <span class="p">(</span><span class="nf">cus-cons</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">))</span> <span class="c1">;=&gt; 1</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">defn </span><span class="nv">cus-cons</span> <span class="p">[</span><span class="nv">x</span> <span class="nv">y</span><span class="p">]</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">fc</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kd">defn </span><span class="nv">cus-car</span> <span class="p">[</span><span class="nv">fc2</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc2</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">a</span> <span class="nv">d</span><span class="p">]</span> <span class="nv">a</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">cus-car</span> <span class="p">(</span><span class="nf">cus-cons</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">))</span> <span class="c1">;=&gt; 1</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>演繹一下這個神奇的程序</p>
 <ul>
@@ -1886,7 +1885,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

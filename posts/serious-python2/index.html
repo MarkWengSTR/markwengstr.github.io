@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Serious-Python 讀書筆記(2) - 來好好理解import module 這檔事">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1566,7 +1565,7 @@ finders)。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1593,39 +1592,39 @@ finders)。</li>
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">MetaImporter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">find_on_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span>
-  	<span class="s2">&#34;&#34;&#34;
-</span><span class="s2">  	確認path是否有東西
-</span><span class="s2">  	&#34;&#34;&#34;</span>
-    <span class="n">fls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2">/__init__.hy&#34;</span><span class="p">,</span> <span class="s2">&#34;</span><span class="si">%s</span><span class="s2">.hy&#34;</span><span class="p">]</span>
-    <span class="n">dirpath</span> <span class="o">=</span> <span class="s2">&#34;/&#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fullname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">))</span>
-  	
-    <span class="k">for</span> <span class="n">pth</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
-        <span class="n">pth</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">pth</span><span class="p">)</span>
-    
-    <span class="k">for</span> <span class="n">fp</span> <span class="ow">in</span> <span class="n">fls</span><span class="p">:</span>
-        <span class="n">composed_path</span> <span class="o">=</span> <span class="n">fp</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pth</span><span class="p">,</span> <span class="n">dirpath</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">composed_path</span><span class="p">):</span>
-           	<span class="k">return</span> <span class="n">composed_path</span>
-    
-    <span class="k">def</span> <span class="nf">find_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
- 	<span class="s2">&#34;&#34;&#34;
-</span><span class="s2">  	Meta Path Finder 必要的method，配合sys.meta_path 可讓python認為這個cutoms的file的路徑是有效的，也是一個有效的module
-</span><span class="s2">  	&#34;&#34;&#34;</span>
-    	<span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_on_path</span><span class="p">(</span><span class="n">fullname</span><span class="p">)</span>
-    	<span class="k">if</span> <span class="n">path</span><span class="p">:</span>
-      	<span class="k">return</span> <span class="n">MetaLoader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-
-	<span class="n">sys</span><span class="o">.</span><span class="n">meta_path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MetaImporter</span><span class="p">())</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MetaImporter</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">find_on_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">  	<span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">  	確認path是否有東西
+</span></span></span><span class="line"><span class="cl"><span class="s2">  	&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">fls</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2">/__init__.hy&#34;</span><span class="p">,</span> <span class="s2">&#34;</span><span class="si">%s</span><span class="s2">.hy&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">dirpath</span> <span class="o">=</span> <span class="s2">&#34;/&#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fullname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  	
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">pth</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">pth</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">pth</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="n">fp</span> <span class="ow">in</span> <span class="n">fls</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">composed_path</span> <span class="o">=</span> <span class="n">fp</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&#34;</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pth</span><span class="p">,</span> <span class="n">dirpath</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">composed_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">           	<span class="k">return</span> <span class="n">composed_path</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">def</span> <span class="nf">find_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl"> 	<span class="s2">&#34;&#34;&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s2">  	Meta Path Finder 必要的method，配合sys.meta_path 可讓python認為這個cutoms的file的路徑是有效的，也是一個有效的module
+</span></span></span><span class="line"><span class="cl"><span class="s2">  	&#34;&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">    	<span class="n">path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">find_on_path</span><span class="p">(</span><span class="n">fullname</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    	<span class="k">if</span> <span class="n">path</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">      	<span class="k">return</span> <span class="n">MetaLoader</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="n">sys</span><span class="o">.</span><span class="n">meta_path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">MetaImporter</span><span class="p">())</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>當python認為路徑是有效且可成為module之後，就會return 一個MetaLoader object。</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1662,42 +1661,42 @@ finders)。</li>
 </span><span class="lnt">35
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">MetaLoader</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-      <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-         <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
-
-      <span class="k">def</span> <span class="nf">is_package</span><span class="p">(</span><span class="n">fullname</span><span class="p">):</span>
-         <span class="n">dirpath</span> <span class="o">=</span> <span class="s2">&#34;/&#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fullname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">))</span>
-         <span class="k">for</span> <span class="n">pth</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
-            <span class="n">pth</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">pth</span><span class="p">)</span>
-            <span class="n">compose_path</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/__init_.hy&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pth</span><span class="p">,</span> <span class="n">dirpath</span><span class="p">)</span>
-         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">compose_path</span><span class="p">):</span>
-            <span class="k">return</span> <span class="bp">True</span>
-         <span class="k">return</span> <span class="bp">False</span>
-
-      <span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span>
-         <span class="k">if</span> <span class="n">fullname</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">fullname</span><span class="p">]</span>
-         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
-            <span class="k">return</span>
-         <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">fullname</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
-         <span class="c1"># import_file_to_module reads a .hy source file, compiles it to Python code, and returns a Python module object.</span>
-         <span class="n">mod</span> <span class="o">=</span> <span class="n">import_file_to_module</span><span class="p">(</span><span class="n">fullname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
-         <span class="n">ispkg</span> <span class="o">=</span> <span class="n">is_package</span><span class="p">(</span><span class="n">fullname</span><span class="p">)</span>
-
-         <span class="n">mod</span><span class="o">.</span><span class="vm">__file__</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span>
-         <span class="n">mod</span><span class="o">.</span><span class="n">__loader__</span> <span class="o">=</span> <span class="bp">self</span>
-         <span class="n">mod</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">fullname</span>
-
-         <span class="k">if</span> <span class="n">ispkg</span><span class="p">:</span>
-            <span class="n">mod</span><span class="o">.</span><span class="n">__path__</span> <span class="o">=</span> <span class="p">[]</span>
-            <span class="n">mod</span><span class="o">.</span><span class="n">__package__</span> <span class="o">=</span> <span class="n">fullname</span>
-         <span class="k">else</span><span class="p">:</span>
-            <span class="n">mod</span><span class="o">.</span><span class="n">__package__</span> <span class="o">=</span> <span class="n">fullname</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-
-         <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">fullname</span><span class="p">]</span> <span class="o">=</span> <span class="n">mod</span>
-         <span class="k">return</span> <span class="n">mod</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">MetaLoader</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="bp">self</span><span class="o">.</span><span class="n">path</span> <span class="o">=</span> <span class="n">path</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">is_package</span><span class="p">(</span><span class="n">fullname</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="n">dirpath</span> <span class="o">=</span> <span class="s2">&#34;/&#34;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">fullname</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&#34;.&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">         <span class="k">for</span> <span class="n">pth</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">pth</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">pth</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="n">compose_path</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="si">%s</span><span class="s2">/</span><span class="si">%s</span><span class="s2">/__init_.hy&#34;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pth</span><span class="p">,</span> <span class="n">dirpath</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">compose_path</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="kc">True</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="kc">False</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">def</span> <span class="nf">load_module</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fullname</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="n">fullname</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span> <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">fullname</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span>
+</span></span><span class="line"><span class="cl">         <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">fullname</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span></span><span class="line"><span class="cl">         <span class="c1"># import_file_to_module reads a .hy source file, compiles it to Python code, and returns a Python module object.</span>
+</span></span><span class="line"><span class="cl">         <span class="n">mod</span> <span class="o">=</span> <span class="n">import_file_to_module</span><span class="p">(</span><span class="n">fullname</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">         <span class="n">ispkg</span> <span class="o">=</span> <span class="n">is_package</span><span class="p">(</span><span class="n">fullname</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="n">mod</span><span class="o">.</span><span class="vm">__file__</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">path</span>
+</span></span><span class="line"><span class="cl">         <span class="n">mod</span><span class="o">.</span><span class="n">__loader__</span> <span class="o">=</span> <span class="bp">self</span>
+</span></span><span class="line"><span class="cl">         <span class="n">mod</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">=</span> <span class="n">fullname</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="k">if</span> <span class="n">ispkg</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mod</span><span class="o">.</span><span class="n">__path__</span> <span class="o">=</span> <span class="p">[]</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mod</span><span class="o">.</span><span class="n">__package__</span> <span class="o">=</span> <span class="n">fullname</span>
+</span></span><span class="line"><span class="cl">         <span class="k">else</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">            <span class="n">mod</span><span class="o">.</span><span class="n">__package__</span> <span class="o">=</span> <span class="n">fullname</span><span class="o">.</span><span class="n">rpartition</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">         <span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">fullname</span><span class="p">]</span> <span class="o">=</span> <span class="n">mod</span>
+</span></span><span class="line"><span class="cl">         <span class="k">return</span> <span class="n">mod</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="useful-standard-libraries">Useful Standard Libraries</h3>
 <ul>
@@ -2051,7 +2050,7 @@ finders)。</li>
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

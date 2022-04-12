@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="Serious-Python 讀書筆記(3) - Documentation 是非常重要的一件事，雖然寫doc是一件感覺非常煩雜的事，但其實不需要，python developer有很好的工具來幫助這件事。">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1531,7 +1530,7 @@ if (!doNotTrack) {
 <ul>
 <li>大多的contributer都喜歡寫code甚於寫文件，甚至有doc跟project<br />
 是分開的，doc根本趕不上開發的速度。</li>
-<li>最常用的python documentation是 <em>reStructuredText</em> 與 * reST* ，輕量級的markup 語言(類似 Markdown)，好撰寫也好閱讀，而 **Sphinx**是開發它們最常用的工具。</li>
+<li>最常用的python documentation是 <em>reStructuredText</em> 與 * reST* ，輕量級的markup 語言(類似 Markdown)，好撰寫也好閱讀，而 <strong>Sphinx</strong>是開發它們最常用的工具。</li>
 <li>Project的doc一定要包含:
 <ul>
 <li>1~2句話簡短描述 此project想要解決的問題</li>
@@ -1577,19 +1576,19 @@ if (!doNotTrack) {
 <li>docstring 可以遵照 PEP257 (<a href="https://www.python.org/dev/peps/pep-0257/">https://www.python.org/dev/peps/pep-0257/</a>) 的規範</li>
 <li>以下給個範例，這個開發者想在Car裡面將turn_left這個method改成turn這個比較general的method</li>
 </ul>
-<pre><code>  class Car(object):
+<pre tabindex="0"><code>  class Car(object):
       def turn_left(self):
-         &quot;&quot;&quot;Turn the car left.
+         &#34;&#34;&#34;Turn the car left.
          .. deprecated:: 1.1
          Use :func:`turn` instead with the direction argument set to left
-         &quot;&quot;&quot;&quot;&quot;
-         self.turn(direction='left')
+         &#34;&#34;&#34;&#34;&#34;
+         self.turn(direction=&#39;left&#39;)
 
       def turn(self, direction):
-         &quot;&quot;&quot;Turn the car in some direction.
+         &#34;&#34;&#34;Turn the car in some direction.
          :param direction: The direction to turn to.
          :type direction: str
-         &quot;&quot;&quot;&quot;&quot;
+         &#34;&#34;&#34;&#34;&#34;
          # Write actual code for the turn function here instead
          pass
 </code></pre><h2 id="marking-deprecated-functions-with-the-warnings-module">Marking Deprecated Functions with the warnings Module</h2>
@@ -1900,7 +1899,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
