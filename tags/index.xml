@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,12 +23,30 @@
 
       
       <item>
-        <title>mindset#</title>
-        <link>https://mark-weng.com/tags/mindset#/</link>
+        <title>motor_knowledge</title>
+        <link>https://mark-weng.com/tags/motor_knowledge/</link>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        
+        <guid>https://mark-weng.com/tags/motor_knowledge/</guid>
+        <description></description>
+        
+        <dc:creator>Mark Weng</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>mindset</title>
+        <link>https://mark-weng.com/tags/mindset/</link>
         <pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         
-        <guid>https://mark-weng.com/tags/mindset#/</guid>
+        <guid>https://mark-weng.com/tags/mindset/</guid>
         <description></description>
         
         <dc:creator>Mark Weng</dc:creator>
@@ -65,24 +83,6 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         
         <guid>https://mark-weng.com/tags/wordpress/</guid>
-        <description></description>
-        
-        <dc:creator>Mark Weng</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>mindset</title>
-        <link>https://mark-weng.com/tags/mindset/</link>
-        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        
-        <guid>https://mark-weng.com/tags/mindset/</guid>
         <description></description>
         
         <dc:creator>Mark Weng</dc:creator>

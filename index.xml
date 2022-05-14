@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -44,6 +44,30 @@
 
       
       <item>
+        <title>IEC 60034-27-1 讀書心得</title>
+        <link>https://mark-weng.com/posts/iec_partial_discharge/</link>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 14 May 2022 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/iec_partial_discharge/</guid>
+        <description>為什麼要寫這篇 因為工作的關係，常常接觸高壓電機的保養與相關測試，當然高壓電機線圈的部分放電也是一個非常重要的部分，最近剛讀完規範，就想說來記</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_knowledge</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
         <title>工作雜記 — 「累積」就是不斷地解決「困難的」問題，並記錄下來。</title>
         <link>https://mark-weng.com/posts/work_exp1/</link>
         <pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>
@@ -59,7 +83,7 @@
         
           
             
-              <category>mindset#</category>
+              <category>mindset</category>
             
           
         
