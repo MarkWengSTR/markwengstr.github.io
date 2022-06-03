@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -44,7 +44,31 @@
 
       
       <item>
-        <title>IEC 60034-27-1 繞阻絕緣之部分放電測量(離線型) 讀書心得</title>
+        <title>想換工作了!? 跨領域轉職，離開大企業穩定工作到網頁全端工程師，歷程分享(1)</title>
+        <link>https://mark-weng.com/posts/job_trans_1/</link>
+        <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Fri, 03 Jun 2022 00:00:00 +0000</atom:modified>
+        <guid>https://mark-weng.com/posts/job_trans_1/</guid>
+        <description>前言 這次想分享我到底怎麼從零轉職網頁全端工程師的，轉職之前是什麼背景、具備什麼基礎、是什麼原因讓我想要轉職、如何真的轉職成功、轉職成功後遇到</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mind_set</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>IEC 繞阻絕緣規範，離線部分放電測量 心得分享</title>
         <link>https://mark-weng.com/posts/iec60034_27_1_study/</link>
         <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
