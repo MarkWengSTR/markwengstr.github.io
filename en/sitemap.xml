@@ -19,6 +19,9 @@
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url><url>
+    <loc>https://mark-weng.com/posts/job_trans_1/</loc>
+    <lastmod>2022-06-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://mark-weng.com/tags/</loc>
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -31,9 +34,6 @@
                 hreflang="en"
                 href="https://mark-weng.com/tags/"
                 />
-  </url><url>
-    <loc>https://mark-weng.com/posts/job_trans_1/</loc>
-    <lastmod>2022-06-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://mark-weng.com/tags/%E8%BD%89%E8%81%B7/</loc>
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
@@ -146,9 +146,6 @@
     <loc>https://mark-weng.com/posts/hugo-setup/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://mark-weng.com/about/</loc>
-    <lastmod>2020-05-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://mark-weng.com/archive/</loc>
     <priority>0</priority>
   </url><url>
@@ -175,5 +172,7 @@
                 hreflang="en"
                 href="https://mark-weng.com/series/"
                 />
+  </url><url>
+    <loc>https://mark-weng.com/about/</loc>
   </url>
 </urlset>
