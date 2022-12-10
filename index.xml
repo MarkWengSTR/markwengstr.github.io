@@ -654,13 +654,13 @@ Contents of Design Required Specification
       </item>
       
       <item>
-        <title>SICP - The Elements of Programming</title>
+        <title>Functional programming serious - The Elements of Programming in SICP</title>
         <link>https://mark-weng.com/posts/sicp_lec1a/</link>
         <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Fri, 10 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/sicp_lec1a/</guid>
-        <description>SICP 1a - The Elements of Programming What is computer science Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo; Method: 組成process的元素，而method的名稱應該要陳述出裡面的</description>
+        <description>重點摘要 本篇取自SICP-1a，解釋最基礎的computer science What is computer science Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo; Method: 組成proces</description>
         
         <dc:creator>Mark</dc:creator>
         
