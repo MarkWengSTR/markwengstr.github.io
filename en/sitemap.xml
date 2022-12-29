@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
   <url>
     <loc>https://mark-weng.com/</loc>
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
@@ -14,14 +15,20 @@
                 hreflang="en"
                 href="https://mark-weng.com/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/</loc>
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/job_trans_1/</loc>
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/</loc>
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -34,121 +41,144 @@
                 hreflang="en"
                 href="https://mark-weng.com/tags/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/%E8%BD%89%E8%81%B7/</loc>
     <lastmod>2022-06-03T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/iec60034_27_1_study/</loc>
     <lastmod>2022-05-14T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/motor_knowledge/</loc>
     <lastmod>2022-05-14T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/mindset/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/work_exp1/</loc>
     <lastmod>2021-11-06T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/vue/</loc>
     <lastmod>2021-07-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/wordpress/</loc>
     <lastmod>2021-07-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/vue-wordpress/</loc>
     <lastmod>2021-07-05T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/mind_renew/</loc>
     <lastmod>2021-07-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/tags/python/</loc>
-    <lastmod>2021-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python8/</loc>
-    <lastmod>2021-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python7/</loc>
-    <lastmod>2021-03-14T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python6/</loc>
-    <lastmod>2021-03-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python5/</loc>
-    <lastmod>2021-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python4/</loc>
-    <lastmod>2021-03-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python3/</loc>
-    <lastmod>2021-02-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python2/</loc>
-    <lastmod>2021-02-18T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python1/</loc>
-    <lastmod>2021-02-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/serious-python0/</loc>
-    <lastmod>2021-02-16T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/motor_design_programming/</loc>
     <lastmod>2020-10-20T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/ansys_init_2/</loc>
     <lastmod>2020-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/spm_motor_design_en/</loc>
-    <lastmod>2020-10-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/python_ansys_concept_en/</loc>
-    <lastmod>2020-10-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://mark-weng.com/posts/motor_principle_en/</loc>
-    <lastmod>2020-10-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/spm_motor_design/</loc>
     <lastmod>2020-10-07T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/python_ansys_concept/</loc>
     <lastmod>2020-09-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/motor_principle/</loc>
     <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/auto_design_intro/</loc>
     <lastmod>2020-07-28T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/ansys_init/</loc>
     <lastmod>2020-07-25T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>https://mark-weng.com/tags/python/</loc>
+    <lastmod>2020-07-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/python_fundamental/</loc>
     <lastmod>2020-07-20T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/%E6%9C%89%E9%99%90%E8%88%87%E7%84%A1%E9%99%90%E7%9A%84%E9%81%8A%E6%88%B2/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/sicp_lec1a/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/sicp/</loc>
     <lastmod>2020-07-10T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/clojure/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/identity_of_objects/</loc>
     <lastmod>2020-07-01T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/tags/hugo/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/posts/hugo-setup/</loc>
     <lastmod>2020-05-21T00:00:00+00:00</lastmod>
-  </url><url>
+  </url>
+  
+  <url>
+    <loc>https://mark-weng.com/about/</loc>
+    <lastmod>2020-05-16T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/archive/</loc>
     <priority>0</priority>
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -160,7 +190,9 @@
                 hreflang="en"
                 href="https://mark-weng.com/categories/"
                 />
-  </url><url>
+  </url>
+  
+  <url>
     <loc>https://mark-weng.com/series/</loc>
     <xhtml:link
                 rel="alternate"
@@ -172,7 +204,6 @@
                 hreflang="en"
                 href="https://mark-weng.com/series/"
                 />
-  </url><url>
-    <loc>https://mark-weng.com/about/</loc>
   </url>
+  
 </urlset>

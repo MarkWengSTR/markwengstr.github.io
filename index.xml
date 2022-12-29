@@ -50,7 +50,24 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Fri, 03 Jun 2022 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/job_trans_1/</guid>
-        <description>前言 這次想分享我到底怎麼從零轉職網頁全端工程師的，轉職之前是什麼背景、具備什麼基礎、是什麼原因讓我想要轉職、如何真的轉職成功、轉職成功後遇到</description>
+        <description>前言 這次想分享我到底怎麼從零轉職網頁全端工程師的，轉職之前是什麼背景、具備什麼基礎、是什麼原因讓我想要轉職、如何真的轉職成功、轉職成功後遇到什麼困難、如何克服這些困難、而最後又為什摩要回到馬達的領域裡面。
+轉職前的背景 在成大研究所時期主要研究馬達設計，使用的工具是Ansys Maxwell (那時候叫做Ansoft)以及JMAG，其實我大學的科系跟馬達一點關係都沒有，到馬達領域也是從零開始，而且當時做的題目是一個沒人做過的題目，沒有學長姐可以問，老師給予的輔助也比較少，需要自己看書找人問。
+但也是因為這樣，自己摸索的過程當中對於電磁反應、轉動機械產生了很高的興趣，受當時給我建議的何博、明賢哥很大的影響，做任何設計之前，需要先了解基礎的物理公式，先用計算的方式得出設計，再來設計細節。
+為什麼要轉職 研究所畢業後順利的進入台達做研替，產品是目前最火紅的電動車的馬達，但進入業界之後，發現電磁分析的設計，到最後實際成品，其實有一段非常大的差距，單純模擬是很難獨自開發產品的，而且做產品跟做研究是非常不一樣的，做產品的成本非常高，需要的是不斷的優化，因此常常在修改參數、跑模擬、然後再修改參數、再跑模擬。
+在優化模擬的過程中，如果每一次只修改一點尺寸就需要重新畫一張CAD，這過程中常常會做許多的重複動作，因此我開始思考有什麼比較簡化的方式，一開始是使用Ansys裡面所提供的尺寸參數化，但隨著我想做的自動化功能越來越多，像是自動判斷結果數值並作出反應，就需要一些程式來輔助。
+其實ANSYS本身就有提供python控制的方式，但是當時沒什麼資訊，我只會寫一點點的matlab，用python根本就是天方夜譚，但那時候就產生一個想法，如果我會寫程式的話有多好，我就可以用程式來控制這些優化過程，按一個鍵去跑，我就可以去看NBA了(誤)。
+再來是考慮到研替以後的職涯，當時看了一本書 “三年後，你的工作還在嗎？”，這本書的作者後來成立了“大人學”。我開始思考依當時的狀況，自己算是最小戰鬥單位： 行腳商人、總管、工匠的哪一個？ 工程師看起來是工匠，但對於馬達這個產品的工匠來說，我會的模擬分析，應該只能算是10%的工匠。
+那有沒有什麼技能是可以成為獨自就能創造產品的工匠呢？ 當時找到的答案就是學習成為網頁全端工程師。
+如何轉職 找課程 大概是研替結束的前半年，開始想要成為網頁全端工程師後，就開始檢視自己會什麼，要找什麼課程來補強。我只會寫一些基本的matlab code，這對於寫網頁是否有用？ 答案是沒有。我連html是什麼鬼都不知道，所以要找的課程就是要完全新手的課程，google了網頁全端的課程，當時剛好Alphacamp第一次辦線上課程，也搞不清楚Ruby on Rails是什麼就報名了。
+學習網頁開發的過程 Alphacamp當時做的最好的一件事就是有幫我們分組，一起討論專案的感覺真的很不錯，互相激勵學習也會督促自己別偷懶，而且我們這組四個雖然沒有上Demo day，但是全部都有轉職成功，現在也在軟體業裡面工作。
+另外一個從Alphacamp學到的方式就是記錄自己的學習，這我一直非常受用至今，不過當時的單純紀錄課程學習是不太夠的，應該要記錄解決問題的過程。
+寫到這裡，想探討一下花錢上Alphacamp的課到底有沒有幫助呢？
+說實在除了在基本的網頁、程式知識、紀錄習慣與分組討論很不錯之外，後面工作上的幫助是非常的少。他們已經做得很不錯了，這其實是我自己學習心態的問題，我覺得沒幫助是因為當時並沒有想用程式解決的問題，只是單純想要找到網頁全端的工作，所以可能會一直去看104上的求職條件，找面試會問的問題，把面試問題的解法背下來，想說這樣就可以找得到工作。
+當時的我也沒有對程式有興趣，當然不會去深入瞭解每行code，都是在抄課程的範例，作業的部分當然會自己做，但就不會更深入想去多瞭解。所以一直到做完期中專案，對於整個rails的架構其實還是一知半解。唯一比較有學到東西的一次，是因為做期中專案的時候有發現排序上的問題，花了九牛二虎之力才發現是ruby跟rails所給的function有排序上的差異所造成。
+轉職成功 既然當時的程度這麼爛，到底怎麼找到工作的呢？ 禱告，就真的是靠著一直禱告，運氣很好的在面試第五間的時候，到了一間港商金融公司，被問到一個關鍵問題 “有沒有在學習的過程中遇到問題，如何解決”，我把上面發現排序問題的過程講了出來，表現出了一個 “邏輯清晰，具備解決問題的能力” 的有潛力的人的形象(這我後來有跟主管印證)，前四間在還沒被問到這個問題的時候就因為被發現寫code能力太差而失敗。
+回顧與檢討 現在來看，比較好的方式應該是，邊上課邊從當時的工作上直接尋找能用網頁來解決的問題，當成工作一的部分，再透過解決問題來學習，並且記錄下解決問題的過程，之後再透過複習這些解決過的問題再來問延伸問題，再想辦法解決並記錄下來，這才是比較好的學習方式。
+這樣有幾個好處
+ 當成工作，比較不會覺得是額外花時間學新東西，如果是額外花時間，常常會覺得想偷懶，當成工作的話比較會有責任感來完成。 真正學到的東西都是從解決問題後累積起來的，透過程式解決問題的過程必定會對程式有更多了解。 透過複習解決過的問題，去延伸其他問題有非常多的好處。  培養問問題的能力： 為什麼這樣可以成功，如果換成其他方式可不可以成功…等，這個能力在後續工作非常非常的重要。 加深這個問題的印象：當反覆思考之後，問題的解決方式就變成你的自然反應，忘也忘不了。 同一款問題其實有很多個面向：其實可以透過這樣的方式把問題整個深思熟慮過，思考的層級會比第一次解決的時候還要高。    下期預告 找到工作後就一帆風順了嗎？ 當然不是，真正痛苦的才剛開始，就留著下篇文章再來分享吧，敬請期待~!</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -74,7 +91,8 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Sat, 14 May 2022 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/iec60034_27_1_study/</guid>
-        <description>為什麼要寫這篇 因為工作的關係，常常接觸高壓電機的保養與相關測試，當然高壓電機線圈的部分放電也是一個非常重要的部分，最近剛讀完規範，就想說來記</description>
+        <description>為什麼要寫這篇 因為工作的關係，常常接觸高壓電機的保養與相關測試，當然高壓電機線圈的部分放電也是一個非常重要的部分，最近剛讀完規範，就想說來記錄一下讀到的東西，也希望可以在這部分有更多的精進，之後會再繼續分享有關高壓馬達保養與測試的知識。
+為什麼要測PD(Partial Discharge)?  用來觀察絕緣的品質 (老化的影響與潛在缺陷) 判斷絕緣的老化程度 定期追蹤絕緣狀態  PD的測量方式  online: IEC 60034-27-2 offline: 此篇  測量PD的限制  雜訊不能太大 溫度, 濕度需控制在一定範圍 規範適用條件  僅使用於頻率範圍 0.1-400hz, Interpretation guidelines適用的範圍為 50~60hz(電機), 45-65(power supply) 繞組需為 bar or coil所成形 線圈需有導體的塗層，通常為6kV以上的電機    常用名詞解析  PD(partial discharge): 在導體與絕緣間隙間發生的部分放電 stress control coating: groundwall insulation 外的塗層或tape，目的是要平緩高壓定子線圈的電位 conductive slot coating: 承上，為導電的塗層，通常稱為半導塗層 slot discharges: 發生在定子鐵芯與線圈外層絕緣的放電 internal discharges: 發生在groundwall insulation的放電 surface discharges: 絕緣的表面(端部或active part)的放電 largest repeatedly occurring PD magnitude(Qm): 每秒重複10次的最大脈衝值  電機中的PD特性 為什麼會有PD?</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -98,7 +116,11 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Sat, 06 Nov 2021 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/work_exp1/</guid>
-        <description>為什麼會思考這個? 八月份時，為了之後在高雄的新生活，也剛好看到了一間研究所時代非常憧憬的公司，義無反顧的就投了，在慌亂的整理快十年來的履歷的</description>
+        <description>為什麼會思考這個? 八月份時，為了之後在高雄的新生活，也剛好看到了一間研究所時代非常憧憬的公司，義無反顧的就投了，在慌亂的整理快十年來的履歷的同時，開始思考
+研究所的時候做馬達設計，有磁路的概念；第一份工作繼續做馬達設計，有馬達設計的實務經驗；第二份工作寫網頁，有網路的知識與網頁開發的概念。 但我到底累積了什麼？ 我到底如何證明這些知識是有累積起來的？
+結論 仔細回想，每個時期印象最深刻的，就是那個當時覺得最難解決的問題，最深刻也學到最多，無論是技能、做事、做人都是。
+而對我來說，所謂的天賦或熱情，就是當面對困難，努力解決之後，仍然對這一個領域的問題感到興奮，期待能繼續解決更困難的問題。
+期待我在新的工作中，能夠持續地解決 「困難」的問題，累積出屬於我的人生。</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -122,7 +144,12 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Mon, 05 Jul 2021 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/vue-wordpress/</guid>
-        <description>前言 ​ 最近也剛好有朋友有個wordpress後台功能擴增的需求，一個小型的商品ERP，由於在wordpress裡面，因此直接使用wordpr</description>
+        <description>前言 最近也剛好有朋友有個wordpress後台功能擴增的需求，一個小型的商品ERP，由於在wordpress裡面，因此直接使用wordpress當後端API，而前端就用Vue，練一下這兩個這幾年非常夯的framework。
+Use Vue-cli in Wordpress admin page 以為Vue跟wordpress都是很多人在使用的工具，應該很好找學習資源，個別找是真的蠻多資源沒錯，但是兩個加在一起的教學就非常的少，不然就是非常複雜，沒有比較簡單能上手的工具，找了很久之後終於找到了這篇文章， 需要做一些設定，之後再使用vue-cli在wordpress裡面hot-reload開發Vue。
+專案連結在此。
+Wordpress wp_rest_controller 後端部分因為已經習慣使用model與controller的方式開發，還好wordpress也提供了wp_rest_controller的工具，可以做好router與controller的部分，跟db溝通的部分拆出一個repository來使用。
+為了讓以後開發能夠有基礎可以參考，我製作了一個簡單的CURD的branch，把前端Vue與後端wordpress串起來。
+這個專案也有將常用的vue-boostrap, font-awsone裝到切開的branch供以後的專案使用，歡迎有興趣使用Vue開發wordpress plugin的朋友們一起討論~~。</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -150,7 +177,13 @@
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Sun, 04 Jul 2021 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/mind_renew/</guid>
-        <description>現實總是變化多端 好久寫文章了，最近做的東西離馬達設計的開發越來越遠，有時真是有點徬徨，感覺跟當初回台南的預期不太相符，慢慢地體會到現實總是無</description>
+        <description>現實總是變化多端 好久寫文章了，最近做的東西離馬達設計的開發越來越遠，有時真是有點徬徨，感覺跟當初回台南的預期不太相符，慢慢地體會到現實總是無法掌控的，畢竟世界不是繞著自己旋轉，不過在持續學習的原則下保持彈性是好的。工作上也使用了一些以前沒有接觸過的工具，還蠻有趣的像是elasticsearch (ELK)的架設、logstash設定、各種ES的API操作&amp;hellip;等等，之後也可以來寫一下。
+上帝的意念高過我們的意念 耶穌升天後，進入了初代教會使徒的時代，各種神蹟彰顯，教會人數倍增，弟兄姊妹和平相處，凡物共用，聖靈時常充滿門徒，我想如果我是當時的門徒，一定覺得初代教會的狀態根本就是上帝給門徒們最終的命定，持續的擴張，並把福音傳到全世界。
+不但彼得約翰講個道就幾千人信主，還會自己找上門，且各種徵兆都象徵上帝的同在。
+但這樣美好的景況卻在司提凡被處死之後瓦解，門徒逃到四處各地。
+而門徒逃到各地之後，逃到哪裡，就把福音傳到哪裡，保羅也在這時候被興起。
+如果還是維持在原本初代教會的狀態，也許上帝很難讓保羅興起，而福音需要更久才能傳的更廣。
+結論 聖經說要心意更新而變化，才能查驗何為神良善、純全、可喜悅的旨意，所以換個角度想，也許上帝最終要我走的方向是個更全面的開發者，而不單單只是開發馬達設計工具，保持持續的學習與進步才是最重要的。</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -168,303 +201,15 @@
       </item>
       
       <item>
-        <title>Serious-Python note - 8. functional programming</title>
-        <link>https://mark-weng.com/posts/serious-python8/</link>
-        <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Mon, 15 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python8/</guid>
-        <description>Creating Pure Functions 當想把code寫成functional style時，function就要盡量設計成沒有side effect。也就是並不會改變送進去的參</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 7. Methods and Decorators</title>
-        <link>https://mark-weng.com/posts/serious-python7/</link>
-        <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sun, 14 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python7/</guid>
-        <description>Decorators and When to Use Them Decorator是一個拿別的function來當作引數的function，且替換或調整丟進來的function成為一個新的fu</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 6. Unit Testing</title>
-        <link>https://mark-weng.com/posts/serious-python6/</link>
-        <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sun, 07 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python6/</guid>
-        <description>The Basics of Testing 在python中寫test與跑test是非常簡單的，並沒有侵入與破壞性，而test會大大的幫助你和其他開發者維護你的專案，接下來就會</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 5. Distributing Your Software (順便distributing我的project &#34;anmotordesign&#34; 到pypi上)</title>
-        <link>https://mark-weng.com/posts/serious-python5/</link>
-        <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Fri, 05 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python5/</guid>
-        <description>A Bit of setup.py History distutils library 從1988年就存在python standard library，開發自Greg Ward，提供了 setup.py 檔案如下 1 2 3 4 5 6 7 from distutils.core import setup setup(name=&amp;#34;rebuildd&amp;#34;, description=&amp;#34;Debian packages rebuild tool&amp;#34;, author=&amp;#34;Julien Danjou&amp;#34;, author_email=&amp;#34;acid@debian.org&amp;#34;,</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 4. Handling Timestamps and Time Zones</title>
-        <link>https://mark-weng.com/posts/serious-python4/</link>
-        <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Mon, 01 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python4/</guid>
-        <description>The Problem of Missing Time Zones 當timestamp沒有time zone資訊，那就等於沒有用，因為無法得知確切可以比較的時間。 在把timestamp儲存起來的時</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 3. Documentation and Good API Practice</title>
-        <link>https://mark-weng.com/posts/serious-python3/</link>
-        <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Wed, 24 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python3/</guid>
-        <description>Documenting with Sphinx 大多的contributer都喜歡寫code甚於寫文件，甚至有doc跟project 是分開的，doc根本趕不上開發的速度。 最常用的py</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 2. modules, libaries and frameworks</title>
-        <link>https://mark-weng.com/posts/serious-python2/</link>
-        <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Thu, 18 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python2/</guid>
-        <description>The Import System import itertools 實際上是 itertools=__import__(&amp;quot;itertools&amp;quot;) 的語法糖 import itertools as it 其實就是 it=__import__(&amp;quot;itertools&amp;quot;) sys module sys.module 是一個dictionary，包含目前所有load進環境中的modules，key是mod</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 1. start your project</title>
-        <link>https://mark-weng.com/posts/serious-python1/</link>
-        <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Wed, 17 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python1/</guid>
-        <description>python版本 每一個小的進版都會有18個月的bug fix suport以及5年的安全性維護 作者建議新的專案，就不要再用python2了 (pyth</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 0. introduction</title>
-        <link>https://mark-weng.com/posts/serious-python0/</link>
-        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Tue, 16 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python0/</guid>
-        <description>緣起 最近因為工作關係，需要大量的使用python，想找一本書來好好精進自己的python功力，於是找了這本Serious-Python來讀，</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
         <title>python開啟ansys軟體問題 (2147221164, &#39;類別未登錄&#39;)</title>
         <link>https://mark-weng.com/posts/ansys_init_2/</link>
         <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Tue, 20 Oct 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/ansys_init_2/</guid>
-        <description>問題描述 重灌了幾次ansys，又灌了其他軟體之後，突然某一天發現用 oAnsoftApp = client.Dispatch(&amp;quot;Ansoft.ElectronicsDesktop&amp;quot;) 無法正常開啟anays軟體，錯誤為 com_error: (-2147221164, &#39;類別未登錄&#39;, none, none)。</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>motor_design_programming</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Real Example of Surface Permanent Magnet Motor Design by python script</title>
-        <link>https://mark-weng.com/posts/spm_motor_design_en/</link>
-        <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Mon, 12 Oct 2020 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/spm_motor_design_en/</guid>
-        <description>Goal The design and detailed dimensions of the entire 10p12s spm motor are derived from the stator outer diameter limit, maximum power, DC bus voltage, maximum torque, and maximum speed specifications. It is not an optimized model, but it is based on reasonable calculations and assumptions. Implement an initial design that meets specifications.
-Contents of Design Required Specification
-1 2 3 4 5 6 7  { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, }   The whole design calculation can refer to the link</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>motor_design_programming</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Surface Permanent Magnet Motor design programming concept in python</title>
-        <link>https://mark-weng.com/posts/python_ansys_concept_en/</link>
-        <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sun, 11 Oct 2020 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/python_ansys_concept_en/</guid>
-        <description>Why use program to design motor Save labor cost - program has the advantage of automation, repeating steps only need to be written once, and then only need to execute the program Code represent design concept and step - When the design becomes code, and a well-understood and universal code structure is used, the work problems caused by personnel switching will be reduced, because as long as everyone can understand</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>motor_design_programming</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Surface Permanent Magnet Motor Design Fundamental</title>
-        <link>https://mark-weng.com/posts/motor_principle_en/</link>
-        <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sat, 10 Oct 2020 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/motor_principle_en/</guid>
-        <description>What&amp;rsquo;s electric machine Recently, electric vehicles can be seen running everywhere on the road. Although they are still considered toys for rich people, their popularity in the future should not be a problem. The power source of electric vehicles is the motor. Of course, motors are not only used in electric vehicles. In fact, there are motors everywhere in our daily life, such as laptop fans, washing machines, robotic arms,</description>
+        <description>問題描述 重灌了幾次ansys，又灌了其他軟體之後，突然某一天發現用 oAnsoftApp = client.Dispatch(&amp;quot;Ansoft.ElectronicsDesktop&amp;quot;) 無法正常開啟anays軟體，錯誤為 com_error: (-2147221164, &#39;類別未登錄&#39;, none, none)。
+使用ipython來執行，詳細問題如下 :
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  &amp;lt;ipython-input-2-9633b38a1caf&amp;gt; in &amp;lt;module&amp;gt; ----&amp;gt; 1 client.dynamic.Dispatch(&amp;#34;Ansoft.ElectronicsDesktop&amp;#34;) c:\python37\lib\site-packages\win32com\client\dynamic.py in Dispatch(IDispatch, userName, createClass, typeinfo, UnicodeToString, clsctx) 125 def Dispatch(IDispatch, userName = None, createClass = None, typeinfo = None, UnicodeToString=None, clsctx = pythoncom.CLSCTX_SERVER): 126 assert UnicodeToString is None, &amp;#34;this is deprecated and will go away&amp;#34; --&amp;gt; 127 IDispatch, userName = _GetGoodDispatchAndUserName(IDispatch,userName,clsctx) 128 if createClass is None: 129 createClass = CDispatch c:\python37\lib\site-packages\win32com\client\dynamic.</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -488,7 +233,12 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Wed, 07 Oct 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/spm_motor_design/</guid>
-        <description>目標 由定子外徑限制、最大功率、DC bus電壓、最大轉矩、最高轉速 規格，推導出整個10p12s spm馬達的設計與細部尺寸，並不是一個優化的模型</description>
+        <description>目標 由定子外徑限制、最大功率、DC bus電壓、最大轉矩、最高轉速 規格，推導出整個10p12s spm馬達的設計與細部尺寸，並不是一個優化的模型，但都是經由合理的計算與假設，實作出一個合乎規格的初始設計。
+設計概覽 規格如下
+1 2 3 4 5 6 7  { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, }   整個 設計計算 可以參考連結
+設計流程簡介 先看到整個script最底下的 mech_structure_cal 的計算
+1 2 3 4 5 6 7  def mech_stucture_cal(total_cal_params): assign_spec_value(total_cal_params) and \ ktke_calculation(total_cal_params) and \ expend_NBLR(total_cal_params) and \ expend_stator_teeth_york(total_cal_params) and \ expend_stator_slot(total_cal_params) and \ expend_magnet(total_cal_params)   清楚的看到，流程就是
+ 將規格參數先塞到整個計算流程會用到的參數上  為什麼要這樣呢? 因為將用到的參數(state)統整在同一個地方，這樣方便管理、修改與debug   計算ke, kt，馬達最重要的兩個參數 由ke展開 線圈匝數、氣隙磁密、馬達有效長度、氣隙半徑 展開定子槽尺寸參數 展開轉子磁石參數  設計流程說明 以下談到的參數與係數都在 設計所需參數 中。</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -512,7 +262,9 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Tue, 01 Sep 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/python_ansys_concept/</guid>
-        <description>Why use program to design motor Save labor cost - program 具有自動化的好處，重複的步驟只要編寫一次，之後只需要執行程式就好 Code represent design concept and step - 當設計變成code，並且利用的是好理解且</description>
+        <description>Why use program to design motor  Save labor cost - program 具有自動化的好處，重複的步驟只要編寫一次，之後只需要執行程式就好 Code represent design concept and step - 當設計變成code，並且利用的是好理解且通用的 code structure ，人員轉換造成的工作問題就會下降，因為所有人只要能看懂code，就能看懂設計步驟，進而理解設計。  How to represent motor design concept and step 專注在兩個非常重要卻又簡單的東西 data &amp;amp; function。
+Input &amp;amp; Output Data 先思考 input 與 ouput的data是什麼
+ input data - 規格 output data - 定子外徑、馬達長度、匝數、BEMP(@1000rpm)、操作點數據(torque data, average torque, speed, torque ripple, current, current density, line voltage, coreloss, copperloss)  Design function and data  手算一次將 規格 轉換成 馬達模型數據 與 電氣數據。 將中間所有的 步驟，以及當中用到的 數據名稱 記錄下來。 將 數據名稱 根據 步驟 的概念分類 (定轉子、磁石、電氣&amp;hellip;等)。使用 dict 這個 data structure將其收起來，還不知道的值就先給 None，用專案中馬達設計的部分呈現如下。  1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64  motor_cal_params = { &amp;#34;stator&amp;#34;: { &amp;#34;OD_limit&amp;#34;: None, &amp;#34;slot&amp;#34;: 12, &amp;#34;shoes_height_front&amp;#34;: 1, &amp;#34;shoes_height_back&amp;#34;: 1, &amp;#34;slot_open&amp;#34;: 4.</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -536,7 +288,11 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Sat, 01 Aug 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/motor_principle/</guid>
-        <description>馬達 (電動機) 是什麼? (What&amp;rsquo;s electric machine) 最近可以看到電動車在路上到處跑了，雖然目前還算是有錢人的玩具，但未來普及應是不在話下，而電動車的動力來源，就是 馬</description>
+        <description>馬達 (電動機) 是什麼? (What&amp;rsquo;s electric machine) 最近可以看到電動車在路上到處跑了，雖然目前還算是有錢人的玩具，但未來普及應是不在話下，而電動車的動力來源，就是 馬達 。 當然不只電動車用到馬達，其實日常生活中到處都是馬達，筆電風扇、洗衣機、機器手臂&amp;hellip;等，任何要讓機械動起來的源頭都是馬達。
+而馬達是什麼? 維基百科 裡面提到，最重要的原理就是 電能 -&amp;gt; 機械能 ，描述的更準確一點，其實是 電能 -&amp;gt; 磁能 -&amp;gt; 機械能 。
+馬達設計 是什麼? (What is motor design) 馬達設計，就是設計 電能 -&amp;gt; 磁能 -&amp;gt; 機械能 中間的 磁能， 讓電能 有效率 的轉換為機械能。 也就是可以在有限制的體積、重量條件，達成最大的輸出功率以及效率，因此評估馬達的指標通常會使用轉矩密度、功率密度、效率&amp;hellip;等指標。
+勞倫茲力 (Lorentz force) 勞倫茲力 (Lorentz force) : F (force density) = $\sigma$( charge density) E (electric field)+ J (current density) x B (magnetic density)
+先來談談電磁力的源頭 - 勞倫茲力 ，為了讓大家不要看到這邊就關掉，不考慮第一項電場力，我們可以回想一下高中一個很簡單的公式，長直導體電流在磁場裡的作用力 - f (電磁作用力) = i (電流) * l (磁場中的導線長度) * B (磁通密度) * sin (垂直分量) ，其實就是勞倫茲力計算得到的。</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -560,7 +316,10 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Tue, 28 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/auto_design_intro/</guid>
-        <description>影片介紹 (Vedio Intro) 目前的成果，拍成影片上傳到youtube上 輸入所需的參數 spec_params [input the required parameters] 1 2 3 4 5 6 7 8 9 10 spec_params = { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, &amp;#34;export_path&amp;#34;: None, &amp;#34;pj_key&amp;#34;: str(int(time.mktime(datetime.datetime.now().timetuple()))), &amp;#34;res_url&amp;#34;: None, } 稍</description>
+        <description>影片介紹 (Vedio Intro) 目前的成果，拍成影片上傳到youtube上
+  輸入所需的參數 spec_params [input the required parameters]
+1 2 3 4 5 6 7 8 9 10 11  spec_params = { &amp;#34;stator_OD_limit&amp;#34;: 120, &amp;#34;max_power&amp;#34;: 5000, &amp;#34;voltage_dc&amp;#34;: 48, &amp;#34;max_torque_nm&amp;#34;: 27, &amp;#34;max_speed_rpm&amp;#34;: 5000, &amp;#34;export_path&amp;#34;: None, &amp;#34;pj_key&amp;#34;: str(int(time.mktime(datetime.datetime.now().timetuple()))), &amp;#34;res_url&amp;#34;: None, }   稍微解釋一下參數
+ stator_OD_limit: 定子外徑限制 [Stator outer diameter] max_power: 最大功率 [maximum power] voltage_dc: DC bus 電壓 [DC bus voltage] max_torque_nm: 最大轉矩 [maximum torque] max_speed_rpm: 最高轉速 [maximum speed] export_path: 輸出路徑 (not required) pj_key: project的名稱(使用不重複的時間戳，以便同時多個模擬一起執行) (not required) res_url: 打response回去的url (這是之後串接要用的可以不用管) (not required)  輸入以上參數後，執行 python run.</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -584,7 +343,13 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Sat, 25 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/ansys_init/</guid>
-        <description>環境 windows10 正版Ansys (我的是教學版) python 3 目標 使用python script，執行後自動開啟maxwell、新增project win32com 首先要完成的是讓</description>
+        <description>環境  windows10 正版Ansys (我的是教學版) python 3  目標 使用python script，執行後自動開啟maxwell、新增project
+win32com 首先要完成的是讓python開啟maxwell，參考了網路上的一些資訊，使用win32com這個module是最方便的，因此先跑pip install pywin32裝好module。
+client.Dispatch 開啟軟體 使用以下的方式就可以直接開啟 ansys 的電磁分析軟體。
+1 2 3  from win32com import client oAnsoftApp = client.Dispatch(&amp;#34;Ansoft.ElectronicsDesktop&amp;#34;)   看到上面的code，可能會有幾個問題
+  client.Dispatch做了什麼事?
+ win32com.client.Dispatch()是利用 微軟 提供的一個 IDispatch 的自動化介面，接收軟體的 ProgID為參數，來操作windows軟體 (來源、詳細資料)    怎麼知道，我的系統有沒有 &amp;ldquo;Ansoft.ElectronicDesktop&amp;rdquo; 這個 ProgID呢 ?
+ 可以在powershell打上 Get-ChildItem HKLM:\Software\Classes -ErrorAction SilentlyContinue | Where-Object {$_.PSChildName -match &#39;^\w+\.\w+$&#39; -and (Test-Path -Path &amp;quot;$($_.PSPath)\CLSID&amp;quot;)} | Select-Object -ExpandProperty PSChildName 找看看有沒有，如果太多的話可以在最後面加上 | grep An 來縮減結果。    為什麼使用 oAnsoftApp 這個Object name?</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -608,7 +373,14 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Mon, 20 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/python_fundamental/</guid>
-        <description>任何語言的基本概念 SICP有提到，或是可以參考網站內的文章 sicp_1a，當認識一個新語言，最重要的事情有四個 Primitive Object (語言的基本元素) Means of combination (</description>
+        <description>任何語言的基本概念 SICP有提到，或是可以參考網站內的文章 sicp_1a，當認識一個新語言，最重要的事情有四個
+ Primitive Object (語言的基本元素) Means of combination (組合基本對象的方法) Means of abstraction (如何抽象) Capturing common patterns (如何利用領域的專業，找到通用函數)  第四點雖然也很重要，但比較屬於系統複雜度增加後採取的作法，目前先不討論
+Primitive Object (語言的基本元素) in python Expression and statement   Expression(表示式): 寫出一段文字 or 程式碼，python的解釋器讀了之後，幫你做完裡面的事，並且回傳給你一個值 (ex: 1 + 1 回傳 2)
+  statement(陳述式): 寫出一段文字 or 程式碼，python的解釋器讀了之後，幫你做完裡面的事，但不回傳任何東西 ( a = 1 )
+  (有個小問題可以思考一下，那回傳 nil算expresion還是statement呢?)
+Data   字串: str
+  數字: int(整數), float(分數)
+  有順序的集合: list(由[]包起來的集合, 元素可以被覆蓋), tuple(由()包起來的集合, 元素不能被覆蓋)</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -636,7 +408,22 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Wed, 15 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/%E6%9C%89%E9%99%90%E8%88%87%E7%84%A1%E9%99%90%E7%9A%84%E9%81%8A%E6%88%B2/</guid>
-        <description>為什麼會看這本書? 最近剛好處於一個人生的重大轉換時期，也剛好有一個多月的空閒時間，除了錄11月份去師大教課的影片，其餘時間就是練習sicp與</description>
+        <description>為什麼會看這本書? 最近剛好處於一個人生的重大轉換時期，也剛好有一個多月的空閒時間，除了錄11月份去師大教課的影片，其餘時間就是練習sicp與看書。
+這本書就是偶然在聽某個財經的podcast聽到的，而剛好以前主管也有分享過，好奇心驅使之下就找了一下資訊。
+看了一下博客來 居然已經絕版了，不過找到了一個說書的影片 ，也找到一份免費的 版本。
+我想以重點摘要配上自己的心得，紀錄這段時間受到的觸動與啟發
+重點摘要與心得 這個世界上有兩種遊戲，有限遊戲與無限遊戲  有限的遊戲: 以取勝為目的 無限的遊戲: 以延續遊戲為目的  心得 :
+ 上面兩句話貫穿整本書，因此其他都忘了也沒關係，只要記得如果某件事情你想要贏別人、或是你覺得輸了，那就是在玩有限的遊戲。 永遠選擇無限的遊戲  有限的遊戲  有玩家獲勝即終結，而獲勝的條件是觀眾的認同 獲勝後的玩家得到頭銜，且以維持這個頭銜為目的 參與者是需要資格的，資格是所有遊戲中的玩家所界定的 參與的玩家隨時都可以撤出 玩家需在規則 (邊界) 內玩遊戲  心得 :
+社會上的每件事情都充滿了有限遊戲，工作、錢、房子、甚至小孩的成績&amp;hellip;，感覺人類的社會一直都是這樣，可能從亞當夏娃吃了分別善惡樹的果實開始的吧。
+而我們卻又深深的沉浸在這些遊戲當中，相信要扮演好某個角色，相信這個角色要贏過某些人才行。
+&amp;ldquo;相信是知道自己相信，而知道自己相信則是不相信&amp;rdquo;，我的解讀是，我們覺得在某個角色上應該要這樣，但覺得角色應該要的同時，我們其實不認同&amp;quot;應該要這樣&amp;quot;的想法。 任何領域的頭銜，都有這個性質。
+無限的遊戲  唯一的目的是&amp;quot;阻止遊戲結束&amp;rdquo; 每個人都有資格 參與的玩家說不清時間、空間界線，他們也不在意 樂趣在於嘗試去啟動一件無法結束的事 玩家玩的是遊戲的規則(邊界)  心得 :
+這真的是一個很值得響往的人生，仔細思考一下，有很多人已經在玩無限遊戲了，音樂、物理、天文、電腦程式&amp;hellip;太多太多人參與在其中，而且此時此刻，還有很多人參與在無限遊戲當中，繼續拓展領域的邊界。
+有時候玩音樂，會去比較誰強，我要比誰彈得更屌，這樣的想法是有限遊戲，但音樂本身是一個無限遊戲，對於無限來說，任何人的能力再強，都是微小的，我要在乎的只是，能不能在音樂的邊界上更多的推展，別人比我強，我就去學習，別人比我弱，我就去教他，我們一起把音樂的邊界推展出去，不只音樂，任何事情都是這樣。
+這本書提供給了我一個想法，我真的很喜歡寫程式的自我實現感，希望可以在馬達這種傳統領域來推廣，因此希望能創造一個 簡單且好用的 motor design programming way ，並且持續的推廣它，讓所有從事馬達設計的人，能在這個programming的基礎上，讓馬達設計更方便，且也能回過頭來一起優化這個project，後面的文章會將我所想要做的motor design programming實踐出來，不過其實對於CS領域的知識還很薄弱，還得先繼續充實自己才行。
+劇本性與傳奇性  有限遊戲是劇本性的，無限遊戲是傳奇性的 有限遊戲的玩家希望所有未來發生的事，都在自己的掌控之中，技巧完美純熟到，一上場遊戲就好像結束了 &amp;ldquo;驚奇之舉&amp;quot;經常讓有限遊戲結束，讓無限遊戲延續  心得 :
+很多的發明都是從&amp;quot;驚奇之舉&amp;quot;來的，但我覺得意思不是指什麼都不準備， 而是準備所有想的到的可能性，但並不排斥準備以外的可能性發生。
+這樣的想法，可以讓壓力下降很多，因為不再執著於每一步，而是把焦點放在整件事能不能往前推進。</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -660,7 +447,9 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Fri, 10 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/sicp_lec1a/</guid>
-        <description>重點摘要 本篇取自SICP-1a，解釋最基礎的computer science What is computer science Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo; Method: 組成proces</description>
+        <description>重點摘要 本篇取自SICP-1a，解釋最基礎的computer science
+What is computer science  Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo; Method: 組成process的元素，而method的名稱應該要陳述出裡面的知識  Computer science 的特性  處理&amp;rdquo; 理想化的元件&amp;rdquo;: 因為我們對所有要組合在一起的 data 與 function都能完全的掌控， 因此在理想與現實之間是差不多的 (如果是電子或機械工程師 那可能會需要考慮很多真實世界的限制)。 一個工程中的 &amp;ldquo;抽象形式&amp;rdquo;: 因為不需考慮現實的限制  Computer science 的技術 - 控制複雜度  black-box abstraction: 將功能封裝起來，使用的人不需要知道裡面的技術，只要呼叫它，丟入值就會輸出結果，而使用者又可以拿這個功能再去組合成更多功能。  將細節隱藏 (用以構建更大型的盒子) 具有通用性 (generality)   Conventional interface: 如果系統裡的數據有許多不一樣的類型，計算的時候總不能混雜在一起，那怎麼辦呢?  Generic operations large-scale structure and modularity object-oriented programming operations on aggregate (流)   Metalinguistic Abstraction: 定義一個新語言 (用lisp做一個解析器來解析lisp)
+本篇不討論第二項與第三項，純粹討論最基礎的第一項。  用一個例子解釋何謂black-box abstraction Square root algorithm - 將數字開根號(x^0.</description>
         
         <dc:creator>Mark</dc:creator>
         
@@ -684,7 +473,16 @@ Contents of Design Required Specification
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Wed, 01 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/identity_of_objects/</guid>
-        <description>本文介紹 為计算机程序的构造和解释（Lec5b：计算对象) 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開</description>
+        <description>本文重點 非預期的共享，是大型系統的bug來源，透過給object一個身份(賦值) ，給它一個別名互相共享，是有蠻多方便，但也相對付出了代價。 但不賦值又怎麼能取用資料結構中的值呢? 能不能直接用function來解決以上問題?
+為计算机程序的构造和解释（Lec5b：计算对象) 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。
+定義最簡單的資料結構 首先討論，什麼是 最簡單的資料結構(data structure)，任何 object 的最小單位就是一個pair。
+如何組成pair 就要談到組成pair的方法，叫做 cons 。
+cons 的定義 1 2 3  ;;對於任何的 x, y (car (cons x y)) = x (cdr (cons x y)) = y   簡單來說(cons x y)就是一個pair，也是最基本的資料結構。 就這個的定義來說，其實是一種抽象，cons包含兩個參數，如果兩個cons包含的參數是一樣的，那這兩個cons就是一樣的。
+不過，上述定義並沒有闡述，到底cons是否具有身份(identity)？
+給資料身分，引入賦值 如何解釋以下這段code ?
+1  (def a (cons 1 2))   指的是在一個環境裡面，創造了一個名為 a 的 pair，這個pair裡面包含兩個指針一個指向1，一個指向2。
+再試著回答下列問題:
+ 假設又定義了一個 b (def b (cons a a))，那 b 這個pair指向的兩個a，是同一個a嗎？ 呈上，且現在呼叫 a 的方式有三種 a, (car b), (cdr b) ，哪個才是真正的呢？ 假設又用了賦值去改 car b (set-car!</description>
         
         <dc:creator>Mark</dc:creator>
         

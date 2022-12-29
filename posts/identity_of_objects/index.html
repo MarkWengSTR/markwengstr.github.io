@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
+<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="simple describe problem of identity of object and church encoding use clojure">
 
-<meta name="generator" content="Hugo 0.94.2" />
+<meta name="generator" content="Hugo 0.74.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,6 +1299,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
+
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1483,7 +1484,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Jul 1, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1515,15 +1516,18 @@ if (!doNotTrack) {
   <div class="expand__content expand__content--toc">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#本文介紹">本文介紹</a></li>
-    <li><a href="#定義最簡單的資料結構">定義最簡單的資料結構</a></li>
-    <li><a href="#未引入賦值">未引入賦值</a></li>
-    <li><a href="#引入賦值後">引入賦值後</a></li>
-    <li><a href="#何謂身份">何謂身份</a></li>
+    <li><a href="#本文重點">本文重點</a></li>
+    <li><a href="#定義最簡單的資料結構">定義最簡單的資料結構</a>
+      <ul>
+        <li><a href="#如何組成pair">如何組成pair</a></li>
+        <li><a href="#cons-的定義">cons 的定義</a></li>
+      </ul>
+    </li>
+    <li><a href="#給資料身分引入賦值">給資料身分，引入賦值</a></li>
     <li><a href="#賦值的危險">賦值的危險</a></li>
     <li><a href="#data-structure-is-just-a-function">Data Structure is Just a function</a>
       <ul>
-        <li><a href="#演示一下用lambda憑空製造一個-cons----by-alonzo-church">演示一下用lambda憑空製造一個 cons ! - by Alonzo Church</a></li>
+        <li><a href="#如何使用lambda-function憑空製造一個-cons----by-alonzo-church">如何使用lambda function憑空製造一個 cons ! - by Alonzo Church</a></li>
       </ul>
     </li>
   </ul>
@@ -1531,55 +1535,46 @@ if (!doNotTrack) {
   </div>
 </div>
 
-      <h2 id="本文介紹">本文介紹</h2>
+      <h2 id="本文重點">本文重點</h2>
+<p><strong>非預期的共享</strong>，是大型系統的bug來源，透過給object一個身份(賦值) ，給它一個別名互相共享，是有蠻多方便，但也相對付出了代價。 但不賦值又怎麼能取用資料結構中的值呢?  能不能直接用function來解決以上問題?</p>
 <p>為<a href="https://www.youtube.com/watch?v=2Iz7agtk614&amp;t=302s">计算机程序的构造和解释（Lec5b：计算对象)</a> 後面部分的心得，整個影片都很值得看，但這篇要說的是從 46:35左右開始講的。且最近開始學Clojure，所以內容中操作的部分會用clojure來呈現。</p>
 <h2 id="定義最簡單的資料結構">定義最簡單的資料結構</h2>
-<p>首先討論，什麼是 <strong>最簡單的資料結構(data structure)</strong>，任何 object 的最小單位就是一個pair， 而如何組成pair呢。</p>
+<p>首先討論，什麼是 <strong>最簡單的資料結構(data structure)</strong>，任何 object 的最小單位就是一個pair。</p>
+<h3 id="如何組成pair">如何組成pair</h3>
 <p>就要談到組成pair的方法，叫做  <strong>cons</strong>  。</p>
-<p>以下是 cons 的定義</p>
+<h3 id="cons-的定義">cons 的定義</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="c1">;;對於任何的 x, y</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">car</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">x</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">y</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="c1">;;對於任何的 x, y</span>
+<span class="p">(</span><span class="nf">car</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">x</span>
+<span class="p">(</span><span class="nf">cdr</span> <span class="p">(</span><span class="nb">cons </span><span class="nv">x</span> <span class="nv">y</span><span class="p">))</span> <span class="nb">= </span><span class="nv">y</span>
+</code></pre></td></tr></table>
 </div>
-</div><p>簡單來說 <code>(cons x y)</code> 就是一個pair，也是最基本的資料結構。</p>
-<p>但其實上述定義並沒有闡述，到底cons是否有像人一樣的身份(identity)？</p>
-<h2 id="未引入賦值">未引入賦值</h2>
-<p>就上述的定義來說，其實是一種抽象，cons包含兩個參數，如果兩個cons包含的參數是一樣的，那這兩個cons就是一樣的。</p>
-<h2 id="引入賦值後">引入賦值後</h2>
-<p>上述定義就不完整了，因為如果我想修改兩個包含一樣參數cons的car，那兩個cons都同時會被我修改嗎？</p>
-<p>如果兩個cons代表的是數學，那其實沒差，就算是兩個一樣的 3/4，就還是3/4，變成同把兩個3/4變成1/4，反正就是1/4，並沒有所謂 <strong>身份</strong> 的區別，</p>
-<p>但物件導向的世界中，我們描述的是真實的世界，是有 <strong>身份</strong> 的，改變car可能就像是做變性手術一樣的。</p>
-<h2 id="何謂身份">何謂身份</h2>
+</div><p>簡單來說<code>(cons x y)</code>就是一個pair，也是最基本的資料結構。 就這個的定義來說，其實是一種抽象，cons包含兩個參數，如果兩個cons包含的參數是一樣的，那這兩個cons就是一樣的。</p>
+<p>不過，上述定義並沒有闡述，到底cons是否具有身份(identity)？</p>
+<h2 id="給資料身分引入賦值">給資料身分，引入賦值</h2>
 <p>如何解釋以下這段code ?</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="p">(</span><span class="k">def </span><span class="nv">a</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="k">def </span><span class="nv">a</span> <span class="p">(</span><span class="nb">cons </span><span class="mi">1</span> <span class="mi">2</span><span class="p">))</span>
+</code></pre></td></tr></table>
 </div>
 </div><p>指的是在一個環境裡面，創造了一個名為 a 的 pair，這個pair裡面包含兩個指針一個指向1，一個指向2。</p>
-<p>接下來來探討幾個哲學的問題</p>
+<p>再試著回答下列問題:</p>
 <ul>
-<li>
-<p>假設又定義了一個 b <code>(def b (cons a a))</code>，那 b 這個pair指向的兩個a，是同一個a嗎？</p>
-</li>
-<li>
-<p>呈上，且現在呼叫 a 的方式有三種 <code>a</code>, <code>(car b)</code>, <code>(cdr b)</code> ，哪個才是真正的呢？</p>
-</li>
-<li>
-<p>假設又用了賦值去改 <code>car b (set-car! (car b) 3)</code> ，原本存在 a 的 1被改成3了，現在如果再呼叫 (car a) 回傳的會是 3，儘管一開始我們定義的 (car a) 是1。</p>
-</li>
+<li>假設又定義了一個 b <code>(def b (cons a a))</code>，那 b 這個pair指向的兩個a，是同一個a嗎？</li>
+<li>呈上，且現在呼叫 a 的方式有三種 <code>a</code>, <code>(car b)</code>, <code>(cdr b)</code> ，哪個才是真正的呢？</li>
+<li>假設又用了賦值去改 <code>car b (set-car! (car b) 3)</code> ，原本存在 a 的 1被改成3了，現在如果再呼叫 (car a) 回傳的會是 3，儘管一開始我們定義的 (car a) 是1。</li>
 </ul>
+<p>是不是有點難回答呢?</p>
 <h2 id="賦值的危險">賦值的危險</h2>
 <p><strong>非預期的共享</strong>，是大型系統的bug來源，透過給object一個身份 ，給它一個別名互相共享，是有蠻多方便，但也相對付出了代價。</p>
 <p>當開始任意使用賦值，以下問題便開始產生</p>
@@ -1591,26 +1586,26 @@ if (!doNotTrack) {
 </ul>
 <h2 id="data-structure-is-just-a-function">Data Structure is Just a function</h2>
 <p>為了盡量避免object的問題，能不能就把它當成數學的函式，而不要認為它是有身分的object呢 ?</p>
-<h3 id="演示一下用lambda憑空製造一個-cons----by-alonzo-church">演示一下用lambda憑空製造一個 cons ! - by Alonzo Church</h3>
+<h3 id="如何使用lambda-function憑空製造一個-cons----by-alonzo-church">如何使用lambda function憑空製造一個 cons ! - by Alonzo Church</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-clojure" data-lang="clojure"><span class="line"><span class="cl"><span class="p">(</span><span class="kd">defn </span><span class="nv">cus-cons</span> <span class="p">[</span><span class="nv">x</span> <span class="nv">y</span><span class="p">]</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">fc</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="kd">defn </span><span class="nv">cus-car</span> <span class="p">[</span><span class="nv">fc2</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc2</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">a</span> <span class="nv">d</span><span class="p">]</span> <span class="nv">a</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">cus-car</span> <span class="p">(</span><span class="nf">cus-cons</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">))</span> <span class="c1">;=&gt; 1</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-clojure" data-lang="clojure"><span class="p">(</span><span class="kd">defn </span><span class="nv">cus-cons</span> <span class="p">[</span><span class="nv">x</span> <span class="nv">y</span><span class="p">]</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">fc</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc</span> <span class="nv">x</span> <span class="nv">y</span><span class="p">)))</span>
+<span class="p">(</span><span class="kd">defn </span><span class="nv">cus-car</span> <span class="p">[</span><span class="nv">fc2</span><span class="p">]</span> <span class="p">(</span><span class="nf">fc2</span> <span class="p">(</span><span class="k">fn </span><span class="p">[</span><span class="nv">a</span> <span class="nv">d</span><span class="p">]</span> <span class="nv">a</span><span class="p">)))</span>
+<span class="p">(</span><span class="nf">cus-car</span> <span class="p">(</span><span class="nf">cus-cons</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">))</span> <span class="c1">;=&gt; 1</span>
+</code></pre></td></tr></table>
 </div>
-</div><p>演繹一下這個神奇的程序</p>
+</div><p>是不是看不太懂? 沒關係，我來演繹一下這個神奇的程序</p>
 <ul>
 <li>1, 2被代換掉 cus-cons中的x, y，回傳了一個function <code>(fn [fc] fc 1 2)</code></li>
 <li>傳入 cus-car之後代換掉 fc2 : <code>((fn [fc] fc 1 2) (fn [a d] a))</code> ， <code>(fn [a d] a)</code> 被當成參數代換掉 fc</li>
 <li>最後變成 <code>((fn [a b] a) 1 2)</code> ，回傳值就是1了，超級神奇吧！</li>
 </ul>
-<p>Lambda這個方式，完全是用function來完成 cons car cdr，並沒有存在任何一的地方，真的很有趣啊，之後一定要來看一下 這個傳說中的 <a href="https://zh.wikipedia.org/wiki/%CE%9B%E6%BC%94%E7%AE%97">Alonzo church lambda calculus</a>！！！</p>
+<p>Lambda這個方式，完全是用function來完成 cons car cdr，並沒有存在任何一的地方。真的很有趣啊，推薦一定要去看一下傳說中的 <a href="https://zh.wikipedia.org/wiki/%CE%9B%E6%BC%94%E7%AE%97">Alonzo church lambda calculus</a>！！！</p>
 
     </article>
     
@@ -1885,7 +1880,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
+<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -2943,15 +2938,18 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="toc toc__outer " data-dir="ltr" data-folding="true" data-ani="true">
           <nav id="TableOfContents">
   <ul>
-    <li><a href="#本文介紹">本文介紹</a></li>
-    <li><a href="#定義最簡單的資料結構">定義最簡單的資料結構</a></li>
-    <li><a href="#未引入賦值">未引入賦值</a></li>
-    <li><a href="#引入賦值後">引入賦值後</a></li>
-    <li><a href="#何謂身份">何謂身份</a></li>
+    <li><a href="#本文重點">本文重點</a></li>
+    <li><a href="#定義最簡單的資料結構">定義最簡單的資料結構</a>
+      <ul>
+        <li><a href="#如何組成pair">如何組成pair</a></li>
+        <li><a href="#cons-的定義">cons 的定義</a></li>
+      </ul>
+    </li>
+    <li><a href="#給資料身分引入賦值">給資料身分，引入賦值</a></li>
     <li><a href="#賦值的危險">賦值的危險</a></li>
     <li><a href="#data-structure-is-just-a-function">Data Structure is Just a function</a>
       <ul>
-        <li><a href="#演示一下用lambda憑空製造一個-cons----by-alonzo-church">演示一下用lambda憑空製造一個 cons ! - by Alonzo Church</a></li>
+        <li><a href="#如何使用lambda-function憑空製造一個-cons----by-alonzo-church">如何使用lambda function憑空製造一個 cons ! - by Alonzo Church</a></li>
       </ul>
     </li>
   </ul>

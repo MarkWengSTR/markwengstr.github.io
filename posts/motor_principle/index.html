@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
+<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="馬達是一種能讓 電能 轉換成 機械能 的元件，此篇文章使用簡單好理解的方式來解釋馬達設計這件事。">
 
-<meta name="generator" content="Hugo 0.94.2" />
+<meta name="generator" content="Hugo 0.74.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,6 +1299,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
+
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1483,7 +1484,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Aug 1, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1536,7 +1537,7 @@ if (!doNotTrack) {
 <p>最近可以看到電動車在路上到處跑了，雖然目前還算是有錢人的玩具，但未來普及應是不在話下，而電動車的動力來源，就是 <strong>馬達</strong> 。 當然不只電動車用到馬達，其實日常生活中到處都是馬達，筆電風扇、洗衣機、機器手臂&hellip;等，任何要讓機械動起來的源頭都是馬達。</p>
 <p>而馬達是什麼? <a href="https://zh.wikipedia.org/wiki/%E7%94%B5%E5%8A%A8%E6%9C%BA">維基百科</a> 裡面提到，最重要的原理就是 <strong>電能 -&gt; 機械能</strong> ，描述的更準確一點，其實是  <strong>電能 -&gt; 磁能 -&gt; 機械能</strong>  。</p>
 <h2 id="馬達設計-是什麼-what-is-motor-design">馬達設計 是什麼? (What is motor design)</h2>
-<p>馬達設計，就是設計 <strong>電能 -&gt; 磁能 -&gt; 機械能</strong>  中間的 <strong>磁能</strong>， 讓電能 <strong>有效率</strong> 的轉換為機械能。</p>
+<p>馬達設計，就是設計 <strong>電能 -&gt; 磁能 -&gt; 機械能</strong>  中間的 <strong>磁能</strong>， 讓電能 <strong>有效率</strong> 的轉換為機械能。 也就是可以在有限制的體積、重量條件，達成最大的輸出功率以及效率，因此評估馬達的指標通常會使用轉矩密度、功率密度、效率&hellip;等指標。</p>
 <h2 id="勞倫茲力-lorentz-force">勞倫茲力 (Lorentz force)</h2>
 <p><a href="https://zh.wikipedia.org/wiki/%E6%B4%9B%E4%BC%A6%E5%85%B9%E5%8A%9B">勞倫茲力 (Lorentz force)</a>  :  <strong>F (force density) =  $\sigma$( charge density) E (electric field)+ J (current density) x B (magnetic density)</strong></p>
 <p>先來談談電磁力的源頭 - <strong>勞倫茲力</strong> ，為了讓大家不要看到這邊就關掉，不考慮第一項電場力，我們可以回想一下高中一個很簡單的公式，長直導體電流在磁場裡的作用力 - <strong>f (電磁作用力) = i (電流) * l (磁場中的導線長度) * B (磁通密度) * sin (垂直分量)</strong> ，其實就是勞倫茲力計算得到的。</p>
@@ -1554,12 +1555,12 @@ if (!doNotTrack) {
 <ul>
 <li>v = $\omega$ * r : <strong>$\epsilon= \omega rBl$</strong></li>
 <li>NS極：馬達裡的磁鐵有NS極，線圈也是一進一出，因此 <strong>$\epsilon= 2 \omega rBl$</strong></li>
-<li>n條導線：若是不只一條導線有n條導線，則轉矩為**$\epsilon= 2 n \omega rBl$**</li>
+<li>n條導線：若是不只一條導線有n條導線，則轉矩為<strong>$\epsilon= 2 n \omega rBl$</strong></li>
 </ul>
 <h2 id="馬達參數-motor-constant-kt-ke">馬達參數 (motor constant) Kt, Ke</h2>
 <p>將上述兩個計算公式的結果擺在一起，來對照一下差異</p>
-<p><strong>T = 2ilBrn</strong></p>
-<p><strong>$\epsilon= 2 n \omega rBl$</strong></p>
+<p><strong>轉矩公式: T = 2ilBrn</strong></p>
+<p><strong>反電動勢公式: $\epsilon= 2 n \omega rBl$</strong></p>
 <p>稍微整理一下</p>
 <p><strong>T = 2nBlri = Kt i</strong></p>
 <p><strong>$\epsilon= 2 nBlr \omega$ = Ke $\omega$</strong></p>
@@ -1871,7 +1872,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
+<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

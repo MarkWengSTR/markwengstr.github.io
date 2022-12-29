@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
+<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
+<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="由 python script 自動開啟Ansys maxwell軟體時，遇到 com_error(-2147221164, &#39;類別未登錄&#39;, none, none) 的解決方法">
 
-<meta name="generator" content="Hugo 0.94.2" />
+<meta name="generator" content="Hugo 0.74.3" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,6 +1299,7 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
+
   
 <script type="application/javascript">
 var doNotTrack = false;
@@ -1483,7 +1484,7 @@ if (!doNotTrack) {
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Oct 20, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1533,7 +1534,7 @@ if (!doNotTrack) {
 <p>使用ipython來執行，詳細問題如下 :</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1560,32 +1561,32 @@ if (!doNotTrack) {
 </span><span class="lnt">25
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">9633</span><span class="n">b38a1caf</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">client</span><span class="o">.</span><span class="n">dynamic</span><span class="o">.</span><span class="n">Dispatch</span><span class="p">(</span><span class="s2">&#34;Ansoft.ElectronicsDesktop&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="p">:</span>\<span class="n">python37</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">win32com</span>\<span class="n">client</span>\<span class="n">dynamic</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">Dispatch</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">userName</span><span class="p">,</span> <span class="n">createClass</span><span class="p">,</span> <span class="n">typeinfo</span><span class="p">,</span> <span class="n">UnicodeToString</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">125</span> <span class="k">def</span> <span class="nf">Dispatch</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">userName</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">createClass</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">typeinfo</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">UnicodeToString</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">clsctx</span> <span class="o">=</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">CLSCTX_SERVER</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">126</span>         <span class="k">assert</span> <span class="n">UnicodeToString</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">,</span> <span class="s2">&#34;this is deprecated and will go away&#34;</span>
-</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="mi">127</span>         <span class="n">IDispatch</span><span class="p">,</span> <span class="n">userName</span> <span class="o">=</span> <span class="n">_GetGoodDispatchAndUserName</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span><span class="n">userName</span><span class="p">,</span><span class="n">clsctx</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">128</span>         <span class="k">if</span> <span class="n">createClass</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">129</span>                 <span class="n">createClass</span> <span class="o">=</span> <span class="n">CDispatch</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="p">:</span>\<span class="n">python37</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">win32com</span>\<span class="n">client</span>\<span class="n">dynamic</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">_GetGoodDispatchAndUserName</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">userName</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">112</span>         <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">113</span>                 <span class="n">userName</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">userName</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span> <span class="mi">114</span>         <span class="k">return</span> <span class="p">(</span><span class="n">_GetGoodDispatch</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">),</span> <span class="n">userName</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">115</span>
-</span></span><span class="line"><span class="cl">    <span class="mi">116</span> <span class="k">def</span> <span class="nf">_GetDescInvokeType</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">invoke_type</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">c</span><span class="p">:</span>\<span class="n">python37</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">win32com</span>\<span class="n">client</span>\<span class="n">dynamic</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">_GetGoodDispatch</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">     <span class="mi">89</span>                         <span class="n">IDispatch</span> <span class="o">=</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">     <span class="mi">90</span>                 <span class="k">except</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">ole_error</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl"><span class="o">---&gt;</span> <span class="mi">91</span>                         <span class="n">IDispatch</span> <span class="o">=</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">CoCreateInstance</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">,</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">IID_IDispatch</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">     <span class="mi">92</span>         <span class="k">else</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">     <span class="mi">93</span>                 <span class="c1"># may already be a wrapped class.</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">com_error</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">2147221164</span><span class="p">,</span> <span class="s1">&#39;類別未登錄&#39;</span><span class="p">,</span> <span class="n">none</span><span class="p">,</span> <span class="n">none</span><span class="p">)</span>
-</span></span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">9633</span><span class="n">b38a1caf</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">client</span><span class="o">.</span><span class="n">dynamic</span><span class="o">.</span><span class="n">Dispatch</span><span class="p">(</span><span class="s2">&#34;Ansoft.ElectronicsDesktop&#34;</span><span class="p">)</span>
+
+<span class="n">c</span><span class="p">:</span>\<span class="n">python37</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">win32com</span>\<span class="n">client</span>\<span class="n">dynamic</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">Dispatch</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">userName</span><span class="p">,</span> <span class="n">createClass</span><span class="p">,</span> <span class="n">typeinfo</span><span class="p">,</span> <span class="n">UnicodeToString</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">)</span>
+    <span class="mi">125</span> <span class="k">def</span> <span class="nf">Dispatch</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">userName</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">createClass</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">typeinfo</span> <span class="o">=</span> <span class="bp">None</span><span class="p">,</span> <span class="n">UnicodeToString</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">clsctx</span> <span class="o">=</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">CLSCTX_SERVER</span><span class="p">):</span>
+    <span class="mi">126</span>         <span class="k">assert</span> <span class="n">UnicodeToString</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">,</span> <span class="s2">&#34;this is deprecated and will go away&#34;</span>
+<span class="o">--&gt;</span> <span class="mi">127</span>         <span class="n">IDispatch</span><span class="p">,</span> <span class="n">userName</span> <span class="o">=</span> <span class="n">_GetGoodDispatchAndUserName</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span><span class="n">userName</span><span class="p">,</span><span class="n">clsctx</span><span class="p">)</span>
+    <span class="mi">128</span>         <span class="k">if</span> <span class="n">createClass</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+    <span class="mi">129</span>                 <span class="n">createClass</span> <span class="o">=</span> <span class="n">CDispatch</span>
+
+<span class="n">c</span><span class="p">:</span>\<span class="n">python37</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">win32com</span>\<span class="n">client</span>\<span class="n">dynamic</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">_GetGoodDispatchAndUserName</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">userName</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">)</span>
+    <span class="mi">112</span>         <span class="k">else</span><span class="p">:</span>
+    <span class="mi">113</span>                 <span class="n">userName</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">userName</span><span class="p">)</span>
+<span class="o">--&gt;</span> <span class="mi">114</span>         <span class="k">return</span> <span class="p">(</span><span class="n">_GetGoodDispatch</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">),</span> <span class="n">userName</span><span class="p">)</span>
+    <span class="mi">115</span>
+    <span class="mi">116</span> <span class="k">def</span> <span class="nf">_GetDescInvokeType</span><span class="p">(</span><span class="n">entry</span><span class="p">,</span> <span class="n">invoke_type</span><span class="p">):</span>
+
+<span class="n">c</span><span class="p">:</span>\<span class="n">python37</span>\<span class="n">lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">win32com</span>\<span class="n">client</span>\<span class="n">dynamic</span><span class="o">.</span><span class="n">py</span> <span class="ow">in</span> <span class="n">_GetGoodDispatch</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">)</span>
+     <span class="mi">89</span>                         <span class="n">IDispatch</span> <span class="o">=</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">)</span>
+     <span class="mi">90</span>                 <span class="k">except</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">ole_error</span><span class="p">:</span>
+<span class="o">---&gt;</span> <span class="mi">91</span>                         <span class="n">IDispatch</span> <span class="o">=</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">CoCreateInstance</span><span class="p">(</span><span class="n">IDispatch</span><span class="p">,</span> <span class="bp">None</span><span class="p">,</span> <span class="n">clsctx</span><span class="p">,</span> <span class="n">pythoncom</span><span class="o">.</span><span class="n">IID_IDispatch</span><span class="p">)</span>
+     <span class="mi">92</span>         <span class="k">else</span><span class="p">:</span>
+     <span class="mi">93</span>                 <span class="c1"># may already be a wrapped class.</span>
+
+<span class="n">com_error</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">2147221164</span><span class="p">,</span> <span class="s1">&#39;類別未登錄&#39;</span><span class="p">,</span> <span class="n">none</span><span class="p">,</span> <span class="n">none</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div><h2 id="debug路程">Debug路程</h2>
 <h3 id="確認prog_id是否存在">確認Prog_id是否存在</h3>
@@ -1793,23 +1794,23 @@ if (!doNotTrack) {
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/spm_motor_design_en/" class="related__link">Real Example of Surface Permanent Magnet Motor Design by python script</a>
-        </li>
-        
-        <li>
-          <a href="/posts/python_ansys_concept_en/" class="related__link">Surface Permanent Magnet Motor design programming concept in python</a>
-        </li>
-        
-        <li>
-          <a href="/posts/motor_principle_en/" class="related__link">Surface Permanent Magnet Motor Design Fundamental</a>
-        </li>
-        
-        <li>
           <a href="/posts/spm_motor_design/" class="related__link">程式化永磁馬達設計 by python 真實範例</a>
         </li>
         
         <li>
           <a href="/posts/python_ansys_concept/" class="related__link">程式化永磁馬達設計概念 by python</a>
+        </li>
+        
+        <li>
+          <a href="/posts/motor_principle/" class="related__link">淺談永磁馬達設計原理</a>
+        </li>
+        
+        <li>
+          <a href="/posts/auto_design_intro/" class="related__link">Python script for ansys maxwell, Surface Permanent Magnet Motor design automation demo</a>
+        </li>
+        
+        <li>
+          <a href="/posts/ansys_init/" class="related__link">python開啟ansys軟體、新增project</a>
         </li>
         
     </ul>
@@ -1819,17 +1820,17 @@ if (!doNotTrack) {
 <nav class="pagination-single">
   
     
-      <a href="https://mark-weng.com/posts/spm_motor_design_en/" class="pagination-single__left">
+      <a href="https://mark-weng.com/posts/spm_motor_design/" class="pagination-single__left">
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M19 11H7.83l4.88-4.88c.39-.39.39-1.03 0-1.42-.39-.39-1.02-.39-1.41 0l-6.59 6.59c-.39.39-.39 1.02 0 1.41l6.59 6.59c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L7.83 13H19c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
         </div>
-        <div class="pagination-single__left-title">Real Example of Surface Permanent Magnet Motor Design by python script</div>      
+        <div class="pagination-single__left-title">程式化永磁馬達設計 by python 真實範例</div>      
       </a>
     
     <div class="grow"></div>
     
-      <a href="https://mark-weng.com/posts/serious-python0/" class="pagination-single__right">      
-        <div class="pagination-single__right-title">Serious-Python note - 0. introduction</div>
+      <a href="https://mark-weng.com/posts/mind_renew/" class="pagination-single__right">      
+        <div class="pagination-single__right-title">現實總是變化多端，因此在原則下保持最大的彈性是重要的</div>
         <div class="pagination-single__icon">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M5 13h11.17l-4.88 4.88c-.39.39-.39 1.03 0 1.42.39.39 1.02.39 1.41 0l6.59-6.59c.39-.39.39-1.02 0-1.41l-6.58-6.6c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L16.17 11H5c-.55 0-1 .45-1 1s.45 1 1 1z"/></svg>
         </div>
@@ -1906,7 +1907,7 @@ if (!doNotTrack) {
 </div>
 
 
-<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
+<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

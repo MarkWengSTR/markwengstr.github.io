@@ -14,7 +14,7 @@
     <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
     <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
     <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
-    <lastBuildDate>Mon, 15 Mar 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="https://mark-weng.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,229 +23,20 @@
 
       
       <item>
-        <title>Serious-Python note - 8. functional programming</title>
-        <link>https://mark-weng.com/posts/serious-python8/</link>
-        <pubDate>Mon, 15 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Mon, 15 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python8/</guid>
-        <description>Creating Pure Functions 當想把code寫成functional style時，function就要盡量設計成沒有side effect。也就是並不會改變送進去的參</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 7. Methods and Decorators</title>
-        <link>https://mark-weng.com/posts/serious-python7/</link>
-        <pubDate>Sun, 14 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sun, 14 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python7/</guid>
-        <description>Decorators and When to Use Them Decorator是一個拿別的function來當作引數的function，且替換或調整丟進來的function成為一個新的fu</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 6. Unit Testing</title>
-        <link>https://mark-weng.com/posts/serious-python6/</link>
-        <pubDate>Sun, 07 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Sun, 07 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python6/</guid>
-        <description>The Basics of Testing 在python中寫test與跑test是非常簡單的，並沒有侵入與破壞性，而test會大大的幫助你和其他開發者維護你的專案，接下來就會</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 5. Distributing Your Software (順便distributing我的project &#34;anmotordesign&#34; 到pypi上)</title>
-        <link>https://mark-weng.com/posts/serious-python5/</link>
-        <pubDate>Fri, 05 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Fri, 05 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python5/</guid>
-        <description>A Bit of setup.py History distutils library 從1988年就存在python standard library，開發自Greg Ward，提供了 setup.py 檔案如下 1 2 3 4 5 6 7 from distutils.core import setup setup(name=&amp;#34;rebuildd&amp;#34;, description=&amp;#34;Debian packages rebuild tool&amp;#34;, author=&amp;#34;Julien Danjou&amp;#34;, author_email=&amp;#34;acid@debian.org&amp;#34;,</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 4. Handling Timestamps and Time Zones</title>
-        <link>https://mark-weng.com/posts/serious-python4/</link>
-        <pubDate>Mon, 01 Mar 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Mon, 01 Mar 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python4/</guid>
-        <description>The Problem of Missing Time Zones 當timestamp沒有time zone資訊，那就等於沒有用，因為無法得知確切可以比較的時間。 在把timestamp儲存起來的時</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 3. Documentation and Good API Practice</title>
-        <link>https://mark-weng.com/posts/serious-python3/</link>
-        <pubDate>Wed, 24 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Wed, 24 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python3/</guid>
-        <description>Documenting with Sphinx 大多的contributer都喜歡寫code甚於寫文件，甚至有doc跟project 是分開的，doc根本趕不上開發的速度。 最常用的py</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 2. modules, libaries and frameworks</title>
-        <link>https://mark-weng.com/posts/serious-python2/</link>
-        <pubDate>Thu, 18 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Thu, 18 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python2/</guid>
-        <description>The Import System import itertools 實際上是 itertools=__import__(&amp;quot;itertools&amp;quot;) 的語法糖 import itertools as it 其實就是 it=__import__(&amp;quot;itertools&amp;quot;) sys module sys.module 是一個dictionary，包含目前所有load進環境中的modules，key是mod</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 1. start your project</title>
-        <link>https://mark-weng.com/posts/serious-python1/</link>
-        <pubDate>Wed, 17 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Wed, 17 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python1/</guid>
-        <description>python版本 每一個小的進版都會有18個月的bug fix suport以及5年的安全性維護 作者建議新的專案，就不要再用python2了 (pyth</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Serious-Python note - 0. introduction</title>
-        <link>https://mark-weng.com/posts/serious-python0/</link>
-        <pubDate>Tue, 16 Feb 2021 00:00:00 +0000</pubDate>
-        <author>bskin0330@gmail.com (Mark Weng)</author>
-        <atom:modified>Tue, 16 Feb 2021 00:00:00 +0000</atom:modified>
-        <guid>https://mark-weng.com/posts/serious-python0/</guid>
-        <description>緣起 最近因為工作關係，需要大量的使用python，想找一本書來好好精進自己的python功力，於是找了這本Serious-Python來讀，</description>
-        
-        <dc:creator>Mark</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>python</category>
-            
-          
-        
-        
-        
-      </item>
-      
-      <item>
         <title>python fundamental concept 基礎概念</title>
         <link>https://mark-weng.com/posts/python_fundamental/</link>
         <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
         <author>bskin0330@gmail.com (Mark Weng)</author>
         <atom:modified>Mon, 20 Jul 2020 00:00:00 +0000</atom:modified>
         <guid>https://mark-weng.com/posts/python_fundamental/</guid>
-        <description>任何語言的基本概念 SICP有提到，或是可以參考網站內的文章 sicp_1a，當認識一個新語言，最重要的事情有四個 Primitive Object (語言的基本元素) Means of combination (</description>
+        <description>任何語言的基本概念 SICP有提到，或是可以參考網站內的文章 sicp_1a，當認識一個新語言，最重要的事情有四個
+ Primitive Object (語言的基本元素) Means of combination (組合基本對象的方法) Means of abstraction (如何抽象) Capturing common patterns (如何利用領域的專業，找到通用函數)  第四點雖然也很重要，但比較屬於系統複雜度增加後採取的作法，目前先不討論
+Primitive Object (語言的基本元素) in python Expression and statement   Expression(表示式): 寫出一段文字 or 程式碼，python的解釋器讀了之後，幫你做完裡面的事，並且回傳給你一個值 (ex: 1 + 1 回傳 2)
+  statement(陳述式): 寫出一段文字 or 程式碼，python的解釋器讀了之後，幫你做完裡面的事，但不回傳任何東西 ( a = 1 )
+  (有個小問題可以思考一下，那回傳 nil算expresion還是statement呢?)
+Data   字串: str
+  數字: int(整數), float(分數)
+  有順序的集合: list(由[]包起來的集合, 元素可以被覆蓋), tuple(由()包起來的集合, 元素不能被覆蓋)</description>
         
         <dc:creator>Mark</dc:creator>
         
