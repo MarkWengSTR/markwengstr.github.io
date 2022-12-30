@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>IEC 繞阻絕緣規範，離線部分放電測量 心得分享 – MarkWeng</title>
+    <title>IEC 規範中，部分放電(partial discharge)造成絕緣不良的原因與解決方式 – MarkWeng</title>
     
 
 
@@ -1221,7 +1221,7 @@
 
 
     
-<meta name="description" content="study note of IEC 60034-27-1 (Off-line partial discharge measurements on the winding insulation)" />
+<meta name="description" content="根據 IEC 60034-27-1 (Off-line partial discharge measurements on the winding insulation)，絕緣中的電介質特性並非全部都是均質的，造成某些地方電場強度過強導致介電崩潰，其不會直接造成絕緣的破壞，但造成了絕緣壽命的減少。" />
 
 
 <meta name="keywords" content="motor_knowledge">
@@ -1235,10 +1235,10 @@
 
 
 <meta property="og:site_name" content="MarkWeng">
-<meta property="og:title" content="IEC 繞阻絕緣規範，離線部分放電測量 心得分享">
+<meta property="og:title" content="IEC 規範中，部分放電(partial discharge)造成絕緣不良的原因與解決方式">
 <meta property="og:url" content="https://mark-weng.com/posts/iec60034_27_1_study/">
 <meta property="og:type" content="article">
-<meta property="og:description" content="study note of IEC 60034-27-1 (Off-line partial discharge measurements on the winding insulation)">
+<meta property="og:description" content="根據 IEC 60034-27-1 (Off-line partial discharge measurements on the winding insulation)，絕緣中的電介質特性並非全部都是均質的，造成某些地方電場強度過強導致介電崩潰，其不會直接造成絕緣的破壞，但造成了絕緣壽命的減少。">
 
 <meta name="generator" content="Hugo 0.74.3" />
 <meta name="msapplication-TileColor" content="#fff">
@@ -1263,11 +1263,11 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "headline": "IEC 繞阻絕緣規範，離線部分放電測量 心得分享",
+    "headline": "IEC 規範中，部分放電(partial discharge)造成絕緣不良的原因與解決方式",
     "datePublished": "2022-05-14T00:00:00Z",
     "dateModified": "2022-05-14T00:00:00Z",
     "url" : "https://mark-weng.com/posts/iec60034_27_1_study/",
-    "description": "study note of IEC 60034-27-1 (Off-line partial discharge measurements on the winding insulation)",
+    "description": "根據 IEC 60034-27-1 (Off-line partial discharge measurements on the winding insulation)，絕緣中的電介質特性並非全部都是均質的，造成某些地方電場強度過強導致介電崩潰，其不會直接造成絕緣的破壞，但造成了絕緣壽命的減少。",
     "keywords": ["motor_knowledge"],
     "author": {
       "@type": "Person",
@@ -1466,7 +1466,7 @@ if (!doNotTrack) {
   
   <li  class="is-active" >
     
-      <span>IEC 繞阻絕緣規範，離線部分放電測量 心得分享</span>
+      <span>IEC 規範中，部分放電(partial discharge)造成絕緣不良的原因與解決方式</span>
     
   </li>
   
@@ -1478,7 +1478,7 @@ if (!doNotTrack) {
   <div class="single ">
     <div class="single__nojs">This page looks best with JavaScript enabled</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
-    <h2 class="single__title" data-ani="true">IEC 繞阻絕緣規範，離線部分放電測量 心得分享</h2>
+    <h2 class="single__title" data-ani="true">IEC 規範中，部分放電(partial discharge)造成絕緣不良的原因與解決方式</h2>
     <div class="single__meta">
       
 <div class="single__infos">
@@ -1542,6 +1542,7 @@ if (!doNotTrack) {
     </li>
     <li><a href="#定位pd發生的位置">定位PD發生的位置</a></li>
     <li><a href="#解釋pd測量結果">解釋PD測量結果</a></li>
+    <li><a href="#結論">結論</a></li>
   </ul>
 </nav>
   </div>
@@ -1585,7 +1586,7 @@ if (!doNotTrack) {
 <h2 id="電機中的pd特性">電機中的PD特性</h2>
 <h3 id="為什麼會有pd">為什麼會有PD?</h3>
 <ul>
-<li>絕緣中的電介質特性並非全部都是均質的，造成某些地方電場強度過強至介電崩潰，但其實不會直接的造成絕緣的破壞。</li>
+<li>絕緣中的電介質特性並非全部都是均質的，造成某些地方電場強度過強至介電崩潰，其不會直接造成絕緣的破壞，但造成了絕緣壽命的減少。</li>
 </ul>
 <h3 id="pd發生的地方">PD發生的地方</h3>
 <ul>
@@ -1673,6 +1674,8 @@ if (!doNotTrack) {
 </ul>
 </li>
 </ul>
+<h2 id="結論">結論</h2>
+<p>對於高壓電機來說，絕緣不良導致電機損壞的機率是一半以上，但願這篇文章可以提供大家一些有用的資訊，測量高壓電機的時候也要保護好自己，有問題也可以私訊我討論喔~，雖然我還是比較喜歡寫程式，但對於這些物理現象也是很有興趣的!</p>
 
     </article>
     
@@ -3026,6 +3029,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </li>
     <li><a href="#定位pd發生的位置">定位PD發生的位置</a></li>
     <li><a href="#解釋pd測量結果">解釋PD測量結果</a></li>
+    <li><a href="#結論">結論</a></li>
   </ul>
 </nav>
         </div>
