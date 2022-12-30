@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://mark-weng.com/</loc>
-    <lastmod>2022-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-14T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -19,33 +19,8 @@
   
   <url>
     <loc>https://mark-weng.com/posts/</loc>
-    <lastmod>2022-06-03T00:00:00+00:00</lastmod>
+    <lastmod>2022-05-14T00:00:00+00:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mark-weng.com/posts/job_trans_1/</loc>
-    <lastmod>2022-06-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mark-weng.com/tags/</loc>
-    <lastmod>2022-06-03T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://mark-weng.com/zh/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://mark-weng.com/tags/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://mark-weng.com/tags/%E8%BD%89%E8%81%B7/</loc>
-    <lastmod>2022-06-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -56,6 +31,21 @@
   <url>
     <loc>https://mark-weng.com/tags/motor_knowledge/</loc>
     <lastmod>2022-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mark-weng.com/tags/</loc>
+    <lastmod>2022-05-14T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://mark-weng.com/zh/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://mark-weng.com/tags/"
+                />
   </url>
   
   <url>
