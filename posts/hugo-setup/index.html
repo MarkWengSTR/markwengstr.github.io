@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="從無到有利用hugo建立部落格 &#43; delpoy github static page">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 
 
@@ -1478,7 +1477,7 @@ enScroll=!1;const lStor=localStorage,sStor=sessionStorage,doc=document,docEl=doc
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;May 21, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;2&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1531,51 +1530,51 @@ enScroll=!1;const lStor=localStorage,sStor=sessionStorage,doc=document,docEl=doc
 <h4 id="先將apt升級">先將apt升級</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get update -y
-sudo apt-get upgrade -y
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo apt-get update -y
+</span></span><span class="line"><span class="cl">sudo apt-get upgrade -y
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="下載指令">下載指令</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">wget https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_0.70.0_Linux-64bit.deb
-wget https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_extended_0.70.0_Linux-64bit.deb
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">wget https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_0.70.0_Linux-64bit.deb
+</span></span><span class="line"><span class="cl">wget https://github.com/gohugoio/hugo/releases/download/v0.70.0/hugo_extended_0.70.0_Linux-64bit.deb
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>去hugo的github上找<a href="https://github.com/gohugoio/hugo/releases">最新的release版本</a>來下載，hugo 與 extend 都裝一下比較好，因為有些theme會用到sass/scss，像我用的zzo就會用。</p>
 <h4 id="安裝指令">安裝指令</h4>
 <p>不推薦用apt裝是因為，apt的hugo版本不是最新的。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">sudo dpkg -i hugo_0.70.0_Linux-64bit.deb <span class="c1">#寫文章時的最新版本是0.70.0</span>
-sudo dpkg -i hugo_extended_0.70.0_Linux-64bit.deb
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo dpkg -i hugo_0.70.0_Linux-64bit.deb <span class="c1">#寫文章時的最新版本是0.70.0</span>
+</span></span><span class="line"><span class="cl">sudo dpkg -i hugo_extended_0.70.0_Linux-64bit.deb
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>裝完可以先用 <code>hugo version</code> 來看一下有沒有安裝成功。</p>
 <h4 id="新增hugo專案指令">新增hugo專案指令</h4>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">hugo new site xxxx <span class="c1"># xxxx 請改成自己的專案名稱</span>
-<span class="nb">cd</span> xxxx
-hugo server
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">hugo new site xxxx <span class="c1"># xxxx 請改成自己的專案名稱</span>
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> xxxx
+</span></span><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在瀏覽器開啟 localhost:1313 沒有錯誤就是OK摟，空白是正常的。</p>
 <h2 id="選擇theme並開啟hugo">選擇theme並開啟hugo</h2>
@@ -1584,17 +1583,17 @@ hugo server
 <p>目前在xxxx目錄裡(以zzo為例)：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">&lt;CTRL&gt; + c <span class="o">(</span>先關掉server<span class="o">)</span>
-git init
-git clone https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
-hugo server
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">&lt;CTRL&gt; + c <span class="o">(</span>先關掉server<span class="o">)</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git clone https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
+</span></span><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>就看theme的頁面裡面怎麼做，照做就是了。</p>
 <h2 id="deploy-on-github">deploy on github</h2>
@@ -1614,7 +1613,7 @@ hugo server
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1645,36 +1644,36 @@ hugo server
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">  <span class="c1"># 目前在專案的目錄裡。</span>
-  <span class="c1"># 參考github push的步驟</span>
-  git init
-
-  git remote add origin https://github.com/&lt;你的GitHub&gt;/xxx.git
-
-  vi .gitignore <span class="c1"># 產生.gitignore</span>
-
-  <span class="c1"># 按小寫英文a可以編輯，填入 public/，:wq 存取&amp;退出</span>
-  <span class="c1"># 目的是不想讓產生的public使這個專案一直肥大</span>
-
-  git push origin master
-  <span class="c1"># 首次推的話會需要名稱、email以及帳號密碼(每次都需要，除非額外設定，這邊不講)</span>
-
-  <span class="c1"># Build the project.</span>
-  hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
-
-  <span class="c1"># 將新產生的public folder複製到原本專案外</span>
-  cp -r public ../
-
-  <span class="c1"># Go To Public folder</span>
-  <span class="nb">cd</span> ../public
-
-  <span class="c1"># 再產生一個delpoy的git版本</span>
-  git init
-
-  git remote add origin https://github.com/&lt;你的GitHub&gt;/xxxx.github.io.git
-
-  git push origin master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">  <span class="c1"># 目前在專案的目錄裡。</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># 參考github push的步驟</span>
+</span></span><span class="line"><span class="cl">  git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  git remote add origin https://github.com/&lt;你的GitHub&gt;/xxx.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  vi .gitignore <span class="c1"># 產生.gitignore</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 按小寫英文a可以編輯，填入 public/，:wq 存取&amp;退出</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># 目的是不想讓產生的public使這個專案一直肥大</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  git push origin master
+</span></span><span class="line"><span class="cl">  <span class="c1"># 首次推的話會需要名稱、email以及帳號密碼(每次都需要，除非額外設定，這邊不講)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Build the project.</span>
+</span></span><span class="line"><span class="cl">  hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 將新產生的public folder複製到原本專案外</span>
+</span></span><span class="line"><span class="cl">  cp -r public ../
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Go To Public folder</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">cd</span> ../public
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 再產生一個delpoy的git版本</span>
+</span></span><span class="line"><span class="cl">  git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  git remote add origin https://github.com/&lt;你的GitHub&gt;/xxxx.github.io.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  git push origin master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>用瀏覽器開啟 <code>www.xxxx.github.io</code> 就可以看到啦!!!</p>
 <ul>
@@ -1682,7 +1681,7 @@ hugo server
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1716,39 +1715,39 @@ hugo server
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">  <span class="c1">#!/bin/sh</span>
-
-  <span class="c1"># 在專案的目錄裡。</span>
-  <span class="c1"># If a command fails then the deploy stops</span>
-  <span class="nb">set</span> -e
-
-  <span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
-
-  <span class="c1"># remove old public file.</span>
-  rm public
-
-  <span class="c1"># Build the project.</span>
-  hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
-
-  <span class="c1"># 將新產生的public folder複製到原本專案外</span>
-  cp -r public ../
-
-  <span class="c1"># Go To Public folder</span>
-  <span class="nb">cd</span> ../public
-
-  <span class="c1"># Add changes to git.</span>
-  git add .
-
-  <span class="c1"># Commit changes.</span>
-  <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
-  <span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
-  <span class="k">fi</span>
-  git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
-
-  <span class="c1"># Push source and build repos.</span>
-  git push origin master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">  <span class="c1">#!/bin/sh</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 在專案的目錄裡。</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># If a command fails then the deploy stops</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">set</span> -e
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="nb">printf</span> <span class="s2">&#34;\033[0;32mDeploying updates to GitHub...\033[0m\n&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># remove old public file.</span>
+</span></span><span class="line"><span class="cl">  rm public
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Build the project.</span>
+</span></span><span class="line"><span class="cl">  hugo <span class="c1"># if using a theme, replace with `hugo -t &lt;YOURTHEME&gt;`</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># 將新產生的public folder複製到原本專案外</span>
+</span></span><span class="line"><span class="cl">  cp -r public ../
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Go To Public folder</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">cd</span> ../public
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Add changes to git.</span>
+</span></span><span class="line"><span class="cl">  git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Commit changes.</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;rebuilding site </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="o">[</span> -n <span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">msg</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$*</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">  git commit -m <span class="s2">&#34;</span><span class="nv">$msg</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Push source and build repos.</span>
+</span></span><span class="line"><span class="cl">  git push origin master
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </article>
@@ -2017,7 +2016,7 @@ hugo server
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 

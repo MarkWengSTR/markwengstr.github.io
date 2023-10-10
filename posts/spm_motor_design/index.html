@@ -18,9 +18,9 @@
 
 <script defer src="/js/lazysizes.min.5e11d056075a05065b9c0bfec44084a113fc2976c2952ec804dedb61c7662db9.js"></script>
 
-<script defer src="/js/helper/getParents.min.1618c696be7c98933f9a92677f518b512a74e55bdbb976b09936b4182e93181b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.93a331f96194789a542f33690bbe4f0c102c7e78ffc018217f5a1c33010bad91.js"></script>
+<script defer src="/js/helper/fadeinout.min.58d290b487a552ce9c144bf938c2758c4a3afbc4f17d70d11771c9e3c61fe3d0.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
   
@@ -1240,7 +1240,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="由定子外徑限制、最大功率、DC bus電壓、最大轉矩、最高轉速 規格，推導出整個10p12s spm馬達的設計與細部尺寸，並不是一個優化的模型，但都是經由合理的計算與假設，實作出一個合乎規格的初始設計。">
 
-<meta name="generator" content="Hugo 0.74.3" />
+<meta name="generator" content="Hugo 0.94.2" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1299,7 +1299,6 @@ if (!doNotTrack) {
 	ga('send', 'pageview');
 }
 </script>
-
   
 
 
@@ -1478,7 +1477,7 @@ enScroll=!1;const lStor=localStorage,sStor=sessionStorage,doc=document,docEl=doc
 <div class="single__infos">
   <time class="single__info" title="Written At">📅&nbsp;Oct 7, 2020 </time>
   
-  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;1&nbsp;min read </span>
+  &nbsp;&middot;&nbsp; <span class="single__info" title="Reading Time"> ☕&nbsp;3&nbsp;min read </span>
   
   &nbsp;&middot;&nbsp; <span class="single__info" title="WRITTEN BY">✍️&nbsp;Mark</span>
   
@@ -1532,7 +1531,7 @@ enScroll=!1;const lStor=localStorage,sStor=sessionStorage,doc=document,docEl=doc
 <p>規格如下</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1541,21 +1540,21 @@ enScroll=!1;const lStor=localStorage,sStor=sessionStorage,doc=document,docEl=doc
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="p">{</span>
-    <span class="s2">&#34;stator_OD_limit&#34;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
-    <span class="s2">&#34;max_power&#34;</span><span class="p">:</span>       <span class="mi">5000</span><span class="p">,</span>
-    <span class="s2">&#34;voltage_dc&#34;</span><span class="p">:</span>      <span class="mi">48</span><span class="p">,</span>
-    <span class="s2">&#34;max_torque_nm&#34;</span><span class="p">:</span>   <span class="mi">27</span><span class="p">,</span>
-    <span class="s2">&#34;max_speed_rpm&#34;</span><span class="p">:</span>   <span class="mi">5000</span><span class="p">,</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;stator_OD_limit&#34;</span><span class="p">:</span> <span class="mi">120</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;max_power&#34;</span><span class="p">:</span>       <span class="mi">5000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;voltage_dc&#34;</span><span class="p">:</span>      <span class="mi">48</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;max_torque_nm&#34;</span><span class="p">:</span>   <span class="mi">27</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;max_speed_rpm&#34;</span><span class="p">:</span>   <span class="mi">5000</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>整個 <a href="https://github.com/MarkWengSTR/ansys-maxwell-EM-design-online/blob/master/params/ktke_calculation.py">設計計算</a> 可以參考連結</p>
 <h2 id="設計流程簡介">設計流程簡介</h2>
 <p>先看到整個script最底下的 <code>mech_structure_cal</code> 的計算</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1564,14 +1563,14 @@ enScroll=!1;const lStor=localStorage,sStor=sessionStorage,doc=document,docEl=doc
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">mech_stucture_cal</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
-    <span class="n">assign_spec_value</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-        <span class="n">ktke_calculation</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-        <span class="n">expend_NBLR</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-        <span class="n">expend_stator_teeth_york</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-        <span class="n">expend_stator_slot</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
-        <span class="n">expend_magnet</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">mech_stucture_cal</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">assign_spec_value</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">        <span class="n">ktke_calculation</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">        <span class="n">expend_NBLR</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">        <span class="n">expend_stator_teeth_york</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">        <span class="n">expend_stator_slot</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span> <span class="ow">and</span> \
+</span></span><span class="line"><span class="cl">        <span class="n">expend_magnet</span><span class="p">(</span><span class="n">total_cal_params</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>清楚的看到，流程就是</p>
 <ol>
@@ -1921,7 +1920,7 @@ enScroll=!1;const lStor=localStorage,sStor=sessionStorage,doc=document,docEl=doc
 </div>
 
 
-<script defer src="/js/swipe.min.08ff2be1b74347bad9e267f732f1388d271b2f9d97b6a8a87bd6a510f17c5ad2.js"></script>
+<script defer src="/js/swipe.min.65f221ff82e48caafe55b04a110facc552363aa2c0c6c9d05102053bbc99559a.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
