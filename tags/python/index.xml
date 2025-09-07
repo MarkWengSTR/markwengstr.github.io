@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Python on MarkWeng</title>
+    <link>https://markwengstr.github.io/tags/python/</link>
+    <description>Recent content in Python on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Mon, 20 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      <item>
+        <title>python fundamental concept 基礎概念</title>
+        <link>https://markwengstr.github.io/posts/python_fundamental/</link>
+        <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 20 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/python_fundamental/</guid>
+        <description>&lt;h2 id=&#34;任何語言的基本概念&#34;&gt;任何語言的基本概念&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=IcZSFewqr9k&#34;&gt;SICP&lt;/a&gt;有提到，或是可以參考網站內的文章 &lt;a href=&#34;https://markwengstr.github.io/posts/sicp_lec1a/&#34;&gt;sicp_1a&lt;/a&gt;，當認識一個新語言，最重要的事情有四個&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Primitive Object (語言的基本元素)&lt;/li&gt;
+&lt;li&gt;Means of combination (組合基本對象的方法)&lt;/li&gt;
+&lt;li&gt;Means of abstraction (如何抽象)&lt;/li&gt;
+&lt;li&gt;Capturing common patterns (如何利用領域的專業，找到通用函數)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;第四點雖然也很重要，但比較屬於系統複雜度增加後採取的作法，目前先不討論&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
+    
+  </channel>
+</rss>

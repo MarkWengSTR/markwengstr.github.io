@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Mindset on MarkWeng</title>
+    <link>https://markwengstr.github.io/tags/mindset/</link>
+    <description>Recent content in Mindset on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Sat, 06 Nov 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/tags/mindset/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      <item>
+        <title>工作雜記 — 「累積」就是不斷地解決「困難的」問題，並記錄下來。</title>
+        <link>https://markwengstr.github.io/posts/work_exp1/</link>
+        <pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 06 Nov 2021 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/work_exp1/</guid>
+        <description>&lt;h2 id=&#34;為什麼會思考這個&#34;&gt;為什麼會思考這個?&lt;/h2&gt;
+&lt;p&gt;八月份時，為了之後在高雄的新生活，也剛好看到了一間研究所時代非常憧憬的公司，義無反顧的就投了，在慌亂的整理快十年來的履歷的同時，開始思考&lt;/p&gt;
+&lt;p&gt;研究所的時候做馬達設計，有磁路的概念；第一份工作繼續做馬達設計，有馬達設計的實務經驗；第二份工作寫網頁，有網路的知識與網頁開發的概念。 但我到底累積了什麼？ 我到底如何證明這些知識是有累積起來的？&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mindset</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>現實總是變化多端，因此在原則下保持最大的彈性是重要的</title>
+        <link>https://markwengstr.github.io/posts/mind_renew/</link>
+        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sun, 04 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/mind_renew/</guid>
+        <description>&lt;h2 id=&#34;現實總是變化多端&#34;&gt;現實總是變化多端&lt;/h2&gt;
+&lt;p&gt;好久寫文章了，最近做的東西離馬達設計的開發越來越遠，有時真是有點徬徨，感覺跟當初回台南的預期不太相符，慢慢地體會到現實總是無法掌控的，畢竟世界不是繞著自己旋轉，不過在持續學習的原則下保持彈性是好的。工作上也使用了一些以前沒有接觸過的工具，還蠻有趣的像是elasticsearch (ELK)的架設、logstash設定、各種ES的API操作&amp;hellip;等等，之後也可以來寫一下。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mindset</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>有限與無限的遊戲-心得</title>
+        <link>https://markwengstr.github.io/posts/%E6%9C%89%E9%99%90%E8%88%87%E7%84%A1%E9%99%90%E7%9A%84%E9%81%8A%E6%88%B2/</link>
+        <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 15 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/%E6%9C%89%E9%99%90%E8%88%87%E7%84%A1%E9%99%90%E7%9A%84%E9%81%8A%E6%88%B2/</guid>
+        <description>&lt;h2 id=&#34;為什麼會看這本書&#34;&gt;為什麼會看這本書?&lt;/h2&gt;
+&lt;p&gt;最近剛好處於一個人生的重大轉換時期，也剛好有一個多月的空閒時間，除了錄11月份去師大教課的影片，其餘時間就是練習sicp與看書。&lt;/p&gt;
+&lt;p&gt;這本書就是偶然在聽某個財經的podcast聽到的，而剛好以前主管也有分享過，好奇心驅使之下就找了一下資訊。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mindset</category>
+            
+          
+        
+        
+        
+      </item>
+    
+  </channel>
+</rss>

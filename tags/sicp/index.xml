@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Sicp on MarkWeng</title>
+    <link>https://markwengstr.github.io/tags/sicp/</link>
+    <description>Recent content in Sicp on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Fri, 10 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      <item>
+        <title>Functional programming serious - The Elements of Programming in SICP</title>
+        <link>https://markwengstr.github.io/posts/sicp_lec1a/</link>
+        <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Fri, 10 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/sicp_lec1a/</guid>
+        <description>&lt;h2 id=&#34;重點摘要&#34;&gt;重點摘要&lt;/h2&gt;
+&lt;p&gt;本篇取自&lt;a href=&#34;https://www.youtube.com/watch?v=IcZSFewqr9k&amp;amp;list=PLkEwH_Z2WOlppy8oUfrGwFVlOuKyo3RO_&#34;&gt;SICP-1a&lt;/a&gt;，解釋最基礎的computer science&lt;/p&gt;
+&lt;h2 id=&#34;what-is-computer-science&#34;&gt;What is computer science&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Method: 組成process的元素，而method的名稱應該要陳述出裡面的知識&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;computer-science-的特性&#34;&gt;Computer science 的特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;處理&amp;quot; 理想化的元件&amp;quot;: 因為我們對所有要組合在一起的 data 與 function都能完全的掌控， 因此在理想與現實之間是差不多的 (如果是電子或機械工程師 那可能會需要考慮很多真實世界的限制)。&lt;/li&gt;
+&lt;li&gt;一個工程中的 &amp;ldquo;抽象形式&amp;rdquo;: 因為不需考慮現實的限制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;computer-science-的技術---控制複雜度&#34;&gt;Computer science 的技術 - 控制複雜度&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black-box abstraction: 將功能封裝起來，使用的人不需要知道裡面的技術，只要呼叫它，丟入值就會輸出結果，而使用者又可以拿這個功能再去組合成更多功能。
+&lt;ul&gt;
+&lt;li&gt;將細節隱藏 (用以構建更大型的盒子)&lt;/li&gt;
+&lt;li&gt;具有通用性 (generality)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Conventional interface: 如果系統裡的數據有許多不一樣的類型，計算的時候總不能混雜在一起，那怎麼辦呢?
+&lt;ul&gt;
+&lt;li&gt;Generic operations&lt;/li&gt;
+&lt;li&gt;large-scale structure and modularity&lt;/li&gt;
+&lt;li&gt;object-oriented programming&lt;/li&gt;
+&lt;li&gt;operations on aggregate (流)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Metalinguistic Abstraction: 定義一個新語言 (用lisp做一個解析器來解析lisp)&lt;br /&gt;
+本篇不討論第二項與第三項，純粹討論最基礎的第一項。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用一個例子解釋何謂black-box-abstraction&#34;&gt;用一個例子解釋何謂black-box abstraction&lt;/h2&gt;
+&lt;h3 id=&#34;square-root-algorithm---將數字開根號x05&#34;&gt;Square root algorithm - 將數字開根號(x^0.5)&lt;/h3&gt;
+&lt;p&gt;計算過程:&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>sicp</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>SICP - Identity? of objects (by clojure)</title>
+        <link>https://markwengstr.github.io/posts/identity_of_objects/</link>
+        <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 01 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/identity_of_objects/</guid>
+        <description>&lt;h2 id=&#34;本文重點&#34;&gt;本文重點&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;非預期的共享&lt;/strong&gt;，是大型系統的bug來源，透過給object一個身份(賦值) ，給它一個別名互相共享，是有蠻多方便，但也相對付出了代價。 但不賦值又怎麼能取用資料結構中的值呢?  能不能直接用function來解決以上問題?&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>sicp</category>
+            
+          
+            
+              <category>clojure</category>
+            
+          
+        
+        
+        
+      </item>
+    
+  </channel>
+</rss>

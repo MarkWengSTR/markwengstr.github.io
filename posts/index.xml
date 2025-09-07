@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>MarkWeng</title>
+    <link>https://markwengstr.github.io/posts/</link>
+    <description>Recent content on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Mon, 08 Apr 2024 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      <item>
+        <title></title>
+        <link>https://markwengstr.github.io/posts/large_motor_install/</link>
+        <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 08 Apr 2024 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/large_motor_install/</guid>
+        <description>&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;windows10&lt;/li&gt;
+&lt;li&gt;正版Ansys (我的是教學版)&lt;/li&gt;
+&lt;li&gt;python 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;目標&#34;&gt;目標&lt;/h2&gt;
+&lt;p&gt;使用python script，執行後自動開啟maxwell、新增project&lt;/p&gt;
+&lt;h2 id=&#34;win32com&#34;&gt;win32com&lt;/h2&gt;
+&lt;p&gt;首先要完成的是讓python開啟maxwell，參考了網路上的一些資訊，使用win32com這個module是最方便的，因此先跑&lt;code&gt;pip install pywin32&lt;/code&gt;裝好module。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>30歲轉換跑道，離開大企業穩定工作從零轉職網頁全端工程師，歷程分享(1)</title>
+        <link>https://markwengstr.github.io/posts/job_trans_1/</link>
+        <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Fri, 03 Jun 2022 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/job_trans_1/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;這次想分享我到底怎麼從零轉職網頁全端工程師的，轉職之前是什麼背景、具備什麼基礎、是什麼原因讓我想要轉職、如何真的轉職成功、轉職成功後遇到什麼困難、如何克服這些困難、而最後又為什摩要回到馬達的領域裡面。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>轉職</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>電機工程師、儀電工程師必看，IEC 60034-27-1 簡述，離線部分放電測量繞阻絕緣規範</title>
+        <link>https://markwengstr.github.io/posts/iec60034_27_1_study/</link>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 14 May 2022 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/iec60034_27_1_study/</guid>
+        <description>&lt;h2 id=&#34;為什麼要寫這篇&#34;&gt;為什麼要寫這篇&lt;/h2&gt;
+&lt;p&gt;因為工作的關係，常常接觸高壓電機的保養與相關測試，當然高壓電機線圈的部分放電也是一個非常重要的部分，最近剛讀完規範，就想說來記錄一下讀到的東西，也希望可以在這部分有更多的精進，之後會再繼續分享有關高壓馬達保養與測試的知識。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_knowledge</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>工作雜記 — 「累積」就是不斷地解決「困難的」問題，並記錄下來。</title>
+        <link>https://markwengstr.github.io/posts/work_exp1/</link>
+        <pubDate>Sat, 06 Nov 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 06 Nov 2021 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/work_exp1/</guid>
+        <description>&lt;h2 id=&#34;為什麼會思考這個&#34;&gt;為什麼會思考這個?&lt;/h2&gt;
+&lt;p&gt;八月份時，為了之後在高雄的新生活，也剛好看到了一間研究所時代非常憧憬的公司，義無反顧的就投了，在慌亂的整理快十年來的履歷的同時，開始思考&lt;/p&gt;
+&lt;p&gt;研究所的時候做馬達設計，有磁路的概念；第一份工作繼續做馬達設計，有馬達設計的實務經驗；第二份工作寫網頁，有網路的知識與網頁開發的概念。 但我到底累積了什麼？ 我到底如何證明這些知識是有累積起來的？&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mindset</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Wordpress plugin development by Vue.js (vue-cli setting, hot reload)</title>
+        <link>https://markwengstr.github.io/posts/vue-wordpress/</link>
+        <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 05 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/vue-wordpress/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近也剛好有朋友有個wordpress後台功能擴增的需求，一個小型的商品ERP，由於在wordpress裡面，因此直接使用wordpress當後端API，而前端就用Vue，練一下這兩個這幾年非常夯的framework。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>vue</category>
+            
+          
+            
+              <category>wordpress</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>現實總是變化多端，因此在原則下保持最大的彈性是重要的</title>
+        <link>https://markwengstr.github.io/posts/mind_renew/</link>
+        <pubDate>Sun, 04 Jul 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sun, 04 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/mind_renew/</guid>
+        <description>&lt;h2 id=&#34;現實總是變化多端&#34;&gt;現實總是變化多端&lt;/h2&gt;
+&lt;p&gt;好久寫文章了，最近做的東西離馬達設計的開發越來越遠，有時真是有點徬徨，感覺跟當初回台南的預期不太相符，慢慢地體會到現實總是無法掌控的，畢竟世界不是繞著自己旋轉，不過在持續學習的原則下保持彈性是好的。工作上也使用了一些以前沒有接觸過的工具，還蠻有趣的像是elasticsearch (ELK)的架設、logstash設定、各種ES的API操作&amp;hellip;等等，之後也可以來寫一下。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mindset</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>python開啟ansys軟體問題 (2147221164, &#39;類別未登錄&#39;)</title>
+        <link>https://markwengstr.github.io/posts/ansys_init_2/</link>
+        <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 20 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/ansys_init_2/</guid>
+        <description>&lt;h2 id=&#34;問題描述&#34;&gt;問題描述&lt;/h2&gt;
+&lt;p&gt;重灌了幾次ansys，又灌了其他軟體之後，突然某一天發現用 &lt;code&gt;oAnsoftApp = client.Dispatch(&amp;quot;Ansoft.ElectronicsDesktop&amp;quot;)&lt;/code&gt; 無法正常開啟anays軟體，錯誤為 &lt;code&gt;com_error: (-2147221164, &#39;類別未登錄&#39;, none, none)&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;使用ipython來執行，詳細問題如下 :&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>程式化永磁馬達設計 by python 真實範例</title>
+        <link>https://markwengstr.github.io/posts/spm_motor_design/</link>
+        <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 07 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/spm_motor_design/</guid>
+        <description>&lt;h2 id=&#34;目標&#34;&gt;目標&lt;/h2&gt;
+&lt;p&gt;由定子外徑限制、最大功率、DC bus電壓、最大轉矩、最高轉速 規格，推導出整個10p12s spm馬達的設計與細部尺寸，並不是一個優化的模型，但都是經由合理的計算與假設，實作出一個合乎規格的初始設計。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>程式化永磁馬達設計概念 by python</title>
+        <link>https://markwengstr.github.io/posts/python_ansys_concept/</link>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 01 Sep 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/python_ansys_concept/</guid>
+        <description>&lt;h2 id=&#34;why-use-program-to-design-motor&#34;&gt;Why use program to design motor&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Save labor cost - program 具有自動化的好處，重複的步驟只要編寫一次，之後只需要執行程式就好&lt;/li&gt;
+&lt;li&gt;Code represent design concept and step - 當設計變成code，並且利用的是好理解且通用的 code structure ，人員轉換造成的工作問題就會下降，因為所有人只要能看懂code，就能看懂設計步驟，進而理解設計。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-to-represent-motor-design-concept-and-step&#34;&gt;How to represent motor design concept and step&lt;/h2&gt;
+&lt;p&gt;專注在兩個非常重要卻又簡單的東西 &lt;strong&gt;data &amp;amp; function&lt;/strong&gt;。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>淺談永磁馬達設計原理</title>
+        <link>https://markwengstr.github.io/posts/motor_principle/</link>
+        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 01 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/motor_principle/</guid>
+        <description>&lt;h2 id=&#34;馬達-電動機-是什麼-whats-electric-machine&#34;&gt;馬達 (電動機) 是什麼? (What&amp;rsquo;s electric machine)&lt;/h2&gt;
+&lt;p&gt;最近可以看到電動車在路上到處跑了，雖然目前還算是有錢人的玩具，但未來普及應是不在話下，而電動車的動力來源，就是 &lt;strong&gt;馬達&lt;/strong&gt; 。 當然不只電動車用到馬達，其實日常生活中到處都是馬達，筆電風扇、洗衣機、機器手臂&amp;hellip;等，任何要讓機械動起來的源頭都是馬達。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Python script for ansys maxwell, Surface Permanent Magnet Motor design automation demo</title>
+        <link>https://markwengstr.github.io/posts/auto_design_intro/</link>
+        <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 28 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/auto_design_intro/</guid>
+        <description>&lt;h2 id=&#34;影片介紹-vedio-intro&#34;&gt;影片介紹 (Vedio Intro)&lt;/h2&gt;
+&lt;p&gt;目前的成果，拍成影片上傳到youtube上&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/uStT2k3V6x0?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+     &lt;/div&gt;
+
+&lt;p&gt;輸入所需的參數 &lt;code&gt;spec_params&lt;/code&gt; [input the required parameters]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;spec_params&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;stator_OD_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;120&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;max_power&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;       &lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;voltage_dc&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;      &lt;span class=&#34;mi&#34;&gt;48&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;max_torque_nm&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;27&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;max_speed_rpm&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;export_path&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;     &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;pj_key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;          &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mktime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;now&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timetuple&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()))),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;res_url&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;         &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;稍微解釋一下參數&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>python開啟ansys軟體、新增project</title>
+        <link>https://markwengstr.github.io/posts/ansys_init/</link>
+        <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 25 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/ansys_init/</guid>
+        <description>&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;windows10&lt;/li&gt;
+&lt;li&gt;正版Ansys (我的是教學版)&lt;/li&gt;
+&lt;li&gt;python 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;目標&#34;&gt;目標&lt;/h2&gt;
+&lt;p&gt;使用python script，執行後自動開啟maxwell、新增project&lt;/p&gt;
+&lt;h2 id=&#34;win32com&#34;&gt;win32com&lt;/h2&gt;
+&lt;p&gt;首先要完成的是讓python開啟maxwell，參考了網路上的一些資訊，使用win32com這個module是最方便的，因此先跑&lt;code&gt;pip install pywin32&lt;/code&gt;裝好module。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>python fundamental concept 基礎概念</title>
+        <link>https://markwengstr.github.io/posts/python_fundamental/</link>
+        <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 20 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/python_fundamental/</guid>
+        <description>&lt;h2 id=&#34;任何語言的基本概念&#34;&gt;任何語言的基本概念&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=IcZSFewqr9k&#34;&gt;SICP&lt;/a&gt;有提到，或是可以參考網站內的文章 &lt;a href=&#34;https://markwengstr.github.io/posts/sicp_lec1a/&#34;&gt;sicp_1a&lt;/a&gt;，當認識一個新語言，最重要的事情有四個&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Primitive Object (語言的基本元素)&lt;/li&gt;
+&lt;li&gt;Means of combination (組合基本對象的方法)&lt;/li&gt;
+&lt;li&gt;Means of abstraction (如何抽象)&lt;/li&gt;
+&lt;li&gt;Capturing common patterns (如何利用領域的專業，找到通用函數)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;第四點雖然也很重要，但比較屬於系統複雜度增加後採取的作法，目前先不討論&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>有限與無限的遊戲-心得</title>
+        <link>https://markwengstr.github.io/posts/%E6%9C%89%E9%99%90%E8%88%87%E7%84%A1%E9%99%90%E7%9A%84%E9%81%8A%E6%88%B2/</link>
+        <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 15 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/%E6%9C%89%E9%99%90%E8%88%87%E7%84%A1%E9%99%90%E7%9A%84%E9%81%8A%E6%88%B2/</guid>
+        <description>&lt;h2 id=&#34;為什麼會看這本書&#34;&gt;為什麼會看這本書?&lt;/h2&gt;
+&lt;p&gt;最近剛好處於一個人生的重大轉換時期，也剛好有一個多月的空閒時間，除了錄11月份去師大教課的影片，其餘時間就是練習sicp與看書。&lt;/p&gt;
+&lt;p&gt;這本書就是偶然在聽某個財經的podcast聽到的，而剛好以前主管也有分享過，好奇心驅使之下就找了一下資訊。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>mindset</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Functional programming serious - The Elements of Programming in SICP</title>
+        <link>https://markwengstr.github.io/posts/sicp_lec1a/</link>
+        <pubDate>Fri, 10 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Fri, 10 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/sicp_lec1a/</guid>
+        <description>&lt;h2 id=&#34;重點摘要&#34;&gt;重點摘要&lt;/h2&gt;
+&lt;p&gt;本篇取自&lt;a href=&#34;https://www.youtube.com/watch?v=IcZSFewqr9k&amp;amp;list=PLkEwH_Z2WOlppy8oUfrGwFVlOuKyo3RO_&#34;&gt;SICP-1a&lt;/a&gt;，解釋最基礎的computer science&lt;/p&gt;
+&lt;h2 id=&#34;what-is-computer-science&#34;&gt;What is computer science&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Process: 如何編寫解決問題的 &amp;ldquo;過程&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Method: 組成process的元素，而method的名稱應該要陳述出裡面的知識&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;computer-science-的特性&#34;&gt;Computer science 的特性&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;處理&amp;quot; 理想化的元件&amp;quot;: 因為我們對所有要組合在一起的 data 與 function都能完全的掌控， 因此在理想與現實之間是差不多的 (如果是電子或機械工程師 那可能會需要考慮很多真實世界的限制)。&lt;/li&gt;
+&lt;li&gt;一個工程中的 &amp;ldquo;抽象形式&amp;rdquo;: 因為不需考慮現實的限制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;computer-science-的技術---控制複雜度&#34;&gt;Computer science 的技術 - 控制複雜度&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;black-box abstraction: 將功能封裝起來，使用的人不需要知道裡面的技術，只要呼叫它，丟入值就會輸出結果，而使用者又可以拿這個功能再去組合成更多功能。
+&lt;ul&gt;
+&lt;li&gt;將細節隱藏 (用以構建更大型的盒子)&lt;/li&gt;
+&lt;li&gt;具有通用性 (generality)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Conventional interface: 如果系統裡的數據有許多不一樣的類型，計算的時候總不能混雜在一起，那怎麼辦呢?
+&lt;ul&gt;
+&lt;li&gt;Generic operations&lt;/li&gt;
+&lt;li&gt;large-scale structure and modularity&lt;/li&gt;
+&lt;li&gt;object-oriented programming&lt;/li&gt;
+&lt;li&gt;operations on aggregate (流)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Metalinguistic Abstraction: 定義一個新語言 (用lisp做一個解析器來解析lisp)&lt;br /&gt;
+本篇不討論第二項與第三項，純粹討論最基礎的第一項。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;用一個例子解釋何謂black-box-abstraction&#34;&gt;用一個例子解釋何謂black-box abstraction&lt;/h2&gt;
+&lt;h3 id=&#34;square-root-algorithm---將數字開根號x05&#34;&gt;Square root algorithm - 將數字開根號(x^0.5)&lt;/h3&gt;
+&lt;p&gt;計算過程:&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>sicp</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>SICP - Identity? of objects (by clojure)</title>
+        <link>https://markwengstr.github.io/posts/identity_of_objects/</link>
+        <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 01 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/identity_of_objects/</guid>
+        <description>&lt;h2 id=&#34;本文重點&#34;&gt;本文重點&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;非預期的共享&lt;/strong&gt;，是大型系統的bug來源，透過給object一個身份(賦值) ，給它一個別名互相共享，是有蠻多方便，但也相對付出了代價。 但不賦值又怎麼能取用資料結構中的值呢?  能不能直接用function來解決以上問題?&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>sicp</category>
+            
+          
+            
+              <category>clojure</category>
+            
+          
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>用Hugo建立blog</title>
+        <link>https://markwengstr.github.io/posts/hugo-setup/</link>
+        <pubDate>Thu, 21 May 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Thu, 21 May 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/hugo-setup/</guid>
+        <description></description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>hugo</category>
+            
+          
+        
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

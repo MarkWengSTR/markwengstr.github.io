@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>轉職 on MarkWeng</title>
+    <link>https://markwengstr.github.io/tags/%E8%BD%89%E8%81%B7/</link>
+    <description>Recent content in 轉職 on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Fri, 03 Jun 2022 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/tags/%E8%BD%89%E8%81%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      <item>
+        <title>30歲轉換跑道，離開大企業穩定工作從零轉職網頁全端工程師，歷程分享(1)</title>
+        <link>https://markwengstr.github.io/posts/job_trans_1/</link>
+        <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Fri, 03 Jun 2022 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/job_trans_1/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;這次想分享我到底怎麼從零轉職網頁全端工程師的，轉職之前是什麼背景、具備什麼基礎、是什麼原因讓我想要轉職、如何真的轉職成功、轉職成功後遇到什麼困難、如何克服這些困難、而最後又為什摩要回到馬達的領域裡面。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>轉職</category>
+            
+          
+        
+        
+        
+      </item>
+    
+  </channel>
+</rss>

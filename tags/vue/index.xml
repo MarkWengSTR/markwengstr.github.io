@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Vue on MarkWeng</title>
+    <link>https://markwengstr.github.io/tags/vue/</link>
+    <description>Recent content in Vue on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Mon, 05 Jul 2021 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      <item>
+        <title>Wordpress plugin development by Vue.js (vue-cli setting, hot reload)</title>
+        <link>https://markwengstr.github.io/posts/vue-wordpress/</link>
+        <pubDate>Mon, 05 Jul 2021 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 05 Jul 2021 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/vue-wordpress/</guid>
+        <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近也剛好有朋友有個wordpress後台功能擴增的需求，一個小型的商品ERP，由於在wordpress裡面，因此直接使用wordpress當後端API，而前端就用Vue，練一下這兩個這幾年非常夯的framework。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>vue</category>
+            
+          
+            
+              <category>wordpress</category>
+            
+          
+        
+        
+        
+      </item>
+    
+  </channel>
+</rss>

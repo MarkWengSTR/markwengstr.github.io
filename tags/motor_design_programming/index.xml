@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Motor_design_programming on MarkWeng</title>
+    <link>https://markwengstr.github.io/tags/motor_design_programming/</link>
+    <description>Recent content in Motor_design_programming on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Mon, 08 Apr 2024 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/tags/motor_design_programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      <item>
+        <title></title>
+        <link>https://markwengstr.github.io/posts/large_motor_install/</link>
+        <pubDate>Mon, 08 Apr 2024 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 08 Apr 2024 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/large_motor_install/</guid>
+        <description>&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;windows10&lt;/li&gt;
+&lt;li&gt;正版Ansys (我的是教學版)&lt;/li&gt;
+&lt;li&gt;python 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;目標&#34;&gt;目標&lt;/h2&gt;
+&lt;p&gt;使用python script，執行後自動開啟maxwell、新增project&lt;/p&gt;
+&lt;h2 id=&#34;win32com&#34;&gt;win32com&lt;/h2&gt;
+&lt;p&gt;首先要完成的是讓python開啟maxwell，參考了網路上的一些資訊，使用win32com這個module是最方便的，因此先跑&lt;code&gt;pip install pywin32&lt;/code&gt;裝好module。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>python開啟ansys軟體問題 (2147221164, &#39;類別未登錄&#39;)</title>
+        <link>https://markwengstr.github.io/posts/ansys_init_2/</link>
+        <pubDate>Tue, 20 Oct 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 20 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/ansys_init_2/</guid>
+        <description>&lt;h2 id=&#34;問題描述&#34;&gt;問題描述&lt;/h2&gt;
+&lt;p&gt;重灌了幾次ansys，又灌了其他軟體之後，突然某一天發現用 &lt;code&gt;oAnsoftApp = client.Dispatch(&amp;quot;Ansoft.ElectronicsDesktop&amp;quot;)&lt;/code&gt; 無法正常開啟anays軟體，錯誤為 &lt;code&gt;com_error: (-2147221164, &#39;類別未登錄&#39;, none, none)&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;使用ipython來執行，詳細問題如下 :&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>程式化永磁馬達設計 by python 真實範例</title>
+        <link>https://markwengstr.github.io/posts/spm_motor_design/</link>
+        <pubDate>Wed, 07 Oct 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 07 Oct 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/spm_motor_design/</guid>
+        <description>&lt;h2 id=&#34;目標&#34;&gt;目標&lt;/h2&gt;
+&lt;p&gt;由定子外徑限制、最大功率、DC bus電壓、最大轉矩、最高轉速 規格，推導出整個10p12s spm馬達的設計與細部尺寸，並不是一個優化的模型，但都是經由合理的計算與假設，實作出一個合乎規格的初始設計。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>程式化永磁馬達設計概念 by python</title>
+        <link>https://markwengstr.github.io/posts/python_ansys_concept/</link>
+        <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 01 Sep 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/python_ansys_concept/</guid>
+        <description>&lt;h2 id=&#34;why-use-program-to-design-motor&#34;&gt;Why use program to design motor&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Save labor cost - program 具有自動化的好處，重複的步驟只要編寫一次，之後只需要執行程式就好&lt;/li&gt;
+&lt;li&gt;Code represent design concept and step - 當設計變成code，並且利用的是好理解且通用的 code structure ，人員轉換造成的工作問題就會下降，因為所有人只要能看懂code，就能看懂設計步驟，進而理解設計。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;how-to-represent-motor-design-concept-and-step&#34;&gt;How to represent motor design concept and step&lt;/h2&gt;
+&lt;p&gt;專注在兩個非常重要卻又簡單的東西 &lt;strong&gt;data &amp;amp; function&lt;/strong&gt;。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>淺談永磁馬達設計原理</title>
+        <link>https://markwengstr.github.io/posts/motor_principle/</link>
+        <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 01 Aug 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/motor_principle/</guid>
+        <description>&lt;h2 id=&#34;馬達-電動機-是什麼-whats-electric-machine&#34;&gt;馬達 (電動機) 是什麼? (What&amp;rsquo;s electric machine)&lt;/h2&gt;
+&lt;p&gt;最近可以看到電動車在路上到處跑了，雖然目前還算是有錢人的玩具，但未來普及應是不在話下，而電動車的動力來源，就是 &lt;strong&gt;馬達&lt;/strong&gt; 。 當然不只電動車用到馬達，其實日常生活中到處都是馬達，筆電風扇、洗衣機、機器手臂&amp;hellip;等，任何要讓機械動起來的源頭都是馬達。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>Python script for ansys maxwell, Surface Permanent Magnet Motor design automation demo</title>
+        <link>https://markwengstr.github.io/posts/auto_design_intro/</link>
+        <pubDate>Tue, 28 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Tue, 28 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/auto_design_intro/</guid>
+        <description>&lt;h2 id=&#34;影片介紹-vedio-intro&#34;&gt;影片介紹 (Vedio Intro)&lt;/h2&gt;
+&lt;p&gt;目前的成果，拍成影片上傳到youtube上&lt;/p&gt;
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+       &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/uStT2k3V6x0?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+     &lt;/div&gt;
+
+&lt;p&gt;輸入所需的參數 &lt;code&gt;spec_params&lt;/code&gt; [input the required parameters]&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;spec_params&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;stator_OD_limit&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;120&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;max_power&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;       &lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;voltage_dc&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;      &lt;span class=&#34;mi&#34;&gt;48&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;max_torque_nm&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;27&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;max_speed_rpm&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;   &lt;span class=&#34;mi&#34;&gt;5000&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;export_path&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;     &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;pj_key&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;          &lt;span class=&#34;nb&#34;&gt;str&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;int&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;time&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;mktime&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;datetime&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;now&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;timetuple&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()))),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;s2&#34;&gt;&amp;#34;res_url&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;         &lt;span class=&#34;kc&#34;&gt;None&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;稍微解釋一下參數&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>python開啟ansys軟體、新增project</title>
+        <link>https://markwengstr.github.io/posts/ansys_init/</link>
+        <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 25 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/ansys_init/</guid>
+        <description>&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;windows10&lt;/li&gt;
+&lt;li&gt;正版Ansys (我的是教學版)&lt;/li&gt;
+&lt;li&gt;python 3&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;目標&#34;&gt;目標&lt;/h2&gt;
+&lt;p&gt;使用python script，執行後自動開啟maxwell、新增project&lt;/p&gt;
+&lt;h2 id=&#34;win32com&#34;&gt;win32com&lt;/h2&gt;
+&lt;p&gt;首先要完成的是讓python開啟maxwell，參考了網路上的一些資訊，使用win32com這個module是最方便的，因此先跑&lt;code&gt;pip install pywin32&lt;/code&gt;裝好module。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+        
+        
+        
+      </item>
+    
+      <item>
+        <title>python fundamental concept 基礎概念</title>
+        <link>https://markwengstr.github.io/posts/python_fundamental/</link>
+        <pubDate>Mon, 20 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Mon, 20 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/python_fundamental/</guid>
+        <description>&lt;h2 id=&#34;任何語言的基本概念&#34;&gt;任何語言的基本概念&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=IcZSFewqr9k&#34;&gt;SICP&lt;/a&gt;有提到，或是可以參考網站內的文章 &lt;a href=&#34;https://markwengstr.github.io/posts/sicp_lec1a/&#34;&gt;sicp_1a&lt;/a&gt;，當認識一個新語言，最重要的事情有四個&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Primitive Object (語言的基本元素)&lt;/li&gt;
+&lt;li&gt;Means of combination (組合基本對象的方法)&lt;/li&gt;
+&lt;li&gt;Means of abstraction (如何抽象)&lt;/li&gt;
+&lt;li&gt;Capturing common patterns (如何利用領域的專業，找到通用函數)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;第四點雖然也很重要，但比較屬於系統複雜度增加後採取的作法，目前先不討論&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_design_programming</category>
+            
+          
+            
+              <category>python</category>
+            
+          
+        
+        
+        
+      </item>
+    
+  </channel>
+</rss>

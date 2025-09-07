@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Motor_knowledge on MarkWeng</title>
+    <link>https://markwengstr.github.io/tags/motor_knowledge/</link>
+    <description>Recent content in Motor_knowledge on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Sat, 14 May 2022 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/tags/motor_knowledge/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      <item>
+        <title>電機工程師、儀電工程師必看，IEC 60034-27-1 簡述，離線部分放電測量繞阻絕緣規範</title>
+        <link>https://markwengstr.github.io/posts/iec60034_27_1_study/</link>
+        <pubDate>Sat, 14 May 2022 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Sat, 14 May 2022 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/iec60034_27_1_study/</guid>
+        <description>&lt;h2 id=&#34;為什麼要寫這篇&#34;&gt;為什麼要寫這篇&lt;/h2&gt;
+&lt;p&gt;因為工作的關係，常常接觸高壓電機的保養與相關測試，當然高壓電機線圈的部分放電也是一個非常重要的部分，最近剛讀完規範，就想說來記錄一下讀到的東西，也希望可以在這部分有更多的精進，之後會再繼續分享有關高壓馬達保養與測試的知識。&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>motor_knowledge</category>
+            
+          
+        
+        
+        
+      </item>
+    
+  </channel>
+</rss>

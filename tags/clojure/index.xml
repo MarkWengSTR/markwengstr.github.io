@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>Clojure on MarkWeng</title>
+    <link>https://markwengstr.github.io/tags/clojure/</link>
+    <description>Recent content in Clojure on MarkWeng</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <managingEditor>bskin0330@gmail.com (Mark Weng)</managingEditor>
+    <webMaster>bskin0330@gmail.com (Mark Weng)</webMaster>
+    <copyright>© Copyright {year} MarkWeng ※本站採用[CC授權](https://creativecommons.org/licenses/by-nc-sa/3.0/tw/)歡迎引用與介紹，並註明出處，謝謝</copyright>
+    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0000</lastBuildDate>
+    
+        <atom:link href="https://markwengstr.github.io/tags/clojure/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+      <item>
+        <title>SICP - Identity? of objects (by clojure)</title>
+        <link>https://markwengstr.github.io/posts/identity_of_objects/</link>
+        <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+        <author>bskin0330@gmail.com (Mark Weng)</author>
+        <atom:modified>Wed, 01 Jul 2020 00:00:00 +0000</atom:modified>
+        <guid>https://markwengstr.github.io/posts/identity_of_objects/</guid>
+        <description>&lt;h2 id=&#34;本文重點&#34;&gt;本文重點&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;非預期的共享&lt;/strong&gt;，是大型系統的bug來源，透過給object一個身份(賦值) ，給它一個別名互相共享，是有蠻多方便，但也相對付出了代價。 但不賦值又怎麼能取用資料結構中的值呢?  能不能直接用function來解決以上問題?&lt;/p&gt;</description>
+        
+        <dc:creator>Mark</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>sicp</category>
+            
+          
+            
+              <category>clojure</category>
+            
+          
+        
+        
+        
+      </item>
+    
+  </channel>
+</rss>
